@@ -1,0 +1,26 @@
+@charset "utf-8";
+#carousel-timeline #taogi-scroll-bar .taogi_tc_slider_index_item {
+	width: 5px !important;
+	height: 5px !important;
+	border: 0 !important;
+	background-color: transparent !important;
+	background-image: url(./images/taogi-slider-item.png) !important;
+	background-attachment: scroll !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+}
+#carousel-timeline #taogi-scroll-bar .mark {
+	width: 27px !important;
+	height: 27px !important;
+	border: 0 !important;
+	background-color: transparent !important;
+	background-image: url(./images/taogi-slider-mark.png) !important;
+	background-attachment: scroll !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+}
+#carousel-timeline #taogi-scroll-bar .mark:after {
+	display: none !important;
+}
+#carousel-timeline #taogi-scroll-bar .tooltip {
+}

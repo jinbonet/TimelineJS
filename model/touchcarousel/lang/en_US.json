@@ -1,0 +1,22 @@
+{
+	"timeline_headline":"Title",
+	"timeline_text":"Summary",
+	"timeline_author":"Author",
+
+	"time_format":"M j, Y A h:i",
+
+	"share_twitter":"Share to Twitter",
+	"share_facebook":"Share to Facebook",
+	"share_googleplus":"Share to Google+",
+	"share_kakaotalk":"Share to Kakaotalk",
+	"share_embed":"Embed source",
+
+	"view_1_media":"View detail",
+	"view_n_media":"+%s media",
+	"read_more":"Read more",
+
+	"download":"<span class="suffix">Download </span>%s",
+
+	"read_source":"Read source",
+	"view_article":"Back to slide"
+}

@@ -1,0 +1,12 @@
+@charset "utf-8";
+.taogi-frame {
+	left:0;
+}
+.taogi-frame.menu-active {
+	left:260px;
+}
+
+#carousel-timeline .figure i:before {
+	border: 0 !important;
+	background: transparent url(../images/article-feature-icon-border.png) scroll no-repeat center center !important;
+}
