@@ -16,6 +16,7 @@ switch($source_type) {
 		if($data) {
 			$json = JNTimeLine_Data::getGoogleSpreed($data);
 			if($json) {
+				$timeline = $json['timeline'];
 				$datalist = $json['timeline']['date'];
 			} else {
 				$source = str_replace("/feeds/list/","/feeds/cells/",$source);
