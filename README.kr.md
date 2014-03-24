@@ -39,27 +39,28 @@
 
 | 라이브러리                                        | 라이선스              | 디렉토리                                          |
 |---------------------------------------------------|-----------------------|---------------------------------------------------|
-| [TimelineJS][repository-timelinejs]               | [MPL][license-mpl]    | `model/timelineJS/`                               |
-| [jQuery][repository-jquery]                       | [MIT][license-mit]    | `resources/script/jquery-1.11.0.min.js`           |
-| [MediaElement.js][repository-mediaelement]        | [MIT][license-mit]    | `resources/mediaelement/`                         |
-| [PDFObject][repository-pdfobject]                 | [MIT][license-mit]    | `resources/pdfobject/`                            |
-| [PHP Proxy][repository-php-proxy]                 | [MIT][license-mit]    | `library/php-proxy/`                              |
-| [Twitteroauth][repository-twitteroauth]           | [?]                   | `library/twitteroauth/`                           |
-| [Bootstrap][repository-bootstrap]                 | [MIT][license-mit]    | `model/touchcarousel/fonts/glyphicons-halflings*` |
-| [Foundation Icons][repository-foundation-icons]   | [MIT][license-mit]    | `model/touchcarousel/fonts/foundation-icons*`     |
+| [TimelineJS][repository-timelinejs]               | [MPL][license-mpl]    | model/timelineJS/                                 |
+| [jQuery][repository-jquery]                       | [MIT][license-mit]    | resources/script/jquery-1.11.0.min.js             |
+| [MediaElement.js][repository-mediaelement]        | [MIT][license-mit]    | resources/mediaelement/                           |
+| [PDFObject][repository-pdfobject]                 | [MIT][license-mit]    | resources/pdfobject/                              |
+| [PHP Proxy][repository-php-proxy]                 | [MIT][license-mit]    | library/php-proxy/                                |
+| [Twitteroauth][repository-twitteroauth]           | [?]                   | library/twitteroauth/                             |
+| [Bootstrap][repository-bootstrap]                 | [MIT][license-mit]    | model/touchcarousel/fonts/glyphicons-halflings*   |
+| [Foundation Icons][repository-foundation-icons]   | [MIT][license-mit]    | model/touchcarousel/fonts/foundation-icons*       |
 
 2. 업로드
 ---------
 
 사용하고자 하는 웹서비스 디렉토리에 업로드한 뒤 권한을 확인합니다. 일반적인 환경이라면 `cache` 폴더의 `other` 쓰기 권한을 부여하는 것으로 충분합니다.
 
-| 디렉토리  | 권한  | 비고                              |
-|-----------|-------|-----------------------------------|
-| `cache`   | `707` | 타임라인 JSON 파일을 저장합니다.  |
-
 ~~~~
 chmod 707 cache
 ~~~~
+
+| 디렉토리  | 권한  | 비고                              |
+|-----------|-------|-----------------------------------|
+| cache     | 707   | 타임라인 JSON 파일을 저장합니다.  |
+
 
 3. 설정
 -------
@@ -68,14 +69,14 @@ chmod 707 cache
 
 | 변수                                  | 기본값            | 선택지                                            |
 |---------------------------------------|-------------------|---------------------------------------------------|
-| `$timelineConfig['default_model']`    | `touchcarousel`   | **4. 내용 작성** 항목의 `model` 매개변수 참조     |
-| `$timelineConfig['cache']`            | `60`              |                                                   |
-| `$timelineConfig['cache_path']`       | `./cache`         |                                                   |
-| `$timelineConfig['use_sns']`          | `true`            | `true, false`                                     |
-| `$timelineConfig['fb_app']`           | 없음              | 페이스북 앱 아이디                                |
-| `$timelineConfig['theme']`            | `defaults`        | **4. 내용 작성** 항목의 `skinname` 매개변수 참조  |
-| `$timelineConfig['taogiauth']`        | 없음              | 임의의 문자열                                     |
-| `$timelineConfig['lang']`             | `ko_KR`           | `ko_KR, en_US`                                    |
+| $timelineConfig['default_model']      | touchcarousel     | **4. 내용 작성** 항목의 `model` 매개변수 참조     |
+| $timelineConfig['cache']              | 60                |                                                   |
+| $timelineConfig['cache_path']         | ./cache           |                                                   |
+| $timelineConfig['use_sns']            | true              | true, false                                       |
+| $timelineConfig['fb_app']             | 없음              | 페이스북 앱 아이디                                |
+| $timelineConfig['theme']              | defaults          | **4. 내용 작성** 항목의 `skinname` 매개변수 참조  |
+| $timelineConfig['taogiauth']          | 없음              | 임의의 문자열                                     |
+| $timelineConfig['lang']               | ko_KR             | ko_KR, en_US                                      |
 
 4. 내용 작성
 ------------
@@ -91,9 +92,9 @@ http://yourdomain.com/taogi-timeline/?src=yourfile.json&model=touchcarousel
 
 | 매개변수      | 값                    | 기본값            | 선택지                        |
 |---------------|-----------------------|-------------------|-------------------------------|
-| `src`         | `json` 파일의 `URI`   | 없음(필수)        |                               |
-| `model`       | 사용할 출력 모델      | `touchcarousel`   | `touchcarousel, timelineJS`   |
-| `skinname`    | 사용할 스킨 이름      | `default`         |                               |
+| src           | `json` 파일의 `URI`   | 없음(필수)        |                               |
+| model         | 사용할 출력 모델      | touchcarousel     | touchcarousel, timelineJS     |
+| skinname      | 사용할 스킨 이름      | default           |                               |
 
 2. 데이터 형식
 ==============
