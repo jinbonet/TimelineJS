@@ -6,11 +6,6 @@
 		"startDate":"2012.01.01",
 		"endDate":"2012.12.31",
 		"text":"진보넷이 2012년에 수행했던 주요사업들을 타임라인으로 만들었습니다.",
-		"asset": {
-			"media":"",
-			"credit":"",
-			"caption":""
-		},
 		"date": [
 			{
 				"startDate":"2012,1,4",
@@ -24,10 +19,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature"
-					},
 					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/DSCF5895.preview.JPG",
 						"credit":"",
@@ -64,10 +55,6 @@
 				"layout":"triple",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature2"
-					},
-					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/_IMG_1077.jpg",
 						"credit":"",
 						"caption":""
@@ -101,10 +88,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature2"
-					},
 					{
 						"media":"http://vimeo.com/30656319",
 						"credit":"",
@@ -142,10 +125,6 @@
 				"layout":"double",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature2"
-					},
-					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/mediareport.jpg",
 						"credit":"",
 						"caption":""
@@ -169,10 +148,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature"
-					},
 					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/IMG_9067.JPG",
 						"credit":"",
@@ -214,10 +189,6 @@
 						"caption":""
 					},
 					{
-						"media":"subject",
-						"layout":"feature2"
-					},
-					{
 						"media":"http://vimeo.com/32122281",
 						"layout":"feature2",
 						"credit":"",
@@ -243,10 +214,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature3"
-					},
 					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/IMG_0585_1.jpg",
 						"credit":"",
@@ -276,10 +243,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature"
-					},
 					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/1_2.jpg",
 						"credit":"",
@@ -321,10 +284,6 @@
 				"layout":"triple",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature3"
-					},
-					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/120229.JPG",
 						"credit":"",
 						"caption":""
@@ -354,10 +313,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature2"
-					},
 					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/(%EC%B5%9C%EC%A2%85)_0.preview.JPG",
 						"credit":"",
@@ -392,10 +347,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature2"
-					},
 					{
 						"media":"http://center.jinbo.net/emeeting2013/timeline/images/DSC_1674.jpg",
 						"credit":"",
@@ -443,10 +394,6 @@
 				"layout":"triple",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature2"
-					},
-					{
 						"media":"http://ablenews.co.kr/news/newsimages/newsimage/c_0_001320120614133731688944.jpg",
 						"credit":"",
 						"caption":""
@@ -482,10 +429,6 @@
 				"layout":"triple",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature"
-					},
-					{
 						"media":"http://image.aladin.co.kr/product/1766/64/cover/8993463301_1.jpg",
 						"credit":"",
 						"caption":""
@@ -497,7 +440,6 @@
 					},
 					{
 						"media":"http://vimeo.com/24807677",
-						"layout":"feature2",
 						"credit":"",
 						"caption":""
 					},
@@ -520,10 +462,6 @@
 				},
 				"layout":"double",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature2"
-					},
 					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/IMG_0115.JPG",
 						"credit":"",
@@ -548,10 +486,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature2"
-					},
 					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/suda.preview.jpg",
 						"credit":"",
@@ -587,10 +521,6 @@
 				"layout":"triple",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature2"
-					},
-					{
 						"media":"http://center.jinbo.net/emeeting2013/timeline/images/res2.jpg",
 						"credit":"",
 						"caption":""
@@ -624,10 +554,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature2"
-					},
 					{
 						"media":"http://center.jinbo.net/emeeting2013/timeline/images/netneutrall_open_seminar_poster.jpg",
 						"credit":"",
@@ -663,10 +589,6 @@
 				"layout":"triple",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature2"
-					},
-					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/%20-DSC01366.png",
 						"credit":"",
 						"caption":""
@@ -700,10 +622,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature"
-					},
 					{
 						"media":"http://center.jinbo.net/emeeting2013/timeline/images/candidate.jpg",
 						"layout":"feature2",
@@ -740,10 +658,6 @@
 				"layout":"double",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature"
-					},
-					{
 						"media":"http://center.jinbo.net/emeeting2013/timeline/images/taogi-cmyk-300.jpg",
 						"credit":"",
 						"caption":"따오기 로고 시안"
@@ -773,10 +687,6 @@
 				"layout":"double",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature2"
-					},
-					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/301.jpg",
 						"credit":"",
 						"caption":""
@@ -800,10 +710,6 @@
 				},
 				"layout":"triple",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature3"
-					},
 					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/_DSC_6211.JPG",
 						"credit":"",
@@ -834,10 +740,6 @@
 				"layout":"double",
 				"media": [
 					{
-						"media":"subject",
-						"layout":"feature2"
-					},
-					{
 						"media":"http://center.jinbo.net/emeeting2013/images/Funch4.JPG",
 						"credit":"",
 						"caption":""
@@ -862,10 +764,6 @@
 				},
 				"layout":"double",
 				"media": [
-					{
-						"media":"subject",
-						"layout":"feature2"
-					},
 					{
 						"media":"http://act.jinbo.net/drupal/sites/default/files/images/036.jpg",
 						"credit":"",
