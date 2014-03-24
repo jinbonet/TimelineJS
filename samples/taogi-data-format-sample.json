@@ -1,0 +1,92 @@
+{ 
+    "timeline":
+    {
+        "headline":"타임라인 제목",
+        "type":"데이터 종류 -- default(기본값), Json, Google spreadsheet, Storify",
+        "startDate":"타임라인 시작 날짜",
+        "text":"타임라인 설명",
+		"asset": // 타임라인 대표 또는 커버 멀티미디어 Veriteco와 세로형에서 사용
+		{
+			"media":"대표 멀티미디어 URI",
+			"credit":"대표 멀티미디어 출처 또는 작성자",
+			"caption":"대표 멀티미디어 설명"
+		},
+		"date": // 타임라인에 표시될 포스트들 배열
+		[
+			{
+				"type":"종류",
+				"startDate":"시작일",
+				"endDate":"종료일",
+				"headline":"포스트 제목",
+				"text":"포스트 요약문",
+				"tag":"태그",
+				"asset": // 각 포스트의 대표 멀티미디어. Veriteco과 세로형 타입에서 사용
+				{
+					"media":"대표 멀티미디어 URI",
+					"credit":"대표 멀티미디어 출처 또는 작성자",
+					"caption":"대표 멀티미디어 설명"
+					"thumbnail":"대표 멀티미디어 썸네일 이미지"
+				},
+				"unique":"각 포스트의 고유 permalink에 사용될 hash 값",
+				"layout":"각 포스트의 가로/세로 크기가 표시될 css class 값",
+				"media":
+				[ // 각 포스트에 표시될 n개의 멀티미디어 배열. TouchCarousel과 세로형에서 사용
+					{
+						"media":"멀티미디어 URI",
+						"credit":"멀티미디어 출처 또는 작성자",
+						"caption":"멀티미디어 설명",
+						"thumbnail":"멀티미디어 썸네일 이미지",
+						"layout":"멀티미디어 가로/세로 크기정보가 담겨있는 css class 값",
+					}
+				],
+				"feature":"각 포스트에 대표로 표시될 media 갯수"
+			}
+		],
+		"era":
+		{
+			"startDate":"시작일",
+			"endDate":"종료일",
+			"headline":"기간 제목",
+			"text":"기간 설명",
+			"tag":"태그"
+		},
+		"extra": // TouchCarousel과 세로형을 구현하기 위해 추가된 데이터들. 주로 모양과 관련된 정보들
+		{
+			"template":"타임라인 타입을 지정 -- touchcarousel(기본값), vertical(구현 예정), timelineJS",
+			"author":"타임라인 작성자",
+			"theme": // 모양 테마 정보
+			{
+				"background":"화면 배경색 또는 반복 패턴 이미지 URI. CSS 속성값 형태로 표시",
+				"canvas":"타임라인이 그려진 영역의 배경색 또는 반복 패턴 이미지 URI. CSS 속성값 형태로 표시",
+				"cover": // 타이틀에서 사용할 css 속성들
+				{
+					"background":"바탕색",
+					"subject": // 타이틀 제목 모양
+					{
+						"font-family":"글꼴",
+						"color":"글자색"
+					},
+					"summary": // 타이틀 설명문 모양
+					{
+						"font-family":"글꼴",
+						"color":"글자색"
+					}
+				},
+				"post": // 각 포스트에서 사용할 css 속성들
+				{
+					"background":"바탕색",
+					"subject": // 제목 모양
+					{
+						"font-family":"글꼴",
+						"color":"글자색"
+					},
+					"summary": // 설명문 모양
+					{
+						"font-family":"글꼴",
+						"color":"글자색"
+					}
+				}
+			}
+		}
+	}
+}
