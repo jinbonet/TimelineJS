@@ -15,7 +15,7 @@
 미리보기
 
 * <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/taogi-media-gallery-demo.json>
-* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/jinbonet-activities-2013.json>
+* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/jinbonet-2013.json>
 * <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/nis-surveillance.json>
 * <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/paris-commune.json>
 
@@ -118,7 +118,7 @@ http://yourdomain.com/taogi-timeline/?src=yourfile.json
 
 * [taogi-data-format-sample.json](samples/taogi-data-format-sample.json) -- 주석을 포함하고 있으므로 정상동작하지 않습니다.
 * [taogi-media-gallery-demo.json](samples/taogi-media-gallery-demo.json)
-* [jinbonet-activities-2013.json](samples/jinbonet-activities-2013.json)
+* [jinbonet-2013.json](samples/jinbonet-2013.json)
 * [nis-surveillance.json](samples/nis-surveillance.json)
 * [paris-commune.json](samples/paris-commune.json)
 
