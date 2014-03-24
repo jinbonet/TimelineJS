@@ -12,6 +12,13 @@
   * 스킨 선택 기능
   * 반응형 레이아웃이 적용된 기본 스킨
 
+미리보기
+
+* <//hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/taogi-media-gallery-demo.json>
+* <//hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/jinbonet-activities-2013.json>
+* <//hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/nis-surveillance.json>
+* <//hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/paris-commune.json>
+
 목차
 ----------------------
 
