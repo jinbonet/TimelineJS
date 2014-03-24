@@ -122,7 +122,7 @@ http://yourdomain.com/taogi-timeline/?src=yourfile.json
 * [nis-surveillance.json](samples/nis-surveillance.json)
 * [paris-commune.json](samples/paris-commune.json)
 
-또는, [TimelineJS의 예제들](//githubm.com/NUKnightLab/TimelineJS/examples/)을 확인할 수 있습니다. TimelineJS 형식의 JSON 파일을 사용할 경우에는 추가 기능이 적용되지 않습니다.
+또는, [TimelineJS의 예제들](//github.com/NUKnightLab/TimelineJS/tree/master/examples)을 확인할 수 있습니다. TimelineJS 형식의 JSON 파일을 사용할 경우에는 추가 기능이 적용되지 않습니다.
 
 3. 지원하는 미디어 형식
 =======================
