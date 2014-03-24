@@ -14,10 +14,10 @@
 
 미리보기
 
-* <//hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/taogi-media-gallery-demo.json>
-* <//hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/jinbonet-activities-2013.json>
-* <//hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/nis-surveillance.json>
-* <//hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/paris-commune.json>
+* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/taogi-media-gallery-demo.json>
+* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/jinbonet-activities-2013.json>
+* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/nis-surveillance.json>
+* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/paris-commune.json>
 
 목차
 ----------------------
