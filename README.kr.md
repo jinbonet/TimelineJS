@@ -57,9 +57,9 @@
 chmod 707 cache
 ~~~~
 
-| 디렉토리  | 권한  | 비고                              |
-|-----------|-------|-----------------------------------|
-| cache     | 707   | 타임라인 JSON 파일을 저장합니다.  |
+| 디렉토리  | 권한  | 비고                                  |
+|-----------|-------|---------------------------------------|
+| cache     | 707   | 타임라인 `JSON` 파일을 저장합니다.    |
 
 
 3. 설정
@@ -85,7 +85,7 @@ chmod 707 cache
 2.  따오기 타임라인이 설치된 웹서비스 주소를 `src` 매개변수로 `json` 파일 경로를 지정해서 호출합니다.
 
 ~~~~
-http://yourdomain.com/taogi-timeline/?src=yourfile.json&model=touchcarousel
+http://yourdomain.com/taogi-timeline/?src=yourfile.json
 ~~~~
 
 `src` 매개변수와 같이 주소 형식으로 지정할 수 있는 설정값은 다음과 같습니다.
