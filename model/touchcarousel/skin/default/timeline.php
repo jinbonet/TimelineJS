@@ -9,7 +9,7 @@
 						<p class="description"><?php print $timeline['text']; ?></p>
 						<div class="meta">
 							<cite class="author"><?php print $timeline['extra']['author']; ?></cite>
-							<time pubdate datetime="<?php print JNTimeLine_prettyTime($datalist[$i]['startDate']); ?>" title="<?php print JNTimeLine_prettyTime($datalist[$i]['startDate']); ?>" class="date"><?php print JNTimeLine_prettyTime($datalist[$i]['startDate']); ?></time>
+							<?php print $taogi_theme->time($timeline); ?>
 						</div>
 						<ul class="social">
 							<li class="twitter"><a href="https://twitter.com/share?text=" target="_blank"><span><?php print $lang->_t('share_twitter'); ?></span></a></li>
@@ -30,7 +30,7 @@
 				<div class="item-flipper">
 					<section id="touchcarousel-<?php print $datalist[$i]['unique']; ?>-article" class="section article">
 						<article class="wrap">
-							<time pubdate datetime="<?php print JNTimeLine_prettyTime($datalist[$i]['startDate']); ?>" title="<?php print JNTimeLine_prettyTime($datalist[$i]['startDate']); ?>" class="pubdate"><?php print JNTimeLine_prettyTime($datalist[$i]['startDate']); ?></time>
+							<?php print $taogi_theme->time($datalist[$i]); ?>
 <?php						if($datalist[$i]['asset']['media']) {?>
 								<div class="feature">
 									<?php print $taogi_theme->figure($datalist[$i]['asset']); ?>
@@ -87,7 +87,7 @@
 						<p class="description"><?php print $timeline['text']; ?></p>
 						<div class="meta">
 							<cite class="author"><?php print $timeline['extra']['author']; ?></cite>
-							<time pubdate datetime="<?php print JNTimeLine_prettyTime($datalist[$i]['startDate']); ?>" title="<?php print JNTimeLine_prettyTime($datalist[$i]['startDate']); ?>" class="date"><?php print JNTimeLine_prettyTime($datalist[$i]['startDate']); ?></time>
+							<?php print $taogi_theme->time($timeline,'endDate'); ?>
 						</div>
 						<ul class="social">
 							<li class="twitter"><a href="https://twitter.com/share?text=" target="_blank"><span><?php print $lang->_t('share_twitter');?></span></a></li>

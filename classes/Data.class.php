@@ -27,6 +27,14 @@ class JNTimeLine_Data {
 		}
 		unset($json['timeline']['date']);
 		$json['timeline']['date'] = $datalist;
+		if(!$json['timeline']['startDate']) {
+			if($json['timeline']['era']['startDate']) $json['timeline']['startDate'] = $json['timeline']['era']['startDate'];
+			else $json['timeline']['startDate'] = $datalist[0]['startDate'];
+		}
+		if(!$json['timeline']['endDate']) {
+			if($json['timeline']['era']['endDate']) $json['timeline']['endDate'] = $json['timeline']['era']['endDate'];
+			else $json['timeline']['endDate'] = $datalist[@count($datalist)-1]['startDate'];
+		}
 
 		return $json;
 	}

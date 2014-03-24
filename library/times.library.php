@@ -36,4 +36,106 @@ function JNTimeLine_prettyTime($dateString) {
 
 	return $pubDate;
 }
+
+function JNTimeLine_formatTime($dateString,$format) {
+	$_date = explode(" ",$dateString);
+	$_day = preg_split("/[\-\/,]+/",$_date[0]);
+	$_time = explode(":",trim($_date[1]));
+	$stamp = mktime(($_time[0] ? $_time[0] : 0),($_time[1] ? $_time[1] : 0),($_time[2] ? $_time[2] : 0),($_day[1] ? $_day[1] : 1),($_day[2] ? $_day[2] : 1),$_day[0]);
+	$out = '';
+	$skip = false;
+	for($i=0; $i<mb_strlen($format); $i++) {
+		$c = mb_substr($format,$i,1);
+		switch($c) {
+			case 'd':
+			case 'D':
+			case 'j':
+			case 'l':
+			case 'N':
+			case 'S':
+			case 'w':
+			case 'z':
+			case 'W':
+			case 't':
+				if($_day[2]) {
+					$out .= date($c,$stamp);
+					$skip = false;
+				} else {
+					$skip = true;
+				}
+				break;
+			case 'F':
+			case 'm':
+			case 'M':
+			case 'n':
+				if($_day[1]) {
+					$out .= date($c,$stamp);
+					$skip = false;
+				} else {
+					$skip = true;
+				}
+				break;
+			case 'L':
+			case 'o':
+			case 'Y':
+			case 'y':
+				if($_day[0]) {
+					$out .= date($c,$stamp);
+					$skip = false;
+				} else {
+					$skip = true;
+				}
+				break;
+			case 'a':
+			case 'A':
+			case 'B':
+			case 'g':
+			case 'G':
+			case 'h':
+			case 'H':
+			case 'e':
+			case 'I':
+			case 'O':
+			case 'P':
+			case 'T':
+			case 'Z':
+				if($_time[0]) {
+					$out .= date($c,$stamp);
+					$skip = false;
+				} else {
+					$skip = true;
+				}
+				break;
+			case 'i':
+				if($_time[1]) {
+					$out .= date($c,$stamp);
+					$skip = false;
+				} else {
+					$skip = true;
+				}
+				break;
+			case 's':
+			case 'u':
+				if($_time[2]) {
+					$out .= date($c,$stamp);
+					$skip = false;
+				} else {
+					$skip = true;
+				}
+				break;
+			case 'c':
+			case 'r':
+				$out .= date($c,$stamp);
+				$skip = false;
+				break;
+			case ' ':
+				$out .= ' ';
+				break;
+			default:
+				if($skip == false) $out .= $c;
+				break;
+		}
+	}
+	return trim($out);
+}
 ?>

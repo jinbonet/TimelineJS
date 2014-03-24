@@ -10,6 +10,7 @@ if(!$skinname) $skinname = "default";
 $taogi_ER = new Taogi_ElementResolution();
 
 if(!$order) $order = "asc";
+$lang = new TaogiLanguage(dirname(__FILE__),$config['lang'],$skinname);
 switch($source_type) {
 	case 'googlespreadsheet':
 		$data = $getSource->getSource($source);
@@ -39,8 +40,6 @@ switch($source_type) {
 		}
 		break;
 }
-
-$lang = new TaogiLanguage(dirname(__FILE__),$config['lang'],$skinname);
 
 if($datalist) {
 	$header .= "\t\t<meta name=\"viewport\" content=\"user-scalable=no,width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0\" />";

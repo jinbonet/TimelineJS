@@ -6779,7 +6779,7 @@ function onYouTubePlayerAPIReady() {
 			var _date = {};
 			for(i=0; i<this.items.length; i++) {
 				if(this.items[i].isCover == true) continue;
-				var pdate = this.items[i].item.find('.pubdate').text();
+				var pdate = this.items[i].item.find('.pubdate').attr('datetime');
 				if(pdate) {
 					_date.startdate = taogiVMM.Date.parse(pdate);
 					_date.full_startdate		= _date.startdate.getTime();
@@ -6787,7 +6787,8 @@ function onYouTubePlayerAPIReady() {
 				}
 			}
 			for(i=this.items.length-1; i>=0; i--) {
-				var pdate = this.items[i].item.find('.pubdate').text();
+				if(this.items[i].isCover == true) continue;
+				var pdate = this.items[i].item.find('.pubdate').attr('datetime');
 				if(pdate) {
 					_date.enddate = taogiVMM.Date.parse(pdate);
 					_date.full_enddate			= _date.enddate.getTime();
@@ -6819,13 +6820,14 @@ function onYouTubePlayerAPIReady() {
 			var _l_class = 0;
 			for(i=0; i<this.items.length; i++) {
 				if(this.items[i].isCover == true) continue;
-				var _pub_date = this.items[i].item.find('.pubdate').text();
+				var _pub_date = this.items[i].item.find('.pubdate').attr('datetime');
+				var _lang_pub_date = this.items[i].item.find('.pubdate').text();
 				_date.curdate = taogiVMM.Date.parse(_pub_date);
 				_date.full_curdate = _date.curdate.getTime();
 				cur_pos = parseInt((_date.full_curdate - _date.full_startdate) / _date.full_period * this.slidebar_width);
 				if(cur_pos <= pre_pos) cur_pos = pre_pos + 1;
 				if(!reBuild) {
-					var item_index = jQuery('<li rel="'+i+'" attr-pubdate="'+_pub_date+'" attr-headline="'+this.items[i].item.find('h2.title').text()+'" class="taogi-scrollbar-node"><a href="javascript://"><span>'+this.items[i].item.find('h2.title').text()+'</span></a></li>');
+					var item_index = jQuery('<li rel="'+i+'" attr-pubdate="'+_lang_pub_date+'" attr-headline="'+this.items[i].item.find('h2.title').text()+'" class="taogi-scrollbar-node"><a href="javascript://"><span>'+this.items[i].item.find('h2.title').text()+'</span></a></li>');
 				} else {
 					var item_index = jQuery('li[rel="'+i+'"]');
 				}

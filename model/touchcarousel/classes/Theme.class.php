@@ -102,6 +102,16 @@ class Taogi_Theme {
 		return $attr;
 	}
 
+	function time($item,$startEnd='startDate',$class='',$attr='') {
+		global $lang;
+		if($startEnd == 'endDate') {
+			$html = '<time pubdate datetime="'.JNTimeLine_prettyTime($item['endDate']).'" title="'.JNTimeLine_formatTime($item['endDate'],$lang->_t('time_format')).'" class="pubdate'.($class ? ' '.$class : '').'"'.($attr ? ' '.$attr : '').'>'.JNTimeLine_formatTime($item['endDate'],$lang->_t('time_format')).'</time>';
+		} else if($startEnd == 'startDate') {
+			$html = '<time pubdate datetime="'.JNTimeLine_prettyTime($item['startDate']).'" title="'.JNTimeLine_formatTime($item['startDate'],$lang->_t('time_format')).'" class="pubdate'.($class ? ' '.$class : '').'"'.($attr ? ' '.$attr : '').'>'.JNTimeLine_formatTime($item['startDate'],$lang->_t('time_format')).'</time>';
+		}
+		return $html;
+	}
+
 	function figure($item,$class='',$attr='') {
 		$html = '<figure class="figure'.($class ? ' '.$class : '').'" '.$this->attr($item).($attr ? ' '.$attr : '').'></figure>';
 		return $html;
