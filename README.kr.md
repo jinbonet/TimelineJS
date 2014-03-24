@@ -122,6 +122,8 @@ http://yourdomain.com/taogi-timeline/?src=yourfile.json
 * [nis-surveillance.json](samples/nis-surveillance.json)
 * [paris-commune.json](samples/paris-commune.json)
 
+...
+
 3. 지원하는 미디어 형식
 =======================
 
