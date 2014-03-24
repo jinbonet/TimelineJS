@@ -116,11 +116,13 @@ http://yourdomain.com/taogi-timeline/?src=yourfile.json
 
 따오기 타임라인에서 사용하는 JSON 파일은 TimelineJS에서 사용하는 JSON 파일 형식에 추가정보와 각 슬라이드별 갤러리 항목을 추가한 것입니다. 그러므로 TimelineJS 형식의 JSON 파일을 사용할 경우에는 추가 기능이 적용되지 않습니다. 다음 JSON 예제들을 참고하세요.
 
-* [taogi-data-format-sample.json](samples/taogi-data-format-sample.json) -- 주석을 포함하고 있으므로 정상동작하지 않습니다.
+* [taogi-data-format-sample.json](samples/taogi-data-format-sample.json)[^taogi-data-format-sample]
 * [taogi-media-gallery-demo.json](samples/taogi-media-gallery-demo.json)
 * [jinbonet-2013.json](samples/jinbonet-2013.json)
 * [nis-surveillance.json](samples/nis-surveillance.json)
 * [paris-commune.json](samples/paris-commune.json)
+
+[^taogi-data-format-sample]: 주석을 포함하고 있으므로 정상동작하지 않습니다.
 
 3. 지원하는 미디어 형식
 =======================
