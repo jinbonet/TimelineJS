@@ -122,8 +122,6 @@ http://yourdomain.com/taogi-timeline/?src=yourfile.json
 * [nis-surveillance.json](samples/nis-surveillance.json)
 * [paris-commune.json](samples/paris-commune.json)
 
-[^taogi-data-format-sample]: 주석을 포함하고 있으므로 정상동작하지 않습니다.
-
 3. 지원하는 미디어 형식
 =======================
 
@@ -162,3 +160,5 @@ http://yourdomain.com/taogi-timeline/?src=yourfile.json
 
 [license-mpl]: http://mozilla.org/MPL/2.0/
 [license-mit]: http://opensource.org/licenses/MIT
+
+[^taogi-data-format-sample]: 주석을 포함하고 있으므로 정상동작하지 않습니다.
