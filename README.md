@@ -15,4 +15,4 @@ Version History
 License
 -------
 
-This package is following MPL 2.0 and 
+The original package files are following the MPL 2.0 license and each external library is following it's own license. see **README.en.md - Instructions - Requirements**.
