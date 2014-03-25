@@ -1,4 +1,4 @@
-cache/*
+cache/
 !cache/index.html
 *.DS_Store
 .DS_Store*
