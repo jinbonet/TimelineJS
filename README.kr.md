@@ -12,6 +12,13 @@
   * 스킨 선택 기능
   * 반응형 레이아웃이 적용된 기본 스킨
 
+미리보기
+
+* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/taogi-media-gallery-demo.json>
+* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/jinbonet-2013.json>
+* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/nis-surveillance.json>
+* <http://hwangkm.jinbo.net/taogi-timeline/?src=http://hwangkm.jinbo.net/taogi-timeline/samples/paris-commune.json>
+
 목차
 ----------------------
 
@@ -39,27 +46,28 @@
 
 | 라이브러리                                        | 라이선스              | 디렉토리                                          |
 |---------------------------------------------------|-----------------------|---------------------------------------------------|
-| [TimelineJS][repository-timelinejs]               | [MPL][license-mpl]    | `model/timelineJS/`                               |
-| [jQuery][repository-jquery]                       | [MIT][license-mit]    | `resources/script/jquery-1.11.0.min.js`           |
-| [MediaElement.js][repository-mediaelement]        | [MIT][license-mit]    | `resources/mediaelement/`                         |
-| [PDFObject][repository-pdfobject]                 | [MIT][license-mit]    | `resources/pdfobject/`                            |
-| [PHP Proxy][repository-php-proxy]                 | [MIT][license-mit]    | `library/php-proxy/`                              |
-| [Twitteroauth][repository-twitteroauth]           | [?]                   | `library/twitteroauth/`                           |
-| [Bootstrap][repository-bootstrap]                 | [MIT][license-mit]    | `model/touchcarousel/fonts/glyphicons-halflings*` |
-| [Foundation Icons][repository-foundation-icons]   | [MIT][license-mit]    | `model/touchcarousel/fonts/foundation-icons*`     |
+| [TimelineJS][repository-timelinejs]               | [MPL][license-mpl]    | model/timelineJS/                                 |
+| [jQuery][repository-jquery]                       | [MIT][license-mit]    | resources/script/jquery-1.11.0.min.js             |
+| [MediaElement.js][repository-mediaelement]        | [MIT][license-mit]    | resources/mediaelement/                           |
+| [PDFObject][repository-pdfobject]                 | [MIT][license-mit]    | resources/pdfobject/                              |
+| [PHP Proxy][repository-php-proxy]                 | [MIT][license-mit]    | library/php-proxy/                                |
+| [Twitteroauth][repository-twitteroauth]           | [?]                   | library/twitteroauth/                             |
+| [Bootstrap][repository-bootstrap]                 | [MIT][license-mit]    | model/touchcarousel/fonts/glyphicons-halflings*   |
+| [Foundation Icons][repository-foundation-icons]   | [MIT][license-mit]    | model/touchcarousel/fonts/foundation-icons*       |
 
 2. 업로드
 ---------
 
 사용하고자 하는 웹서비스 디렉토리에 업로드한 뒤 권한을 확인합니다. 일반적인 환경이라면 `cache` 폴더의 `other` 쓰기 권한을 부여하는 것으로 충분합니다.
 
-| 디렉토리  | 권한  | 비고                              |
-|-----------|-------|-----------------------------------|
-| `cache`   | `707` | 타임라인 JSON 파일을 저장합니다.  |
-
 ~~~~
 chmod 707 cache
 ~~~~
+
+| 디렉토리  | 권한  | 비고                                  |
+|-----------|-------|---------------------------------------|
+| cache     | 707   | 타임라인 `JSON` 파일을 저장합니다.    |
+
 
 3. 설정
 -------
@@ -68,14 +76,14 @@ chmod 707 cache
 
 | 변수                                  | 기본값            | 선택지                                            |
 |---------------------------------------|-------------------|---------------------------------------------------|
-| `$timelineConfig['default_model']`    | `touchcarousel`   | **4. 내용 작성** 항목의 `model` 매개변수 참조     |
-| `$timelineConfig['cache']`            | `60`              |                                                   |
-| `$timelineConfig['cache_path']`       | `./cache`         |                                                   |
-| `$timelineConfig['use_sns']`          | `true`            | `true, false`                                     |
-| `$timelineConfig['fb_app']`           | 없음              | 페이스북 앱 아이디                                |
-| `$timelineConfig['theme']`            | `defaults`        | **4. 내용 작성** 항목의 `skinname` 매개변수 참조  |
-| `$timelineConfig['taogiauth']`        | 없음              | 임의의 문자열                                     |
-| `$timelineConfig['lang']`             | `ko_KR`           | `ko_KR, en_US`                                    |
+| $timelineConfig['default_model']      | touchcarousel     | **4. 내용 작성** 항목의 `model` 매개변수 참조     |
+| $timelineConfig['cache']              | 60                |                                                   |
+| $timelineConfig['cache_path']         | ./cache           |                                                   |
+| $timelineConfig['use_sns']            | true              | true, false                                       |
+| $timelineConfig['fb_app']             | 없음              | 페이스북 앱 아이디                                |
+| $timelineConfig['theme']              | defaults          | **4. 내용 작성** 항목의 `skinname` 매개변수 참조  |
+| $timelineConfig['taogiauth']          | 없음              | 임의의 문자열                                     |
+| $timelineConfig['lang']               | ko_KR             | ko_KR, en_US                                      |
 
 4. 내용 작성
 ------------
@@ -84,16 +92,16 @@ chmod 707 cache
 2.  따오기 타임라인이 설치된 웹서비스 주소를 `src` 매개변수로 `json` 파일 경로를 지정해서 호출합니다.
 
 ~~~~
-http://yourdomain.com/taogi-timeline/?src=yourfile.json&model=touchcarousel
+http://yourdomain.com/taogi-timeline/?src=yourfile.json
 ~~~~
 
 `src` 매개변수와 같이 주소 형식으로 지정할 수 있는 설정값은 다음과 같습니다.
 
 | 매개변수      | 값                    | 기본값            | 선택지                        |
 |---------------|-----------------------|-------------------|-------------------------------|
-| `src`         | `json` 파일의 `URI`   | 없음(필수)        |                               |
-| `model`       | 사용할 출력 모델      | `touchcarousel`   | `touchcarousel, timelineJS`   |
-| `skinname`    | 사용할 스킨 이름      | `default`         |                               |
+| src           | `json` 파일의 `URI`   | 없음(필수)        |                               |
+| model         | 사용할 출력 모델      | touchcarousel     | touchcarousel, timelineJS     |
+| skinname      | 사용할 스킨 이름      | default           |                               |
 
 2. 데이터 형식
 ==============
@@ -106,128 +114,27 @@ http://yourdomain.com/taogi-timeline/?src=yourfile.json&model=touchcarousel
 2. JSON 파일
 ------------
 
-따오기 타임라인에서 사용하는 JSON 파일은 TimelineJS에서 사용하는 JSON 파일 형식에 추가정보와 각 슬라이드별 갤러리 항목을 추가한 것입니다. 그러므로 TimelineJS 형식의 JSON 파일을 사용할 경우에는 추가 기능이 적용되지 않습니다. 다음 JSON 예제를 참고하세요.
+따오기 타임라인에서 사용하는 JSON 파일은 TimelineJS에서 사용하는 JSON 파일 형식에 추가정보와 각 슬라이드별 갤러리 항목을 추가한 것입니다. 다음 JSON 예제들을 참고하세요.
 
-~~~~
-{ 
-    "timeline":
-    {
-        "headline":"타임라인 제목",
-        "type":"default",
-        "startDate":"타임라인 시작 날짜",
-        "text":"타임라인 설명",
-        "asset": // 타임라인 표지 설정.
-        {
-            "media":"타임라인 표지 그림 소스",
-            "credit":"타임라인 표지 그림의 저자 정보",
-            "caption":"타임라인 표지 그림 설명"
-        },
-        "extra": // 타임라인 추가정보.
-        {
-            "template":"사용할 템플릿 이름", // touchcarousel(기본값), timelinejs, etc... -- 대소문자를 구분하지 않습니다.
-            "author":"타임라인 저자 정보",
-            "theme": // 모양새 설정, timelinejs에는 적용되지 않습니다.
-            {
-                "background":"문서 배경색",
-                "canvas":"타임라인 영역 배경색",
-                "cover": // 표지 설정
-                {
-                    "background":"표지 배경색",
-                    "subject": // 표지 제목 모양새.
-                    {
-                        "font-family":"표지 제목 글꼴 이름",
-                        "color":"표지 제목 글자 색상"
-                    },
-                    "summary": // 표지 본문 모양새.
-                    {
-                        "font-family":"표지 본문 글꼴 이름",
-                        "color":"표지 본문 글자 색상"
-                    }
-                },
-                "post": // 슬라이드 설정.
-                {
-                    "background":"슬라이드 배경색",
-                    "subject": // 슬라이드 제목 모양새.
-                    {
-                        "font-family":"슬라이드 제목 글꼴 이름",
-                        "color":"슬라이드 제목 글자 색상"
-                    },
-                    "summary": // 슬라이드 본문 모양새.
-                    {
-                        "font-family":"슬라이드 본문 글꼴 이름",
-                        "color":"슬라이드 본문 글자 색상"
-                    }
-                }
-            }
-        },
-        "date": // 날짜별 슬라이드 데이터
-        [
-            {
-                "startDate":"슬라이드(1) 시작 날짜",
-                "headline":"슬라이드(1) 제목",
-                "text":"슬라이드(1) 설명",
-                "asset": // 슬라이드 피쳐
-                {
-                    "media":"슬라이드(1)의 미디어(1) 소스",
-                    "thumbnail":"슬라이드(1)의 미디어(1) 미리보기 그림 주소",
-                    "credit":"슬라이드(1)의 미디어(1) 저자 정보",
-                    "caption":"슬라이드(1)의 미디어(1) 설명"
-                },
-                "media": // 갤러리
-                [
-                    {
-                        "media":"슬라이드(1)의 미디어(1) 소스",
-                        "thumbnail":"슬라이드(1)의 미디어(1) 미리보기 그림 주소",
-                        "credit":"슬라이드(1)의 미디어(1) 저자 정보",
-                        "caption":"슬라이드(1)의 미디어(1) 설명"
-                    },
-                    {
-                        "media":"슬라이드(1)의 미디어(2) 소스",
-                        "thumbnail":"슬라이드(1)의 미디어(2) 미리보기 그림 주소",
-                        "credit":"슬라이드(1)의 미디어(2) 저자 정보",
-                        "caption":"슬라이드(1)의 미디어(2) 설명"
-                    },
-                    {
-                        "media":"슬라이드(1)의 미디어(3) 소스",
-                        "thumbnail":"슬라이드(1)의 미디어(3) 미리보기 그림 주소",
-                        "credit":"슬라이드(1)의 미디어(3) 저자 정보",
-                        "caption":"슬라이드(1)의 미디어(3) 설명"
-                    }
-                ]
-            },
-            {
-                "startDate":"슬라이드(2) 시작 날짜",
-                "headline":"슬라이드(2) 제목",
-                "text":"슬라이드(2) 설명",
-                "asset":
-                {
-                    "media":"슬라이드(2)의 미디어(1) 소스",
-                    "thumbnail":"슬라이드(2)의 미디어(1) 미리보기 그림 주소",
-                    "credit":"슬라이드(2)의 미디어(1) 저자 정보",
-                    "caption":"슬라이드(2)의 미디어(1) 설명"
-                }
-            },
-            {
-                "startDate":"슬라이드(3) 시작 날짜",
-                "headline":"슬라이드(3) 제목",
-                "text":"슬라이드(3) 설명",
-            },
-        ]
-    }
-}
-~~~~
+* [taogi-data-format-sample.json](samples/taogi-data-format-sample.json) -- 주석을 포함하므로 정상동작하지 않습니다.
+* [taogi-media-gallery-demo.json](samples/taogi-media-gallery-demo.json)
+* [jinbonet-2013.json](samples/jinbonet-2013.json)
+* [nis-surveillance.json](samples/nis-surveillance.json)
+* [paris-commune.json](samples/paris-commune.json)
+
+또는, [TimelineJS의 예제들](//github.com/NUKnightLab/TimelineJS/tree/master/examples)을 확인할 수 있습니다. TimelineJS 형식의 JSON 파일을 사용할 경우에는 추가 기능이 적용되지 않습니다.
 
 3. 지원하는 미디어 형식
 =======================
 
 `media` 필드에는 TimelineJS와 마찬가지로 몇 가지 형식의 미디어 소스를 입력할 수 있습니다. 기본적으로는 웹페이지 주소를 입력받아 [Facebook Open Graph Protocol][resource-og], [Twitter Cards Protocol][resource-twittercards], API 등을 이용해서 마크업을 출력하고, 적당한 마크업을 얻어낼 수 없으면 [Page Peeker][resource-pagepeeker]를 이용해서 해당 페이지의 캡쳐 이미지를 사용합니다. 파일 주소, 임베드 코드 등을 직접 입력할 수도 있습니다. 유튜브처럼 웹페이지 주소를 통한 API 호출 기능, Open Graph, 임베드 코드를 모두 제공하는 경우에는 원하는 입력방식을 선택할 수 있습니다.
 
-| 형식          | 처리                                                                                              |
-|---------------|---------------------------------------------------------------------------------------------------|
-| 웹페이지 주소 | `http:`로 시작하는 주소를 입력할 경우 웹페이지 주소로 처리합니다.                                 |
-| 파일 주소     | `http:`로 시작하는 주소에 확장자가 포함된 경우에는 파일 주소로 처리합니다.                        |
-| 임베드 코드   | `<object>`, `<embed>`, `<iframe>` 태그를 임베드 코드로 처리합니다.                                |
-| 파일 내용     | 위 항목에 해당하지 않는 경우에는 파일 내용을 직접 입력한 것으로 처리합니다. (예를 들어, 인용문)   |
+| 형식          | 처리                                                                          |
+|---------------|-------------------------------------------------------------------------------|
+| 웹페이지 주소 | `http:`로 시작하는 주소를 입력할 경우 웹페이지 주소로 처리합니다.             |
+| 파일 주소     | `http:`로 시작하는 주소에 확장자가 포함된 경우에는 파일 주소로 처리합니다.    |
+| 임베드 코드   | `<object>`, `<embed>`, `<iframe>` 태그를 임베드 코드로 처리합니다.            |
+| 인용문        | 위 항목에 해당하지 않는 경우에는 입력된 문자열을 바로 출력합니다.             |
 
 4. 라이선스
 ===========
