@@ -1796,6 +1796,9 @@ li.touchcarousel-item.flipper.vertical .item-flipper .section.media {
 		height: 90%;
 		margin-top: 5%;
 	}
+	li.touchcarousel-item .section.article .title-description {
+		padding-bottom: 20px;
+	}
 	li.touchcarousel-item .section.media .gallery-wrap {
 		height: 100%; /* regarding media-nav, by javascript */
 	}
