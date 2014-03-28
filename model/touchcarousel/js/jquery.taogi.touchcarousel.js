@@ -5025,7 +5025,7 @@ function onYouTubePlayerAPIReady() {
 									*/
 		fallbackToMouseEvents: true,	//Boolean, if true mouse events are used when run on a non touch device, false will stop swipes being triggered by mouse events on non tocuh devices
 		
-		excludedElements:"button, input, select, textarea, a, .noSwipe" //a jquery selector that specifies child elements that do NOT trigger swipes. By default, this is one select that removes all form, input select, button and anchor elements.
+		excludedElements:"button, input, select, textarea, a"+(taogiVMM.Browser.device != 'desktop' ? ":not('.snapshot')" : '')+", .noSwipe" //a jquery selector that specifies child elements that do NOT trigger swipes. By default, this is one select that removes all form, input select, button and anchor elements.
 	};
 
 	/**
