@@ -6492,7 +6492,7 @@ function onYouTubePlayerAPIReady() {
 
 			if(direction == 'up' || direction == 'down') {
 //				if(this._isSliderSwipping != true && (this._isPageScrollSwipping != true || (this._isPageScrollSwipping == true && this._startYPos == this._scrollItem.curScrollY))) {
-				if(this._isSliderSwipping != true && (this._isPageScrollSwipping != true || this._pageScroll == 0)) {
+				if(this._isSliderSwipping != true && this._isPageScrollSwipping != true && this._pageScroll == 0) {
 					var obj = jQuery(event.target).closest('.touchcarousel-item');
 					if(!obj.hasClass('cover-title') && !obj.hasClass('noMedia')) {
 						this.switchGallery(obj,this.settings.fingerSwitchGalleryMethod,direction);
