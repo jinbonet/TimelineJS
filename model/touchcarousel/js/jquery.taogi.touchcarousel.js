@@ -5962,6 +5962,7 @@ function onYouTubePlayerAPIReady() {
 		this._onSwipping;
 		this._startPos=0;
 		this._startYPos=0;
+		this._startIndex=0;
 		this._scrollItem;
 
 		this._totalItemWidth = 0;
@@ -6457,6 +6458,7 @@ function onYouTubePlayerAPIReady() {
 				}
 			}
 			this._startPos = this._getXPosition();
+			this._startIndex = this.active_indexer;
 			this._setSwippingCursor();
 			this._isSwipping = true;
 		},
@@ -6577,8 +6579,10 @@ function onYouTubePlayerAPIReady() {
 					}
 				} else {
 					if(v >= 0.45) {
-						if(direction == 'left') this.nextPage((this.settings.transitionSpeed / 2));
-						else this.prevPage((this.settings.transitionSpeed / 2));
+						if(direction == 'left') this.nextPage((this.settings.transitionSpeed / 2),true);
+						else this.prevPage((this.settings.transitionSpeed / 2),true);
+//						if(direction == 'left') this.moveTo((this._startIndex+1),(this.settings.transitionSpeed / 2),'',true);
+//						else this.moveTo((this._startIndex-1),(this.settings.transitionSpeed / 2),'',true);
 					} else {
 						this.snapPage();
 					}
@@ -6793,10 +6797,11 @@ function onYouTubePlayerAPIReady() {
 		/*
 		 * Function for move to prev Item
 		 */
-		prevPage:function(duration) {
+		prevPage:function(duration,snap_opt) {
 			if(this.active_indexer) var new_index = this.active_indexer - 1;
 			else var new_index = 0;
 			if(new_index <= 0) new_index = 0;
+			if(snap_opt == true && this._startIndex > new_index+1) new_index++;
 
 			this.moveTo(new_index,(parseInt(duration) > 0 ? parseInt(duration) : 0),'',true);
 		},
@@ -6804,10 +6809,11 @@ function onYouTubePlayerAPIReady() {
 		/*
 		 * Function for move to next Item
 		 */
-		nextPage:function(duration) {
+		nextPage:function(duration,snap_opt) {
 			if(this.active_indexer && this.curr_indexer > 0) var new_index = this.active_indexer + 1;
 			else var new_index = 1;
 			if(new_index > (this.items.length - 1)) new_index = this.items.length - 1;
+			if(snap_opt == true && this._startIndex < new_index-1) new_index--;
 
 			this.moveTo(new_index,(parseInt(duration) > 0 ? parseInt(duration) : 0),'',true);
 		},
