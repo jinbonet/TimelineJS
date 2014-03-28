@@ -1813,8 +1813,11 @@ li.touchcarousel-item.flipper.vertical .item-flipper .section.media {
 @media all and ( max-width: 600px ) and ( max-height: 570px) {
 	li.touchcarousel-item .section.article .wrap {
 		width: 95%;
-		height: 95%;
+		height: auto;
 		margin-top: 2.5%;
+	}
+	li.touchcarousel-item.cover .section.article .wrap {
+		height: 95%;
 	}
 }
 .figure.overflow {
