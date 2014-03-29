@@ -5961,6 +5961,7 @@ function onYouTubePlayerAPIReady() {
 
 		this._onSwipping;
 		this._startPos=0;
+		this._moveToX=0;
 		this._startYPos=0;
 		this._startIndex=0;
 		this._scrollItem;
@@ -6035,8 +6036,9 @@ function onYouTubePlayerAPIReady() {
 
 		var uid;
 		var thumb;
-		this.min_slide = Math.round(jQuery(window).width()/4)*(-1)
-		this.max_slide = Math.round(jQuery(window).width()*1.25);
+		this.min_slide = Math.round(this.TLFrame.width()/4)*(-1)
+		this.max_slide = Math.round(this.TLFrame.width()*1.25);
+		this.min_width = 0;
 		this.snapToItem = false;
 		this.totalItemCnt=0;
 		this._pageScroll = 0;
@@ -6044,6 +6046,7 @@ function onYouTubePlayerAPIReady() {
 		Items.each(function(index) {
 			var item = jQuery(this);
 			var iwidth = item.outerWidth(true);
+			if(!self.min_width || self.min_width > iwidth) self.min_width = iwidth;
 			item.data('width',iwidth);
 			if(iwidth > Math.abs(self.min_slide)) self.min_slide = iwidth * (-1.25);
 			if((currPosX + iwidth) < self.min_slide) {
@@ -6172,7 +6175,7 @@ function onYouTubePlayerAPIReady() {
 		});
 		this._maxXPos = this._totalItemWidth = currPosX;
 		this.sliderMax = Math.max(100,Math.round(this._totalItemWidth / 100));
-		var win_width = jQuery(document).width();
+		var win_width = this.TLFrame.width();
 		if(currPosX > win_width) {
 			this.TLRoot.width(win_width);
 			this._TLContainer.css({'width':win_width+"px"});
@@ -6254,7 +6257,6 @@ function onYouTubePlayerAPIReady() {
 			var _hash = window.location.hash;
 			self.moveToHash(_hash.substring(1));
 		}
-		this.scrollMode = 0;
 
 		self._setSwipeCursor();
 
@@ -6267,7 +6269,7 @@ function onYouTubePlayerAPIReady() {
 		 * Functions for TouchCarousel Timeline Container Layout
 		 */
 		_checkBrowserResolutionScale:function() {
-			if(jQuery(window).width() > jQuery(window).height()) return true;
+			if(this.TLFrame.width() > this.TLFrame.height()) return true;
 			else return false;
 		},
 
@@ -6282,8 +6284,8 @@ function onYouTubePlayerAPIReady() {
 
 		/* touchcarousel container resizing function where window resize event call */
 		updateTLSize:function(reBuild) {
-			var win_width = jQuery(document).width();
-			var win_height = jQuery(document).height();
+			var win_width = this.TLFrame.width();
+			var win_height = this.TLFrame.height();
 
 			var rBuild = 0;
 			var curPos = 0;
@@ -6299,13 +6301,14 @@ function onYouTubePlayerAPIReady() {
 				for(i=0; i<this.items.length; i++) {
 					var iwidth = parseInt(this.items[i].item.css('width'));
 					if(iwidth > Math.abs(this.min_slide)) this.min_slide = iwidth * (-1.25);
+					if(!this.min_width || this.min_width > iwidth) this.min_width = iwidth;
 					this.items[i].posX = currPosX;
 					this.items[i].width = iwidth;
 					this.items[i].item.data('width',iwidth);
 					this.items[i].height = this.items[i].item.find('.section.article').innerHeight();
 					this.items[i].wheight = this.items[i].item.find('.section.article .wrap').outerHeight(true);
 					if(this.items[i].wheight > this.items[i].height) {
-						self._pageScroll = 1;
+						this._pageScroll = 1;
 						if(this.items[i].pageScroll == false) {
 							this.items[i].curScrollY = 0;
 						}
@@ -6351,6 +6354,7 @@ function onYouTubePlayerAPIReady() {
 				this._TLWrapper.width(this.tlWidth - _TLmarginLeft - _TLmarginRight);
 			}
 			this.tlcWidth = this._TLWrapper.width();
+			this.maxItem = parseInt(this.tlcWidth / this.min_width) + 2;
 			if(rBuild) {
 				this.snapPage();
 			}
@@ -6474,12 +6478,12 @@ function onYouTubePlayerAPIReady() {
 				if( (this._startYPos + this._scrollItem.wheight) > (this._scrollItem.height + (this.scrollContainerPos && this.scrollContainer.data('show')==1 ? this.scrollContainerPos : 0)) && 
 					(this._scrollItem.curScrollY + this._scrollItem.wheight) > ((this._scrollItem.height + (this.scrollContainerPos && this.scrollContainer.data('show')==1 ? this.scrollContainerPos : 0)) * 0.75) ) {
 					scroll = true;
-					dist = this._scrollItem.curScrollY - (distance/6);
+					dist = this._startYPos - distance;
 				}
 			} else if(direction == 'down' && this._isPageScrollSwipping == true) {
 				if( this._startYPos < 0 && this._scrollItem.curScrollY < ((this._scrollItem.height + (this.scrollContainerPos && this.scrollContainer.data('show')==1 ? this.scrollContainerPos : 0)) / 4) ) {
 					scroll = true;
-					dist = this._scrollItem.curScrollY + (distance/6);
+					dist = this._startYPos + distance;
 				}
 			}
 			if(scroll == true) this.setYScrollPosition(this._scrollItem,dist,0,'linear');
@@ -6491,7 +6495,6 @@ function onYouTubePlayerAPIReady() {
 			this._setSwipeCursor();
 
 			if(direction == 'up' || direction == 'down') {
-//				if(this._isSliderSwipping != true && (this._isPageScrollSwipping != true || (this._isPageScrollSwipping == true && this._startYPos == this._scrollItem.curScrollY))) {
 				if(this._isSliderSwipping != true && this._isPageScrollSwipping != true && this._pageScroll == 0) {
 					var obj = jQuery(event.target).closest('.touchcarousel-item');
 					if(!obj.hasClass('cover-title') && !obj.hasClass('noMedia')) {
@@ -6545,8 +6548,7 @@ function onYouTubePlayerAPIReady() {
 					var lastendPos = this.lastendPos;
 					var maxPos = this._totalItemWidth-this.tlcWidth;
 
-//					var easing = (this.hasTouch || this._useWebkitTransition) ? 'ease-out' : $.cssEase['easeOutCubic'];
-					var easing = 'easeOutCubic';
+					var easing = (this.hasTouch || this._useWebkitTransition) ? 'easeOutCubic' : $.cssEase['easeOutCubic'];
 
 					if(lastendPos + S > 0) {
 						if(lastendPos > 0) {
@@ -6581,8 +6583,6 @@ function onYouTubePlayerAPIReady() {
 					if(v >= 0.45) {
 						if(direction == 'left') this.nextPage((this.settings.transitionSpeed / 2),true);
 						else this.prevPage((this.settings.transitionSpeed / 2),true);
-//						if(direction == 'left') this.moveTo((this._startIndex+1),(this.settings.transitionSpeed / 2),'',true);
-//						else this.moveTo((this._startIndex-1),(this.settings.transitionSpeed / 2),'',true);
 					} else {
 						this.snapPage();
 					}
@@ -6643,12 +6643,17 @@ function onYouTubePlayerAPIReady() {
 				var v = 0;
 			}
 			this._TLContainer.attr('data-XPos',pos);
+			var sI = (this._isAnimating === true ? this.active_indexer : (this._startIndex ? this._startIndex : this.active_indexer));
+			var dis = Math.abs(pos - (this._isAnimating === true ? this.lastendPos : (this._startPosX ? this._startPosX : this._moveToX)))+this.tlcWidth;
+			var icnt = Math.min(parseInt(dis / this.min_width) + 2,this.maxItem)-1;
+			var pI = Math.max(sI-icnt,0);
+			var eI = Math.min(sI+icnt,this.items.length-1);
 			if(v <= 0) {
-				for(var i=0; i<this.items.length; i++) {
+				for(var i=pI; i<=eI; i++) {
 					this._setIPosition(this.items[i].item,(pos + this.items[i].posX),duration,v,'linear');
 				}
 			} else if(v > 0) {
-				for(var i=this.items.length-1; i >= 0; i--) {
+				for(var i=eI; i>=pI; i--) {
 					this._setIPosition(this.items[i].item,(pos + this.items[i].posX),duration,v,'linear');
 				}
 			}
@@ -6701,14 +6706,14 @@ function onYouTubePlayerAPIReady() {
 		moveTo:function(id,duration,easing,animateSkip) {
 			var item = this.items[id];
 			if(item) {
-				var moveToX = this._getXPosByItem(id);
+				this._moveToX = this._getXPosByItem(id);
 				this.curr_indexer = id;
-				if(typeof(moveToX) != 'undefined') {
+				if(typeof(this._moveToX) != 'undefined') {
 					if(this.hasTouch) easing = "easeOutCubic";
 					if(animateSkip == true) {
-						this._setXPosition(moveToX,((parseInt(duration) > 0) ? duration : this.settings.transitionSpeed),(easing ? easing : "easeOutCubic"));
+						this._setXPosition(this._moveToX,((parseInt(duration) > 0) ? duration : this.settings.transitionSpeed),(easing ? easing : "easeOutCubic"));
 					} else {
-						this.animateTo(moveToX,((parseInt(duration) > 0) ? duration : this.settings.transitionSpeed),(easing ? easing : "easeOutCubic"));
+						this.animateTo(this._moveToX,((parseInt(duration) > 0) ? duration : this.settings.transitionSpeed),(easing ? easing : "easeOutCubic"));
 					}
 				}
 			}
@@ -6745,7 +6750,6 @@ function onYouTubePlayerAPIReady() {
 				self._enableArrow();
 				self.lastendPos = self._getXPosition();
 				self._isAnimating = false;
-				if(self.scrollMode) self.scrollMode = 0;
 			}
 
 			var cur = performance.now();
@@ -6932,7 +6936,6 @@ function onYouTubePlayerAPIReady() {
 						e.preventDefault();
 						var indexer = jQuery(this).parent().attr('rel');
 						self._setIndicate(indexer);
-						self.scrollMode = 1;
 						self.moveTo(indexer);
 					});
 					this.items[i].indexer = item_index;
