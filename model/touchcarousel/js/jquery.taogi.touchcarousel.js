@@ -6439,6 +6439,7 @@ function onYouTubePlayerAPIReady() {
 		_stopSwipping:function(event) {
 			if(this._onSwipping)
 				this._onSwipping.stop();
+			this.lastendPos = this._getXPosition();
 			this._isSwipping = false;
 			this._isPageScrollSwipping = false;
 		},
@@ -6644,8 +6645,8 @@ function onYouTubePlayerAPIReady() {
 			}
 			this._TLContainer.attr('data-XPos',pos);
 			var sI = (this._isAnimating === true ? this.active_indexer : (this._startIndex ? this._startIndex : this.active_indexer));
-			var dis = Math.abs(pos - (this._isAnimating === true ? this.lastendPos : (this._startPosX ? this._startPosX : this._moveToX)))+this.tlcWidth;
-			var icnt = Math.min(parseInt(dis / this.min_width) + 2,this.maxItem)-1;
+			var dis = Math.abs(pos - (this._isAnimating === true ? this.lastendPos : (this._startPos ? this._startPos : this._moveToX)))+this.tlcWidth;
+			var icnt = Math.max(parseInt(dis / this.min_width) + 2,this.maxItem) - (this.snapToItem === true ? 1 : 0);
 			var pI = Math.max(sI-icnt,0);
 			var eI = Math.min(sI+icnt,this.items.length-1);
 			if(v <= 0) {
@@ -7005,11 +7006,15 @@ function onYouTubePlayerAPIReady() {
 		_onSliderStart:function(event) {
 			if(this._isIndicateSwipping == true) return;
 			this._stopSwipping();
+			this._startPos = this._getXPosition();
+			this._startIndex = this.getClosestIndexer(this._startPos);
 			this._startSPos = (event.pageX ? event.pageX : event.touches[0].pageX) - this.slidebar_division_left;
-			this._startPos = this._getXPosByProcessBar(event);
+			var startPos = this._getXPosByProcessBar(event);
 			this._isSliderSwipping = true;
 			this._setIndicatePos(this._startSPos,0);
-			this._setXPosition(this._startPos,0);
+			this._setXPosition(startPos,0);
+			this._startPos = startPos;
+			this._startIndex = this.getClosestIndexer(this._startSPos);
 			this._isSwipping = true;
 		},
 
