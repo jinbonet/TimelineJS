@@ -2583,6 +2583,14 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 				media.type = "twitter-ready";
 				media.id = d;
 				success = true;			
+			} else if (d.match('iframe') || d.match('object') || d.match('embed')) {
+				media.type = "iframe";
+				group = d.match(/src=['"]([^'"]+)['"]/i);
+				if (group) {
+					media.id = group[1];
+				}
+				media.url = d;
+				success = Boolean(media.id);
 			} else if (d.match('(www.)?youtube\.com|youtu\.be')) {
 				if (d.match('v=')) {
 					media.id	= taogiVMM.Util.getUrlVars(d)["v"];
@@ -2636,6 +2644,29 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 			} else if (d.match("maps.google") && !d.match("staticmap")) {
 				media.type = "google-map";
 				media.id = d.split(/src=['|"][^'|"]*?['|"]/gi);
+				success = true;
+			} else if (d.match(/google\.co[^\/]+\/maps/i) && !d.match("staticmap")) {
+				media.type = "google-map";
+				trace("new google-map");
+				media.id = d.split(/src=['|"][^'|"]*?['|"]/gi);
+				if(media.id[0].match("/maps/place/")) {
+					var _url = media.id[0].split(/\/maps\//);
+					var url = _url[0]+"/maps/?";
+					var _param = _url[1].split('/');
+					var c=0;
+					for(var i=0; i< _param.length; i++) {
+						if(_param[i] == 'place') {
+							url += (c++ ? "&" : "")+"q="+_param[i+1];
+							i++;
+						} else {
+							var ll = _param[i].match(/@([0-9\-\.]+),([0-9\-\.]+),([0-9]+)z$/);
+							if(ll && ll.length == 3) {
+								url += (c++ ? "&" : "")+"ll="+ll[0]+","+ll[1]+"&z="+ll[2];
+							}
+						}
+					}
+					media.id = url;
+				}
 				success = true;
 			} else if (d.match("plus.google")) {
 				media.type = "googleplus";
@@ -2709,14 +2740,6 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 				media.type = "quote";
 				media.id = d;
 				success = true;
-			} else if (d.match('iframe') || d.match('object') || d.match('embed')) {
-				media.type = "iframe";
-				group = d.match(/src=['"]([^'"]+)['"]/i);
-				if (group) {
-					media.id = group[1];
-				}
-				media.url = d;
-				success = Boolean(media.id);
 			} else {
 				trace("unknown media: "+d);
 				media.type = "unknown";
