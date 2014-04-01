@@ -987,9 +987,9 @@ li.touchcarousel-item .item-container .section .wrap:after {
 .figure.website img,
 .figure.attachment img {
 	display: block;
-	width: 100%;
+	width: auto;
 	height: auto;
-	max-width: 400px;
+	max-height: 200px;
 }
 .figure.website .blockquote,
 .figure.attachment .blockquote {
