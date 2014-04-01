@@ -4,7 +4,7 @@
 		"headline":"프랑스 내전 - 파리 꼬뮌",
 		"type":"source type: Json",
 		"startDate":"1870",
-		"text":"파리 꼬뮌 전후 역사 모른 채 마르크스의 [프랑스 내전] 읽기 힘들지 않음? 그래서 만들어봄 ㅇㅇ 이거 읽고 [프랑스 내전] 읽으면 머리에 쏙쏙 들어옵니다 보장<",
+		"text":"파리 꼬뮌 전후 역사 모른 채 마르크스의 [프랑스 내전] 읽기 힘들지 않음? 뭐가 어디 붙어 있는지도 모르겠고. 그래서 만들어봄 ㅇㅇ 이거 읽고 [프랑스 내전] 읽으면 머리에 쏙쏙 들어옵니다 보장< <br /><br />* 책에서 인용한 부분은 따옴표 처리함",
 		"asset": {
 			"media":"",
 			"credit":"뎡야핑(님)",
@@ -130,14 +130,35 @@
 				}
 			},
 			{
-				"startDate":"1871,1,29",
-				"headline":"",
-				"text":"",
+				"startDate":"1871,1,28",
+				"headline":"프랑스 항복",
+				"text":"프랑스군이 항복하며, 파리도 역시 항복했지만, 다 뺏기고 무장 해제당해 무기 양도하고 포로가 된 프랑스 상비군+기동방위군과 달리 파리의 국민방위대는 무기와 캐논포를 소지한 채 승리자들과 휴전만 체결했다.",
 				"asset":
 				{
 					"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/1878_Adam_Fort_Vanves_anagoria.JPG/800px-1878_Adam_Fort_Vanves_anagoria.JPG",
 					"credit":"<a href='https://en.wikipedia.org/wiki/File:1878_Adam_Fort_Vanves_anagoria.JPG'>영문 위키</a>",
 					"caption":"독일군이 파리 외곽 보브 요새에 독일 국기를 걸고 있다. Eugen Adam 그림",
+					"thumbnail":""
+				},
+				"media":
+				[
+					{
+						"media":"http://digital.library.northwestern.edu/siege/images/par00305.jpg",
+						"credit":"<a href='http://digital.library.northwestern.edu/'>The Siege and Commune of Paris</a>",
+						"caption":"이것이 바로 당시 쓰던 캐논포",
+						"thumbnail":""
+					}
+				]
+			},
+			{
+				"startDate":"1871,2,12",
+				"headline":"\"촌놈들의 의회\"가 열림",
+				"text":"[프랑스 내전]에서 마르크스는 보르도에서 열린 의회를 촌놈들의 의회라 부른다. 암튼 개회와 함께 띠에르는 종전을 위한 예비 협정에서 공화국의 거점인 파리를 상대로 전쟁을 개시하는 게 프로이센이 허용하는 유일한 조건이라며 내전을 즉각 승인하라고 종용했대.",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
 					"thumbnail":""
 				}
 			},
@@ -154,9 +175,9 @@
 				}
 			},
 			{
-				"startDate":"1871,2,26",
-				"headline":"베르사이유 조약 체결",
-				"text":"띠에르 개노무시키",
+				"startDate":"1871,3,26",
+				"headline":"꼬뮌 선거",
+				"text":"28일부터 일 시작.",
 				"asset":
 				{
 					"media":"",

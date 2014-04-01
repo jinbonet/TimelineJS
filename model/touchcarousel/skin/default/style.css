@@ -137,6 +137,10 @@ body {
 .cover .section.article h1.title {
 	color: #2F2F2F;
 }
+.cover .section.article p.description {
+	text-align: justify;
+	line-height: 1.6;
+}
 .cover .section.article cite {
 	font-style: normal;
 }
