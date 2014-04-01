@@ -880,8 +880,7 @@ li.touchcarousel-item .item-container .section .wrap:after {
 	float: left;
 	width: auto;
 	height: auto;
-	border-radius: 5px;
-	box-shadow: 5px 5px 5px #000000;
+	box-shadow: 2px 1px 2px #000000;
 }
 .section.media .figure i {
 	display: none;
