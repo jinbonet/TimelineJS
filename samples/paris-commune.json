@@ -1,10 +1,10 @@
 { 
 	"timeline":
 	{
-		"headline":"빠리 꼬뮌 Paris Commune",
+		"headline":"프랑스 내전 - 파리 꼬뮌",
 		"type":"source type: Json",
 		"startDate":"1870",
-		"text":"일단 http://www.marxists.org/history/france/paris-commune/timeline.htm로 구성해 보쟈",
+		"text":"파리 꼬뮌 전후 역사 모른 채 마르크스의 [프랑스 내전] 읽기 힘들지 않음? 그래서 만들어봄 ㅇㅇ 이거 읽고 [프랑스 내전] 읽으면 머리에 쏙쏙 들어옵니다 보장<",
 		"asset": {
 			"media":"",
 			"credit":"뎡야핑(님)",
@@ -14,580 +14,199 @@
         [
 			{
 				"startDate":"1870,1,10",
-				"headline":"진격의 보나파르트",
-				"text":"About 100,000 people demonstrate against Bonaparte's Second Empire after the death of Victor Noir, a republican journalist killed by the Emperor's cousin, Pierre Bonaparte.",
-				"asset":
-                {
-                    "media":"http://taiji0920.jinbo.net/3.gif",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1870,5,8",
 				"headline":"",
-				"text":"A national plebiscite votes confidence in the Empire with about 84% of votes in favour. On the eve of the plebiscite members of the Paris Federation were arrested on a charge of conspiring against Napoleon III. This pretext was further used by the government to launch a campaign of persecution of the members of the International throughout France.",
+				"text":"",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			},
 			{
 				"startDate":"1870,7,19",
-				"headline":"",
-				"text":"After a diplomatic struggle over the Prussian attempt for the Spanish throne, Louis Bonaparte declares war on Prussia.",
+				"headline":"프로이센-프랑스 전쟁(보불전쟁) 발발",
+				"text":"루이 보나파르트, 프로이센(=프러시아, 독일의 전신)에 전쟁 선포",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1870,7,23",
-				"headline":"",
-				"text":"Marx completes what will become known as his \"First Address.\"",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1870,7,26",
-				"headline":"",
-				"text":"The \"First Address\" is approved and internationally distributed by the General Council of the International Working Men's Association.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1870,8,4",
-				"headline":"",
-				"text":"~8.6. Crown Prince Frederick, commanding one of the three Prussian armies invading France, defeats French Marshal MacMahon at Worth and Weissenburg, pushes him out of Alsace (NorthEastern France), surrounds Strasbourg, and drives on towards Nancy. The other two Prussian armies isolate Marshal Bazaine's forces in Metz.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1870,8,16",
-				"headline":"",
-				"text":"~8.18. French Commander Bazaine's efforts to break his soldiers through the German lines are bloodily defeated at Mars-la-Tour and Gravelotte. The Prussians advance on Chalons.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1870,9,1",
-				"headline":"",
-				"text":"Battle of Sedan. MacMahon and Bonaparte, attempting to relieve Bazaine at Metz and finding the road closed, enters battle and is defeated at Sedan.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				},
+				"media":
+				[
+					{
+						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/French_soldiers_in_the_Franco-Prussian_War_1870-71.jpg/800px-French_soldiers_in_the_Franco-Prussian_War_1870-71.jpg",
+						"credit":"<a href='https://en.wikipedia.org/wiki/File:French_soldiers_in_the_Franco-Prussian_War_1870-71.jpg'>Wikipedia</a>",
+						"caption":"당시 프랑스 군인들.",
+						"thumbnail":""
+					}
+				]
+			},
 			{
 				"startDate":"1870,9,2",
-				"headline":"",
-				"text":"Emperor Napoleon III and Marshal MacMahon capitulate at Sedan with over 83,000 soldiers.",
+				"headline":"나폴레옹 3세, 스당 전투에서 포로로 붙잡힘",
+				"text":"ㅇㅇ 나폴레옹은 독일 빌헬름스회에 감금됨. 동시에 제2 제정 붕ㅋ괴ㅋ",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				},
+				"media":
+				[
+					{
+						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/BismarckundNapoleonIII.jpg/800px-BismarckundNapoleonIII.jpg",
+						"credit":"<a href='https://en.wikipedia.org/wiki/File:BismarckundNapoleonIII.jpg'>Wikipedia</a>",
+						"caption":"스당에서 패배한 뒤 포로로 잡힌 나폴레옹 3세(우)와 비스마르크(좌). 저러고 있다..< ",
+						"thumbnail":""
+					},
+					{
+						"media":"https://www.google.co.kr/maps/place/Sedan/@48.2591343,3.6949919,7z/data=!4m2!3m1!1s0x47ea6e8e1f35b111:0x40a5fb99a3f6920",
+						"credit":"구글맵",
+						"caption":"스당이 어듸메뇨? 여기였구나..<",
+						"thumbnail":""
+					}
+				]
+			},
 			{
 				"startDate":"1870,9,4",
-				"headline":"",
-				"text":"At news of Sedan, Paris workers invade the Palais Bourbon and force the Legislative Assembly to proclaim the fall of the Empire. By evening, the Third Republic is proclaimed at the Hotel de Ville (the City Hall) in Paris. The provisional Government of National Defence (GND) is established to continue the war effort to remove Germany from France.",
+				"headline":"파리 혁명 - 제3 공화국 선언",
+				"text":"\"제정은 카드로 만든 집처럼 힘없이 넘어지고 다시 공화국이 선포되었다.\"(by 엥겔스) 그러나 '국민 방위 정부'는 시청을 장악하고 공화국을 팔아 포로가 된 루이 보나파르트와 바꿀 궁리나 한다.",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
+				{
+					"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Red_flag.svg/250px-Red_flag.svg.png",
+					"credit":"<a href='https://en.wikipedia.org/wiki/Red_flag_(politics)'>Wikipedia</a>",
+					"caption":"사회주의/공산주의의 상징 붉은 깃발. 꼬뮌도 붉은 깃발을 올렸다긔.",
+					"thumbnail":""
+				},
+				"media":
+				[
+					{
+						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Red_flag.svg/250px-Red_flag.svg.png",
+						"credit":"<a href='https://en.wikipedia.org/wiki/Red_flag_(politics)'>Wikipedia</a>",
+						"caption":"사회주의/공산주의의 상징 붉은 깃발. 꼬뮌도 붉은 깃발을 올렸다긔.",
+						"thumbnail":""
+					},
+					{
+						"media":"http://www.larousse.fr/encyclopedie/data/images/1313972-Proclamation_de_la_R%c3%a9publique_le_4_septembre_1870_place_de_lH%c3%b4tel_de_Ville.jpg",
+						"credit":"<a href='http://www.larousse.fr/encyclopedie/images/Proclamation_de_la_R%C3%A9publique_le_4_septembre_1870_place_de_lH%C3%B4tel_de_Ville/1313972'>Proclamation de la République, le 4 septembre 1870, place de l'Hôtel de Ville</a>",
+						"caption":"파리 시청사 앞에서 공화국을 선언하고 환호하는 사람들. 원본은 당시 르몽드지에 실렸다.",
+						"thumbnail":""
+					}
+				]
+			},
 			{
-				"startDate":"1870,9,5",
+				"startDate":"1970,10,31",
 				"headline":"",
-				"text":"A series of meetings and demonstrations begin in London and other big cities, at which resolutions and petitions were passed demanding that the British Government immediately recognize the French Republic. The General Council of the First International took a direct part in the organization of this movement.",
+				"text":"",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			},
 			{
-				"startDate":"1870,9,6",
+				"startDate":"",
 				"headline":"",
-				"text":"GND issues statement: blames war on Imperial government, it now wants peace, but \"not an inch of our soil, not a stone of our fortresses, will we cede.\" With Prussia occupying Alsace-Lorraine, the war does not stop.",
+				"text":"",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			},
 			{
-				"startDate":"1870,9,19",
+				"startDate":"1871,1,29",
 				"headline":"",
-				"text":"Two German armies begin the long siege of Paris. Bismarck figures the \"soft and decadent\" French workers will quickly surrender. The GND sends a delegation to Tours, soon to be joined by Gambetta (who escapes from Paris in a balloon), to organize resistance in the provinces.",
+				"text":"",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
+				{
+					"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/1878_Adam_Fort_Vanves_anagoria.JPG/800px-1878_Adam_Fort_Vanves_anagoria.JPG",
+					"credit":"<a href='https://en.wikipedia.org/wiki/File:1878_Adam_Fort_Vanves_anagoria.JPG'>영문 위키</a>",
+					"caption":"독일군이 파리 외곽 보브 요새에 독일 국기를 걸고 있다. Eugen Adam 그림",
+					"thumbnail":""
+				}
+			},
 			{
-				"startDate":"1870,10,27",
-				"headline":"",
-				"text":"French army, led by Bazaine with 140,000-180,000 men at Metz, surrenders.",
+				"startDate":"1871,2,17",
+				"headline":"프로이센 군대 파리 입성",
+				"text":"띠에르 개노무시키",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1870,10,30",
-				"headline":"",
-				"text":" French National Guard defeated at Le Bourget.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1870,10,31",
-				"headline":"",
-				"text":"Upon the receipt of news that the Government of National Defense had decided to start negotiations with the Prussians, Paris workers and revolutionary sections of the National Guard rise up in revolt, led by Blanqui. They seize the Hôtel de Ville (City Hall) and set up their revolutionary government — the Committee of Public Safety, headed by Blanqui. On October 31, Flourens prevents any members of the Government of National Defense from being shot, as had been demanded by one of the insurrectionists.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1870,11,1",
-				"headline":"",
-				"text":"Under pressure from the workers the Government of National Defense promises to resign and schedule national elections to the Commune — promises it has no intention to deliver. With the workers pacified by their 'legal' charade, the government violently seizes the Hôtel de Ville and re-establishes its domination over the besieged city. Paris official Blanqui is arrested for treason.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,1,22",
-				"headline":"",
-				"text":"The Paris proletariat and the National Guards hold a revolutionary demonstration, initiated by the Blanquists. They demand the overthrow of the government and the establishment of a Commune. By order of the Government of National Defense, the Breton Mobile Guard, which was defending the Hôtel de Ville, opens fire on the demonstrators. After massacring the unarmed workers, the government begins preparations to surrender Paris to the Germans.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,1,28",
-				"headline":"",
-				"text":"After four long months of workers struggle, Paris is surrendered to the Prussians. While all regular troops are disarmed, the National Guard is permitted to keep their arms — the populous of Paris remains armed and allows the occupying armies only a small section of the city.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,2,8",
-				"headline":"",
-				"text":"Elections held in France, unknown to most of the nation's population.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,2,12",
-				"headline":"",
-				"text":"New National Assembly opens at Bordeaux; two-thirds of members are conservatives and wish the war to end.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,2,16",
-				"headline":"",
-				"text":"The Assembly elects Adolphe Thiers chief executive.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,2,26",
-				"headline":"",
-				"text":"The preliminary peace treaty between France and Germany signed at Versailles by Thiers and Jules Favre, on the one hand, and Bismarck, on the other. France surrenders Alsace and East Lorraine to Germany and paid it indemnities to the sum of 5 billion francs. German army of occupation to slowly withdraw as indemnity payments made. The final peace treaty was signed in Frankfort-on-Main on May 10, 1871.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,3,1",
-				"headline":"",
-				"text":"~3.3. After months of struggle and suffering, Paris workers react angrily to the entry of German troops in the city, and the ceaseless capitulation of the government. The National Guard defects and organizes a Central Committee.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,3,10",
-				"headline":"",
-				"text":"The National Assembly passes a law on the deferred payment of overdue bills; under this law the payment of debts on obligations concluded between August 13 and November 12, 1870 could be deferred. Thus, the law leads to the bankruptcy of many petty bourgeoisie.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,3,11",
-				"headline":"",
-				"text":"National Assembly adjourns. With trouble in Paris, it establishes its government at Versailles on March 20.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,3,18",
-				"headline":"",
-				"text":"Adolphe Thiers attempts to disarm Paris and sends French troops (regular army), but, through fraternization with Paris workers, they refuse to carry out thier orders. Generals Claude Martin Lecomte and Jacques Leonard Clement Thomas are killed by their own soldiers. Many troops peacefully withdraw, some remain in Paris. Thiers outraged, the Civil War begins.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,3,26",
-				"headline":"",
-				"text":" A municipal council — the Paris Commune — is elected by the citizens of Paris. Commune consists of workers, among them members of the First International and followers of Proudhon and Blanqui.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,3,28",
-				"headline":"",
-				"text":"The Central Committee of the National Guard, which up to then had carried on the government, resigns after it first decrees the permanent abolition of the \"Morality Police\".",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,3,30",
-				"headline":"",
-				"text":"The Commune abolishes conscription and the standing army; the National Guard, in which all citizens capable of bearing arms were to be enrolled, was to be the sole armed force. The Commune remitts all payments of rent for dwelling houses from October 1870 until April 1871. On the same day the foreigners elected to the Commune were confirmed in office, because \"the flag of the Commune is the flag of the World Republic\".",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,1",
-				"headline":"",
-				"text":"The Commune declares that the highest salary received by any member of the Commune does not exceed 6,000 francs",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,2",
-				"headline":"",
-				"text":"In order to suppress the Paris Commune Thiers appeals to Bismarck for permission to supplement the Versailles Army with French prisoners of war, most of whom had been serving in the armies that surrendered at Sedan and Metz. In return for the 5 billion francs indemnity payment, Bismarck agrees. The French Army begins seige of Paris. Paris is continually bombarded and, moreover, by the very people who had stigmatized as a sacrilege the bombardment of the same city by the Prussians. The Commune decrees the separation of the Church from the State, and the abolition of all state payments for religious purposes as well as the transformation of all Church property into national property. Religion is declared a purely private matter.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,5",
-				"headline":"",
-				"text":"Decree on hostages adopted by the Commune in an attempt to prevent Communards from being shot by the French Government. Under this decree, all persons found guilty of being in contact with the French Government were declared hostages. This was never carried out.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,6",
-				"headline":"",
-				"text":"The guillotine was brought out by the 137th battalion of the National guard, and publicly burnt, amid great popular rejoicing.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,7",
-				"headline":"",
-				"text":"On April 7, the French army captures the Seine crossing at Neuilly, on the western front of Paris. Reacting to French government policy of shooting captured Communards, Commune issues an \"eye-for-an-eye\" policy statement, threatening retaliation. The bluff is quickly called; Paris workers execute no one.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,8",
-				"headline":"",
-				"text":"A decree excluding from the schools all religious symbols, pictures, dogmas, prayers — in a word, \"all that belongs to the sphere of the individual's conscience\" — is ordered to be excluded from the schools. The decree is gradually applied.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,11",
-				"headline":"",
-				"text":"In an attack on southern Paris the French army is repulsed with heavy losses by General Eudes.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,12",
-				"headline":"",
-				"text":"The Commune decides that the Victory Column on the Place Vendôme, which had been cast from guns captured by Napoleon after the war of 1809, should be demolished as a symbol of chauvinism and incitement to national hatred. This decree was carried out on May 16.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,16",
-				"headline":"",
-				"text":"Commune announces the postponement of all debt obligations for three years and abolition of interest on them. The Commune orders a statistical tabulation of factories which had been closed down by the manufacturers, and the working out of plans for the carrying on of these factories by workers formerly employed in them, who were to be organized in co-operative societies, and also plans for the organization of these co-operatives in one great union.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,20",
-				"headline":"",
-				"text":"The Commune abolishes night work for bakers, and also the workers' registration cards, which since the Second Empire had been run as a monopoly by police nominees — exploiters of the first rank; the issuing of these registration cards was transferred to the mayors of the 20 arrondissements of Paris.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,23",
-				"headline":"",
-				"text":"Thiers breaks off the negotiations for the exchange, proposed by Commune, of the Archbishop of Paris [Georges Darboy] and a whole number of other priests held hostages in Paris, for only one man, Blanqui, who had twice been elected to the Commune but was a prisoner in Clairvaux.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,27",
-				"headline":"",
-				"text":"In sight of the impending municipal elections of April 30, Thiers enacted one of his great conciliation scenes. He exclaimed from the tribune of the Assembly: \"There exists no conspiracy against the republic but that of Paris, which compels us to shed French blood. I repeat it again and again...\". Out of 700,000 municipal councillors, the united Legitimists, Orleanists, and Bonapartists ( Party of Order ) did not carry 8,000.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,4,30",
-				"headline":"",
-				"text":"The Commune orders the closing of the pawnshops, on the ground that they were a private exploitation of labor, and were in contradiction with the right of the workers to their instruments of labor and to credit.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,5,5",
-				"headline":"",
-				"text":"On May 5 it ordered the demolition of the Chapel of Atonement, which had been built in expiation of the execution of Louis XVI.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,5,9",
-				"headline":"",
-				"text":"Fort Issy, which is completely reduced to ruins by gunfire and constant French bombardement, is captured by the French army.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			},
 			{
 				"startDate":"1871,5,10",
-				"headline":"",
-				"text":"The peace treaty concluded in February now signed, known as Treaty of Frankfurt. (Endorsed by National Assembly May 18.)",
+				"headline":"프랑크푸르트 조약 체결",
+				"text":"이때 프랑스는 알자스-로렌 지방을 프로이센에 드 드리기로.",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
-			{
-				"startDate":"1871,5,16",
-				"headline":"",
-				"text":"The Vendôme Column is pulled down. The Vendôme Column was erected between 1806 and 1810 in Paris in honor of the victories of Napoleonic France; it was made out of the bronze captured from enemy guns and was crowned by a statue of Napoleon.",
-				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            },
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				},
+				"media":
+				[
+					{
+						"media":"http://artnouveau.pagesperso-orange.fr/img/strasbourg/europeng.gif",
+						"credit":"<a href='http://artnouveau.pagesperso-orange.fr/en/villes/strasbourg/typologie/intro.htm'>Art Nouveau</a>",
+						"caption":"중간에 빗금친 부분이 알자스-로렌. 1918년까지 단계적으로 드림<",
+						"thumbnail":""
+					}
+				]
+			},
 			{
 				"startDate":"1871,5,21",
-				"headline":"",
-				"text":"to 28th. Versailles troops enter Paris on May 21. The Prussians who held the northern and eastern forts allowed the Versailles troops to advance across the land north of the city, which was forbidden ground to them under the armistice — Paris workers held the flank with only weak forces. As a result of this, only a weak resistance was put up in the western half of Paris, in the luxury city; while it grew stronger and more tenacious the nearer the Versailles troops approached the eastern half, the working class city. The French army spent eight days massacring workers, shooting civilians on sight. The operation was led by Marshal MacMahon, who would later become president of France. Tens of thousands of Communards and workers are summarily executed (as many as 30,000); 38,000 others imprisoned and 7,000 are forcibly deported.",
+				"headline":"베르사유 군대, 파리 입성 ㅠㅠ",
+				"text":"북쪽과 동쪽 요새를 장악하고 있던 프로이센 군이 베르사유 군 지나게 해줌 ㅠㅠ",
 				"asset":
-                {
-                    "media":"",
-                    "credit":"",
-                    "caption":"",
-                    "thumbnail":""
-                }
-            }
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				},
+			},
+			{
+				"startDate":"1871,5,28",
+				"headline":"",
+				"text":"",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				},
+				"media":
+				[
+					{
+						"media":"http://www.larousse.fr/encyclopedie/data/images/1315392-F%c3%a9d%c3%a9r%c3%a9s_fusill%c3%a9s_pendant_la_Commune_de_1871.jpg",
+						"credit":"<a href='http://www.larousse.fr/encyclopedie/images/F%C3%A9d%C3%A9r%C3%A9s_fusill%C3%A9s_pendant_la_Commune_de_1871/1315392'>Fédérés fusillés pendant la Commune de 1871</a>",
+						"caption":"살해당한 사람들.",
+						"thumbnail":""
+					},
+					{
+						"media":"",
+						"credit":"",
+						"caption":"",
+						"thumbnail":""
+					}
+				]
+			}
         ]
     }
 }
