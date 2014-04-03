@@ -39,9 +39,9 @@ function JNTimeLine_prettyTime($dateString) {
 
 function JNTimeLine_formatTime($dateString,$format) {
 	$_date = explode(" ",$dateString);
-	$_day = preg_split("/[\-\/,]+/",$_date[0]);
+	$_day = preg_split("/[\-\/\.,]+/",$_date[0]);
 	$_time = explode(":",trim($_date[1]));
-	$dt = new DateTime(preg_replace("/[\/,]/i","-",$dateString));
+	$dt = new DateTime(preg_replace("/[\/\.,]/i","-",$dateString));
 	$out = '';
 	$skip = false;
 	for($i=0; $i<mb_strlen($format); $i++) {
