@@ -27,16 +27,28 @@
 			{
 				"startDate":"1870,7,19",
 				"headline":"프로이센-프랑스 전쟁(보불전쟁) 발발",
-				"text":"루이 보나파르트, 프로이센(=프러시아, 독일의 전신)에 전쟁 선포",
+				"text":"루이 보나파르트, 프로이센(=프러시아, 독일의 전신)에 전쟁 선포. 비스마르크는 프랑스를 격파해 독일 통일을 이루고, ",
 				"asset":
 				{
-					"media":"",
-					"credit":"",
-					"caption":"",
+					"media":"http://www.culture.gouv.fr/Wave/image/joconde/0074/m500202_atpico-g70004_p.jpg",
+					"credit":"<a href='http://www.culturecommunication.gouv.fr/'>Ministère de la culturee</a>",
+					"caption":"보불전쟁 첫번째 전투인 Reichshoffen 전투. 8월 6일의 풍경.",
 					"thumbnail":""
 				},
 				"media":
 				[
+					{
+						"media":"http://www.culture.gouv.fr/Wave/image/joconde/0074/m500202_atpico-g70004_p.jpg",
+						"credit":"<a href='http://www.culturecommunication.gouv.fr/'>Ministère de la culture    </a>",
+						"caption":"보불전쟁 첫번째 전투인 Reichshoffen 전투. 8월 6일의 풍경.",
+						"thumbnail":""
+					},
+					{
+						"media":"http://www.culture.gouv.fr/Wave/image/joconde/0074/m500202_atpico-g70003_p.jpg",
+						"credit":"<a href='http://www.culturecommunication.gouv.fr/'>Ministère de la culture   </a>",
+						"caption":"보불전쟁 첫번째 전투인 Reichshoffen 전투. 8월 6일의 풍경.",
+						"thumbnail":""
+					},
 					{
 						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/French_soldiers_in_the_Franco-Prussian_War_1870-71.jpg/800px-French_soldiers_in_the_Franco-Prussian_War_1870-71.jpg",
 						"credit":"<a href='https://en.wikipedia.org/wiki/File:French_soldiers_in_the_Franco-Prussian_War_1870-71.jpg'>Wikipedia</a>",
@@ -118,21 +130,9 @@
 				}
 			},
 			{
-				"startDate":"",
-				"headline":"",
-				"text":"",
-				"asset":
-				{
-					"media":"",
-					"credit":"",
-					"caption":"",
-					"thumbnail":""
-				}
-			},
-			{
 				"startDate":"1871,1,28",
 				"headline":"프랑스 항복",
-				"text":"프랑스군이 항복하며, 파리도 역시 항복했지만, 다 뺏기고 무장 해제당해 무기 양도하고 포로가 된 프랑스 상비군+기동방위군과 달리 파리의 국민방위대는 무기와 캐논포를 소지한 채 승리자들과 휴전만 체결했다.",
+				"text":"프랑스군이 항복하며, 파리도 역시 항복했지만, 다 뺏기고 무장 해제당해 무기 양도하고 포로가 된 프랑스 상비군+기동방위군과 달리 파리의 국민방위대는 무기와 캐논포(대포)를 소지한 채 휴전만 체결했다. 이것은 \"전쟁사에 전례가 없는, 명예를 간직한 항복이었다.\"",
 				"asset":
 				{
 					"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/1878_Adam_Fort_Vanves_anagoria.JPG/800px-1878_Adam_Fort_Vanves_anagoria.JPG",
@@ -147,12 +147,18 @@
 						"credit":"<a href='http://digital.library.northwestern.edu/'>The Siege and Commune of Paris</a>",
 						"caption":"이것이 바로 당시 쓰던 캐논포",
 						"thumbnail":""
+					},
+					{
+						"media":"https://upload.wikimedia.org/wikipedia/commons/c/c3/Communecannon.jpg",
+						"credit":"<a href='https://en.wikipedia.org/wiki/File:Communecannon.jpg'>Wikipedia</a>",
+						"caption":"여자들과 아이들이 캐논포 두 대를 몽마르뜨로 옮기고 있댜",
+						"thumbnail":""
 					}
 				]
 			},
 			{
 				"startDate":"1871,2,12",
-				"headline":"\"촌놈들의 의회\"가 열림",
+				"headline":"\"촌놈들의 의회\"",
 				"text":"[프랑스 내전]에서 마르크스는 보르도에서 열린 의회를 촌놈들의 의회라 부른다. 암튼 개회와 함께 띠에르는 종전을 위한 예비 협정에서 공화국의 거점인 파리를 상대로 전쟁을 개시하는 게 프로이센이 허용하는 유일한 조건이라며 내전을 즉각 승인하라고 종용했대.",
 				"asset":
 				{
@@ -180,7 +186,7 @@
 				"text":"28일부터 일 시작.",
 				"asset":
 				{
-					"media":"",
+					"media":"http://www.marxists.org/glossary/orgs/p/pics/paris-commune.jpg",
 					"credit":"",
 					"caption":"",
 					"thumbnail":""
@@ -217,7 +223,7 @@
 					"credit":"",
 					"caption":"",
 					"thumbnail":""
-				},
+				}
 			},
 			{
 				"startDate":"1871,5,28",
