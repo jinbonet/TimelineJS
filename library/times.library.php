@@ -41,7 +41,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 	$_date = explode(" ",$dateString);
 	$_day = preg_split("/[\-\/,]+/",$_date[0]);
 	$_time = explode(":",trim($_date[1]));
-	$stamp = mktime(($_time[0] ? $_time[0] : 0),($_time[1] ? $_time[1] : 0),($_time[2] ? $_time[2] : 0),($_day[1] ? $_day[1] : 1),($_day[2] ? $_day[2] : 1),$_day[0]);
+	$dt = new DateTime(preg_replace("/[\/,]/i","-",$dateString));
 	$out = '';
 	$skip = false;
 	for($i=0; $i<mb_strlen($format); $i++) {
@@ -58,7 +58,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 			case 'W':
 			case 't':
 				if($_day[2]) {
-					$out .= date($c,$stamp);
+					$out .= $c;
 					$skip = false;
 				} else {
 					$skip = true;
@@ -69,7 +69,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 			case 'M':
 			case 'n':
 				if($_day[1]) {
-					$out .= date($c,$stamp);
+					$out .= $c;
 					$skip = false;
 				} else {
 					$skip = true;
@@ -80,7 +80,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 			case 'Y':
 			case 'y':
 				if($_day[0]) {
-					$out .= date($c,$stamp);
+					$out .= $c;
 					$skip = false;
 				} else {
 					$skip = true;
@@ -100,7 +100,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 			case 'T':
 			case 'Z':
 				if($_time[0]) {
-					$out .= date($c,$stamp);
+					$out .= $c;
 					$skip = false;
 				} else {
 					$skip = true;
@@ -108,7 +108,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 				break;
 			case 'i':
 				if($_time[1]) {
-					$out .= date($c,$stamp);
+					$out .= $c;
 					$skip = false;
 				} else {
 					$skip = true;
@@ -117,7 +117,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 			case 's':
 			case 'u':
 				if($_time[2]) {
-					$out .= date($c,$stamp);
+					$out .= $c;
 					$skip = false;
 				} else {
 					$skip = true;
@@ -125,7 +125,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 				break;
 			case 'c':
 			case 'r':
-				$out .= date($c,$stamp);
+				$out .= $c;
 				$skip = false;
 				break;
 			case ' ':
@@ -136,6 +136,6 @@ function JNTimeLine_formatTime($dateString,$format) {
 				break;
 		}
 	}
-	return trim($out);
+	return $dt->format(trim($out));
 }
 ?>
