@@ -5,7 +5,6 @@
 	DEBUG start
 ******************************************************************************************/
 /* TMP */
-#taogi-gnb-body,
 #carousel-timeline .section.article .more {
 	display: none;
 }
@@ -30,8 +29,6 @@
 /******************************************************************************************
 	DEBUG end
 ******************************************************************************************/
-
-
 
 
 
@@ -75,10 +72,43 @@ blockquote {
 pre,xmp,code,kbd {
 	font-family: '나눔고딕코딩', 'NanumGothicCoding', 'Monaco', 'Lucida Console', monospace;
 }
+/* GENERAL CLASSES */
+.clearfix {
+	*zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+	content: ".";
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+/* IE and Opera use "move", FF uses -moz-grab */
+.swipe-cursor {
+	cursor: url(../images/grab.png) 8 8, move;
+}
+.swipping-cursor {
+	cursor: url(../images/grabbing.png) 8 8, move;
+}
 
 /****************************************************************************************************
 	RESET end
 ****************************************************************************************************/
+
+
+
+/****************************************************************************************************
+	LAYOUT
+****************************************************************************************************/
+/* PLATFORM THEME */
+#taogi-net-site-main-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/* LIBRARY THEME */
 
 
 
@@ -189,6 +219,7 @@ body {
 	left: -261px;
 	width: 260px;
 	height: 100%;
+	overflow: hidden;
 	background-color: black;
 	border-right: 1px solid gray;
 	box-shadow: inset 0 0 5px black;
@@ -200,6 +231,8 @@ body {
 	color: #B3B3B1;
 	font-size: 13px;
 	line-height: inherit;
+	word-wrap: break-word;
+	word-break: break-all;
 }
 #taogi-gnb span {
 	color: inherit;
@@ -372,7 +405,6 @@ body {
 	overflow: hidden;
 	background-color: gray;
 }
-
 /* INTERFACE */
 .taogi-frame.menu-active {
 	transform:translate3d(260px,0,0);
@@ -385,27 +417,6 @@ body {
 	opacity: 0;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
 }
-/* GENERAL CLASSES */
-.clearfix {
-	*zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-	content: ".";
-	display: block;
-	font-size: 0;
-	line-height: 0;
-	overflow: hidden;
-	visibility: hidden;
-}
-/* IE and Opera use "move", FF uses -moz-grab */
-.swipe-cursor {
-	cursor: url(../images/grab.png) 8 8, move;
-}
-.swipping-cursor {
-	cursor: url(../images/grabbing.png) 8 8, move;
-}
-
 /****************************************************************************************************
 	GNB end 
 ****************************************************************************************************/
