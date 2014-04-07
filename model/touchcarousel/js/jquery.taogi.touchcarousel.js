@@ -6111,7 +6111,7 @@ function onYouTubePlayerAPIReady() {
 			obj.fade = '';
 			if(item.hasClass('cover')) {
 				obj.isCover = true;
-				if(this._use_gnb == true)
+				if(self._use_gnb == true)
 					jQuery('.taogi-gnb-switch span').html(item.find('h1.title').html());
 			}
 			else {

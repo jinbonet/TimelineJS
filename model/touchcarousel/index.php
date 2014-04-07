@@ -10,7 +10,7 @@ if(!$skinname) $skinname = "default";
 $taogi_ER = new Taogi_ElementResolution();
 
 if(!$order) $order = "asc";
-$taogi_language = new TaogiLanguage(dirname(__FILE__),$config['lang'],$skinname);
+$lang = new TaogiLanguage(dirname(__FILE__),$config['lang'],$skinname);
 switch($source_type) {
 	case 'googlespreadsheet':
 		$data = $getSource->getSource($source);
@@ -62,7 +62,7 @@ if($datalist) {
 		$font_list = $taogi_theme->getRequiredFontFace();
 	}
 
-	$header .= "\t\t<script type=\"text/javascript\">\n\t\t\t\tvar TaogiLanguagePack='".$taogi_language->json_url(BASE_URI."/model/touchcarousel")."';\n\t\t</script>\n";
+	$header .= "\t\t<script type=\"text/javascript\">\n\t\t\t\tvar TaogiLanguagePack='".$lang->json_url(BASE_URI."/model/touchcarousel")."';\n\t\t</script>\n";
 	$header .= "\t\t<script type=\"text/javascript\" src=\"".BASE_URI."/model/touchcarousel/js/jquery.easing.1.3.js\"></script>\n";
 	$header .= "\t\t<script type=\"text/javascript\" src=\"".BASE_URI."/model/touchcarousel/js/jquery.taogi.touchcarousel.js\"></script>\n";
 	if(file_exists(dirname(__FILE__)."/skin/".$skinname."/script.js")) {
