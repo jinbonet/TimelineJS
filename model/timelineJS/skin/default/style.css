@@ -25,7 +25,8 @@ h1.title {
 			#timeline_sns_share_widget ul li.twitter iframe {
 				width:100px !important; }
 
-#veriteco_timeline_box {
+#timelineJS_timeline_box {
+	height:100%;
 	padding:3px;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 10px;
