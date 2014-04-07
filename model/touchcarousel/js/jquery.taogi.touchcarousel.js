@@ -5966,7 +5966,7 @@ function onYouTubePlayerAPIReady() {
 		this.TLBox = this.TLRoot.wrap(jQuery('<div id="carousel-timeline-box" class="touchcarousel-timeline"></div>')).parent();
 		this.TLBox.Position = this.TLBox.css('position');
 		this._use_gnb = false;
-		if(jQuery('#taogi-gnb')) {
+		if(jQuery('#taogi-gnb').length > 0) {
 			this.TLFrame = this.TLBox.next('#taogi-gnb').andSelf().wrapAll(jQuery('<div class="taogi-frame"></div>')).parent();
 			this._use_gnb = true;
 		} else {
