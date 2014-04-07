@@ -11,14 +11,6 @@
 				<li class="embed"><a href="#"><span>홈페이지에 붙여넣기</span></a></li>
 			</ul>
 		</div>
-		<div id="taogi-gnb-body">
-			<ul>
-				<li class="checkbox checked"><a href="javascript:"><span class="ui"></span><span class="label">카테고리1</span></a></li>
-				<li class="checkbox checked"><a href="javascript:"><span class="ui"></span><span class="label">카테고리2</span></a></li>
-				<li class="radio checked"><a href="javascript:"><span class="ui"></span><span class="label">카테고리3</span></a></li>
-				<li class="radio checked"><a href="javascript:"><span class="ui"></span><span class="label">카테고리4</span></a></li>
-			</ul>
-		</div>
 		<div id="taogi-gnb-footer">
 		</div>
 	</div>
