@@ -14,5 +14,6 @@ $config['youtube'] = array(
 );
 $config['line_cnt'] = 8;
 $config['lang'] = 'ko_KR';
+$config['use_gnb'] = true;
 $config['use_proxy'] = array('naver.com','naver.net','egloos.com','tistory.com','etorrent.com');
 ?>

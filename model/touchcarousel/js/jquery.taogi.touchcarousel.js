@@ -5965,16 +5965,24 @@ function onYouTubePlayerAPIReady() {
 		this.TLRoot = $(element);
 		this.TLBox = this.TLRoot.wrap(jQuery('<div id="carousel-timeline-box" class="touchcarousel-timeline"></div>')).parent();
 		this.TLBox.Position = this.TLBox.css('position');
-		this.TLFrame = this.TLBox.next('#taogi-gnb').andSelf().wrapAll(jQuery('<div class="taogi-frame"></div>')).parent();
+		this._use_gnb = false;
+		if(jQuery('#taogi-gnb')) {
+			this.TLFrame = this.TLBox.next('#taogi-gnb').andSelf().wrapAll(jQuery('<div class="taogi-frame"></div>')).parent();
+			this._use_gnb = true;
+		} else {
+			this.TLFrame = this.TLBox.wrap(jQuery('<div class="taogi-frame"></div>')).parent();
+		}
 		this.TLFrame = this.TLBox.parent();
 		if(taogiVMM.Browser.browser == "Explorer") {
 			this.TLFrame.addClass('isie');
 		}
-		jQuery(this.settings.Smarkup).prependTo(this.TLFrame);
-		this._bindGnb(self.TLFrame.find('.taogi-gnb-switch a'));
-		jQuery('#taogi-gnb-body li a').click(function(e){
-			jQuery(this).parent().toggleClass('checked');
-		});
+		if(this._use_gnb == true) {
+			jQuery(this.settings.Smarkup).prependTo(this.TLFrame);
+			this._bindGnb(self.TLFrame.find('.taogi-gnb-switch a'));
+			jQuery('#taogi-gnb-body li a').click(function(e){
+				jQuery(this).parent().toggleClass('checked');
+			});
+		}
 		this._TLContainer = this.TLRoot.find('.touchcarousel-container');
 		this._TLContainerStyle = this._TLContainer[0].style;
 
@@ -6103,7 +6111,8 @@ function onYouTubePlayerAPIReady() {
 			obj.fade = '';
 			if(item.hasClass('cover')) {
 				obj.isCover = true;
-				jQuery('.taogi-gnb-switch span').html(item.find('h1.title').html());
+				if(this._use_gnb == true)
+					jQuery('.taogi-gnb-switch span').html(item.find('h1.title').html());
 			}
 			else {
 				obj.isCover = false;
@@ -6884,7 +6893,8 @@ function onYouTubePlayerAPIReady() {
 				this.scrollContainer = jQuery('<div class="taogi-scrollbar-container"><div class="taogi-scrollbar-container-switch"></div><div class="taogi-scrollbar-wrap '+this.settings.scrollbar_thmeme+'"><div class="taogi-scrollbar"></div></div></div>');
 				this.scrollContainer.appendTo(this.TLRoot);
 				jQuery(this.settings.Smarkup.replace(/taogi\-timeline\-title/,'taogi-timeline-title-minion')).prependTo(this.scrollContainer);
-				this._bindGnb(self.scrollContainer.find('.taogi-gnb-switch a'));
+				if(this._use_gnb == true)
+					this._bindGnb(self.scrollContainer.find('.taogi-gnb-switch a'));
 				var reBuild = 0;
 				this.scrollContainer.find('.taogi-scrollbar-container-switch').bind('touchstart click',function(e) {
 					self._toggleIndicate();
