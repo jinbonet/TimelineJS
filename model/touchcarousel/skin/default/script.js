@@ -1,25 +1,46 @@
+jQuery(document).ready(function(){
+// BEGIN CODE
+
+// DISABLE TEXT SELECTION
+jQuery.fn.disableSelection = function() {
+	return this.each(function() {
+		$(this).css({
+			'MozUserSelect':'none',
+			'webkitUserSelect':'none'
+		}).attr('unselectable','on').bind('selectstart', function() {
+			return false;
+		});
+	});
+};
+jQuery.fn.enableSelection = function() {
+	return this.each(function() {
+		$(this).css({
+			'MozUserSelect':'',
+			'webkitUserSelect':''
+		}).attr('unselectable','off').unbind('selectstart');
+	});
+};
+jQuery(document).disableSelection();
+
+// LOAD GOOGLE WEBFONTS
+if ( taogiVMM.Browser.browser == "Explorer" && parseInt(taogiVMM.Browser.version, 10) <= 8) {
+} else {
+	jQuery.getScript('//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js',function(data,textStatus,jqxhr){
+		WebFont.load({
+			custom: {
+				families: ['Nanum Gothic'],
+				urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+			}
+		});
+	});
+}
+
+// RESIZE
 function timelineContainer_resize() {
 	var w = window.innerWidth;
 	jQuery('#carousel-timeline').parents().width(w);
 	jQuery('#carousel-timeline').width(w);
 }
-
-jQuery(document).ready(function(){
-
-	// WEBFONTS start -- using google web font api //
-	if ( taogiVMM.Browser.browser == "Explorer" && parseInt(taogiVMM.Browser.version, 10) <= 8) {
-	} else {
-		jQuery.getScript('//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js',function(data,textStatus,jqxhr){
-			WebFont.load({
-				custom: {
-					families: ['Nanum Gothic'],
-					urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
-				}
-			});
-		});
-	}
-	// WEBFONTS end //
-
 
 //	timelineContainer_resize();
 	jQuery("#carousel-timeline").taogiTouchCarousel({                   
@@ -36,4 +57,7 @@ jQuery(document).ready(function(){
 //	jQuery(window).resize(function() {
 //		timelineContainer_resize();
 //	});
+
+
+// END CODE
 });
