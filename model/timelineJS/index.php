@@ -1,6 +1,6 @@
 <?php
 if(!$width) $width = "100%";
-if(!$height) $height = "650";
+if(!$height) $height = "100%";
 if(!$lang) $lang = "en";
 if(!$maptype) $maptype = "toner";
 if(!$start_at_end) $start_at_end = "false";
