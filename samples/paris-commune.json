@@ -5,7 +5,8 @@
 		"type":"source type: Json",
 		"startDate":"1870",
 		"text":"파리 꼬뮌 전후 역사 모른 채 마르크스의 [프랑스 내전] 읽기 힘들지 않음? 뭐가 어디 붙어 있는지도 모르겠고. 그래서 만들어봄 ㅇㅇ 이거 읽고 [프랑스 내전] 읽으면 머리에 쏙쏙 들어옵니다 보장< <br /><br />* 책에서 인용한 부분은 따옴표 처리함",
-		"asset": {
+		"asset":
+		{
 			"media":"",
 			"credit":"뎡야핑(님)",
 			"caption":""
@@ -50,6 +51,12 @@
 						"thumbnail":""
 					},
 					{
+						"media":"http://www.alsatica.eu/alsatica-visuals/bnus/85/f7/c0/1_P_2F668148,0,1024x768/NIM33103-jpg?label=NIM33103.jpg",
+						"credit":"<a href='http://www.alsatica.eu/alsatica/bnus/Schlacht-bei-St-Privat-am-18-August-1870,1_P_2F668148.html'>Alsatica</a>",
+						"caption":"프랑스가 우세했던 교전도 있었다. 예컨대 8월 16일의 그라블로트-생프리바 전투. 독일에서 그린 그림",
+						"thumbnail":""
+					},
+					{
 						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/French_soldiers_in_the_Franco-Prussian_War_1870-71.jpg/800px-French_soldiers_in_the_Franco-Prussian_War_1870-71.jpg",
 						"credit":"<a href='https://en.wikipedia.org/wiki/File:French_soldiers_in_the_Franco-Prussian_War_1870-71.jpg'>Wikipedia</a>",
 						"caption":"당시 프랑스 군인들.",
@@ -70,6 +77,12 @@
 				},
 				"media":
 				[
+					{
+						"media":"http://www.alsatica.eu/alsatica-visuals/bnus/17/23/af/1_P_2F668153,0,1024x768/NIM33105-jpg?label=NIM33105.jpg",
+						"credit":"<a href='http://www.alsatica.eu/alsatica/bnus/Schlacht-bei-Sedan-am-1-September-1870,1_P_2F668153.html'>Alsatica</a>",
+						"caption":"9월 1일 스당 전투를 그린 독일 그림",
+						"thumbnail":""
+					},
 					{
 						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/BismarckundNapoleonIII.jpg/800px-BismarckundNapoleonIII.jpg",
 						"credit":"<a href='https://en.wikipedia.org/wiki/File:BismarckundNapoleonIII.jpg'>Wikipedia</a>",
@@ -96,13 +109,25 @@
 				"text":"\"제정은 카드로 만든 집처럼 힘없이 넘어지고 다시 공화국이 선포되었다.\"(by 엥겔스) 그러나 '국민 방위 정부'는 시청을 장악하고 공화국을 팔아 포로가 된 루이 보나파르트와 바꿀 궁리나 한다.",
 				"asset":
 				{
-					"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Red_flag.svg/250px-Red_flag.svg.png",
-					"credit":"<a href='https://en.wikipedia.org/wiki/Red_flag_(politics)'>Wikipedia</a>",
-					"caption":"사회주의/공산주의의 상징 붉은 깃발. 꼬뮌도 붉은 깃발을 올렸다긔.",
+					"media":"http://www.larousse.fr/encyclopedie/data/images/1008952-Proclamation_de_la_IIIe_R%c3%a9publique.jpg",
+					"credit":"<a href='http://www.larousse.fr/encyclopedie/images/Proclamation_de_la_IIIe_R%C3%A9publique/1008952'>LAROUSSE</a>",
+					"caption":"제3 공화국 선언 당시 포스터.",
 					"thumbnail":""
 				},
 				"media":
 				[
+					{
+						"media":"http://www.larousse.fr/encyclopedie/data/images/1008952-Proclamation_de_la_IIIe_R%c3%a9publique.jpg",
+						"credit":"<a href='http://www.larousse.fr/encyclopedie/images/Proclamation_de_la_IIIe_R%C3%A9publique/1008952'>LAROUSSE</a>",
+						"caption":"제3 공화국 선언 당시 포스터.",
+						"thumbnail":""
+					},
+					{
+						"media":"https://lh5.googleusercontent.com/-pjErlacwOg0/TYZbbECaLUI/AAAAAAAAAgU/8Jw-yW0kLdY/s1600/Le+triomphe+de+la+R%25C3%25A9publique.png",
+						"credit":"<a href='http://clementeocheduval.blogspot.kr/2011_03_01_archive.html'>Et si la IIIème République était devenue la IIIème Restauration ?     </a>",
+						"caption":"[공화국의 승리], 1875.",
+						"thumbnail":""
+					},
 					{
 						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Red_flag.svg/250px-Red_flag.svg.png",
 						"credit":"<a href='https://en.wikipedia.org/wiki/Red_flag_(politics)'>Wikipedia</a>",
@@ -118,7 +143,34 @@
 				]
 			},
 			{
-				"startDate":"1970,10,31",
+				"startDate":"1870,9,19",
+				"headline":"파리 봉쇄",
+				"text":"1871.1.28까지 지속된다.",
+				"asset":
+				{
+					"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Bundesarchiv_Bild_183-H26707%2C_Deutsch-franz%C3%B6sischer_Krieg_1870-71%2C_Paris%2C_Belagerung.jpg/592px-Bundesarchiv_Bild_183-H26707%2C_Deutsch-franz%C3%B6sischer_Krieg_1870-71%2C_Paris%2C_Belagerung.jpg",
+					"credit":"<a href='https://en.wikipedia.org/wiki/File:Bundesarchiv_Bild_183-H26707,_Deutsch-französischer_Krieg_1870-71,_Paris,_Belagerung.jpg'>Wikipedia</a>",
+					"caption":"봉쇄 당시 프로이센 포병대",
+					"thumbnail":""
+				},
+				"media":
+				[
+					{
+						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Les_ballons_sortis_pendant_le_Siege_de_Paris%2C_1870-1871.jpg/766px-Les_ballons_sortis_pendant_le_Siege_de_Paris%2C_1870-1871.jpg",
+						"credit":"<a href='https://en.wikipedia.org/wiki/File:Les_ballons_sortis_pendant_le_Siege_de_Paris,_1870-1871.jpg'>Wikipedia</a>",
+						"caption":"파리 봉쇄를 뚫고 많은 열기구가 탈출했다. 그 리스트와 사진을 담은 당시 인쇄물",
+						"thumbnail":""
+					},
+					{
+						"media":"http://yvesfey.com/wp-content/uploads/2012/03/Jacques_Guiaud_et_Jules_Didier_-_D%C3%A9part_de_Gambetta_en_ballon_place_Saint-Pierre1.jpg",
+						"credit":"<a href='http://yvesfey.com/paris-3/the-commune'>The Commune</a>",
+						"caption":"열기구 탈출 그림 by Jacques Guiaud와 Jules Didier",
+						"thumbnail":""
+					}
+				]
+			},
+			{
+				"startDate":"1870,10,31",
 				"headline":"",
 				"text":"",
 				"asset":
@@ -135,13 +187,25 @@
 				"text":"프랑스군이 항복하며, 파리도 역시 항복했지만, 다 뺏기고 무장 해제당해 무기 양도하고 포로가 된 프랑스 상비군+기동방위군과 달리 파리의 국민방위대는 무기와 캐논포(대포)를 소지한 채 휴전만 체결했다. 이것은 \"전쟁사에 전례가 없는, 명예를 간직한 항복이었다.\"",
 				"asset":
 				{
-					"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/1878_Adam_Fort_Vanves_anagoria.JPG/800px-1878_Adam_Fort_Vanves_anagoria.JPG",
-					"credit":"<a href='https://en.wikipedia.org/wiki/File:1878_Adam_Fort_Vanves_anagoria.JPG'>영문 위키</a>",
-					"caption":"독일군이 파리 외곽 보브 요새에 독일 국기를 걸고 있다. Eugen Adam 그림",
+					"media":"http://www.laguerrede1870enimages.fr/fortdaubervilliers.gif",
+					"credit":"<a href='http://www.laguerrede1870enimages.fr/page118.html'>La  guerre  de  1870-71  en  images</a>",
+					"caption":"오베르빌리에(d'Aubervilliers) 요새를 점령한 프로이센군.",
 					"thumbnail":""
 				},
 				"media":
 				[
+					{
+						"media":"http://www.laguerrede1870enimages.fr/fortdaubervilliers.gif",
+						"credit":"<a href='http://www.laguerrede1870enimages.fr/page118.html'>La  guerre  de  1870-71  en  images</a>",
+						"caption":"오베르빌리에(d'Aubervilliers) 요새를 점령한 프로이센군.",
+						"thumbnail":""
+					},
+					{
+						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/1878_Adam_Fort_Vanves_anagoria.JPG/800px-1878_Adam_Fort_Vanves_anagoria.JPG",
+						"credit":"<a href='https://en.wikipedia.org/wiki/File:1878_Adam_Fort_Vanves_anagoria.JPG'>영문 위키</a>",
+						"caption":"독일군이 파리 외곽 방브 요새에 독일 국기를 걸고 있다. Eugen Adam 그림",
+						"thumbnail":""
+					},
 					{
 						"media":"http://digital.library.northwestern.edu/siege/images/par00305.jpg",
 						"credit":"<a href='http://digital.library.northwestern.edu/'>The Siege and Commune of Paris</a>",
@@ -162,11 +226,26 @@
 				"text":"[프랑스 내전]에서 마르크스는 보르도에서 열린 의회를 촌놈들의 의회라 부른다. 암튼 개회와 함께 띠에르는 종전을 위한 예비 협정에서 공화국의 거점인 파리를 상대로 전쟁을 개시하는 게 프로이센이 허용하는 유일한 조건이라며 내전을 즉각 승인하라고 종용했대.",
 				"asset":
 				{
-					"media":"",
-					"credit":"",
-					"caption":"",
+					"media":"http://www.histoire-fr.com/images/theatre_bordeaux_1871_monde_illustre.jpg",
+					"credit":"<a href='http://www.histoire-fr.com/troisieme_republique_nee_sang_2.htm'>La troisième république (1870 - 1945)   </a>",
+					"caption":"촌놈들의 의회가 열린 그랜드 극장. 2월 18일 르몽드지",
 					"thumbnail":""
-				}
+				},
+				"media":
+				[
+					{
+						"media":"http://www.histoire-fr.com/images/theatre_bordeaux_1871_monde_illustre.jpg",
+						"credit":"<a href='http://www.histoire-fr.com/troisieme_republique_nee_sang_2.htm'>La troisième république (1870 - 1945)   </a>",
+						"caption":"촌놈들의 의회가 열린 그랜드 극장. 2월 18일 르몽드지",
+						"thumbnail":""
+					},
+					{
+						"media":"http://www.histoire-fr.com/images/assemblee_nationale_bordeaux_1871_monde_illustre.jpg",
+						"credit":"<a href='http://www.histoire-fr.com/troisieme_republique_nee_sang_2.htm'>La troisième république (1870 - 1945)   </a>",
+						"caption":"쥘 파브르. 2월 25일 르몽드지",
+						"thumbnail":""
+					}
+				]
 			},
 			{
 				"startDate":"1871,2,17",
@@ -177,6 +256,18 @@
 					"media":"",
 					"credit":"",
 					"caption":"",
+					"thumbnail":""
+				}
+			},
+			{
+				"startDate":"1871,3,18",
+				"headline":"프랑스 내전 발발",
+				"text":"",
+				"asset":
+				{
+					"media":"<blockquote>지배 계급의 패배와 반역의 한가운데에 있는 파리의 프롤레타리아들은 공무의 지휘를 자기의 수중에 장악하여 상황을 수습하여야 할 시간이 다가왔음을 파악하였다. ... 그들은, 스스로 자기 자신들의 운명의 주인이 되고 정부 권력을 장악하는 것이 자신들의 긴급한 의무이며 절대적 권리라는 것을 파악하였다.</blockquote>",
+					"credit":"[프랑스 내전]",
+					"caption":"프랑스 공화국 관보에서, 1871.3.22",
 					"thumbnail":""
 				}
 			},
@@ -252,6 +343,6 @@
 					}
 				]
 			}
-        ]
-    }
+		]
+	}
 }

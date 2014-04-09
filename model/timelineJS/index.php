@@ -1,6 +1,6 @@
 <?php
 if(!$width) $width = "100%";
-if(!$height) $height = "650";
+if(!$height) $height = "100%";
 if(!$lang) $lang = "en";
 if(!$maptype) $maptype = "toner";
 if(!$start_at_end) $start_at_end = "false";
@@ -9,7 +9,7 @@ if(!$debug) $debug = "false";
 if(!$start_at_slide) $start_at_slide = null;
 if(!$start_zoom_adjust) $start_zoom_adjust = null;
 if(!$skinname) $skinname = "default";
-if(file_exists(dirname(__FILE__)."/skin/".$timeline['type']."/style.css")) {
+if(file_exists(dirname(__FILE__)."/skin/".$skinname."/style.css")) {
 	$header .= "\t\t<link href=\"".BASE_URI."/model/timelineJS/skin/".$skinname."/style.css\" rel=\"stylesheet\" type=\"text/css\" />\n";
 }
 $_root = explode("/",ltrim(rtrim($uri['root'],"/"),"/"));

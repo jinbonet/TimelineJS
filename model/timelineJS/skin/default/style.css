@@ -1,3 +1,9 @@
+body {
+	padding: 1em;
+}
+#site-header {
+	display: none;
+}
 h1.title {
 	margin: 0;
 	padding: 0 0 11px 0;
@@ -5,27 +11,35 @@ h1.title {
 	font-family: "NanumGothicBoldWeb";
 	font-size: 1.50em;
 	font-weight: bold;
-	letter-spacing: -0.1em; }
-
+	letter-spacing: -0.1em;
+}
 #timeline_sns_share_widget {
 	margin:0;
-	padding:0; }
-	#timeline_sns_share_widget ul {
-		margin:0;
-		padding:0;
-		list-style:none; }
-		#timeline_sns_share_widget ul li {
-			vertical-align:top;
-			display:inline-block; }
-			#timeline_sns_share_widget ul li.fb {
-				width:481px; }
-			#timeline_sns_share_widget ul li.twitter {
-				padding-left:259px;
-				width:100px; }
-			#timeline_sns_share_widget ul li.twitter iframe {
-				width:100px !important; }
+	padding:0;
+}
+#timeline_sns_share_widget ul {
+	margin:0;
+	padding:0 0 0.5em 0;
+	list-style:none;
+}
+#timeline_sns_share_widget ul li {
+	vertical-align:top;
+	display:inline-block;
+}
+#timeline_sns_share_widget ul li.fb {
+	width:481px;
+}
+#timeline_sns_share_widget ul li.twitter {
+	padding-left:259px;
+	width:100px;
+}
+#timeline_sns_share_widget ul li.twitter iframe {
+	width:100px !important;
+}
 
-#veriteco_timeline_box {
+#timelineJS_timeline_box {
+	height:100%;
+	max-height: 700px;
 	padding:3px;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 10px;
