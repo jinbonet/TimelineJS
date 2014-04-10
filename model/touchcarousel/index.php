@@ -65,9 +65,11 @@ if($datalist) {
 	$header .= "\t\t<script type=\"text/javascript\">\n\t\t\t\tvar TaogiLanguagePack='".$lang->json_url(BASE_URI."/model/touchcarousel")."';\n\t\t</script>\n";
 	$header .= "\t\t<script type=\"text/javascript\" src=\"".BASE_URI."/model/touchcarousel/js/jquery.easing.1.3.js\"></script>\n";
 	$header .= "\t\t<script type=\"text/javascript\" src=\"".BASE_URI."/model/touchcarousel/js/jquery.taogi.touchcarousel.js\"></script>\n";
+	$header .= "\t\t<script type=\"text/javascript\" src=\"".BASE_URI."/model/touchcarousel/js/gnb.js\"></script>\n";
 	if(file_exists(dirname(__FILE__)."/skin/".$skinname."/script.js")) {
 		$header .= "\t\t<script type=\"text/javascript\" src=\"".BASE_URI."/model/touchcarousel/skin/".$skinname."/script.js\"></script>\n";
 	}
+	$permalink = $_SERVER['REQUEST_URI'];
 	ob_start();
 	require_once dirname(__FILE__)."/skin/".$skinname."/timeline.php";
 if($config['use_gnb'] != false) {

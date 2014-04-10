@@ -5934,11 +5934,6 @@ function onYouTubePlayerAPIReady() {
 			this.settings.fingerSwitchGalleryMethod = 'fade';
 		}
 
-		/* init social link */
-		jQuery('ul.social a').click(function(e){
-			window.open(jQuery(this).attr('href'),'popupWindow','width=600,height=400,scrollbars=no,menubar=no,status=no,toolbar=no');
-		});
-
 		/* init language pack */
 		if(TaogiLanguagePack) {
 			taogiVMM.getJSON(TaogiLanguagePack, function(d) {

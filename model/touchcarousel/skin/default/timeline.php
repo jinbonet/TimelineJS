@@ -12,9 +12,9 @@
 							<?php print $taogi_theme->time($timeline); ?>
 						</div>
 						<ul class="social">
-							<li class="twitter"><a href="https://twitter.com/share?text=" target="_blank"><span><?php print $lang->_t('share_twitter'); ?></span></a></li>
-							<li class="facebook"><a href="https://facebook.com/sharer.php?u=" target="_blank"><span><?php print $lang->_t('share_facebook'); ?></span></a></li>
-							<li class="googleplus"><a href="https://plus.google.com/share?url=" target="_blank"><span><?php print $lang->_t('share_googleplus'); ?></span></a></li>
+							<li class="twitter"><a href="https://twitter.com/share?text=<?php print $permalink; ?>" target="_blank"><span><?php print $lang->_t('share_twitter'); ?></span></a></li>
+							<li class="facebook"><a href="https://facebook.com/sharer.php?u=<?php print $permalink; ?>" target="_blank"><span><?php print $lang->_t('share_facebook'); ?></span></a></li>
+							<li class="googleplus"><a href="https://plus.google.com/share?url=<?php print $permalink; ?>" target="_blank"><span><?php print $lang->_t('share_googleplus'); ?></span></a></li>
 							<li class="kakaotalk"><a href="https://plus.google.com/share?url=" target="_blank"><span><?php print $lang->_t('share_kakaotalk'); ?></span></a></li>
 							<li class="embed"><a href="#"><span><?php print $lang->_t('share_embed'); ?></span></a></li>
 						</ul>

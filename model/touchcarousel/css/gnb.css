@@ -1,0 +1,313 @@
+/****************************************************************************************************
+	GNB start
+****************************************************************************************************/
+/* GNB FRAME */
+body,
+#site-main-container,
+#taogi-frame {
+	overflow: hidden;
+}
+body {
+	background-color: #DFDFDF;
+	height: 100%;
+}
+.taogi-frame {
+	transition: transform 0.3s ease-in;
+	-webkit-transition: -webkit-transform 0.3s ease-in;
+	-moz-transition: -moz-transform 0.3s ease-in;
+	-ms-transition: -ms-transform 0.3s ease-in;
+	-o-transition: -o-transform 0.3s ease-in;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.taogi-gnb-switch {
+	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	position: absolute;
+	z-index: 999999999999;
+	*zoom: 1;
+	top: 15px;
+	left: 15px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	font-weight: normal;
+}
+.taogi-gnb-switch:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+.taogi-gnb-switch a {
+	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	float: left;
+	display: block;
+	width: 30px;
+	height: 100%;
+	text-indent: -10000px;
+}
+.taogi-gnb-switch a:after {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	display: block;
+	width: inherit;
+	height: inherit;
+	text-indent: 0;
+	line-height: inherit;
+	text-align: center;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family: 'Jinbonet Icons';
+	font-size: 20px;
+	content: 'd'; /* c:pictogram, d:symbol */
+}
+.taogi-gnb-switch span {
+	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	opacity: 1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=100)";
+	margin-left: 0.5em;
+	white-space: nowrap;
+}
+#taogi-timeline-title {
+}
+#taogi-timeline-title-minion {
+	top: 10px;
+	left: 10px;
+	display: none;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+}
+#taogi-timeline-title-minion a {
+	width: inherit;
+}
+#taogi-timeline-title-minion a:after {
+	font-size: 30px;
+}
+#taogi-timeline-title-minion span {
+	display: none;
+}
+#taogi-gnb {
+	position: absolute;
+	top: 0;
+	left: -261px;
+	width: 260px;
+	height: 100%;
+	overflow: hidden;
+	background-color: black;
+	border-right: 1px solid gray;
+	box-shadow: inset 0 0 5px black;
+}
+#taogi-gnb * {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #B3B3B1;
+	font-size: 13px;
+	line-height: inherit;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+#taogi-gnb span {
+	color: inherit;
+}
+#taogi-gnb a {
+	color: #B3B3B1;
+	text-decoration: none;
+}
+#taogi-gnb a:hover {
+	color: #F0F0F0;
+}
+#taogi-gnb-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: inherit;
+	height: inherit;
+	border-left: 2px inset gray;
+}
+#taogi-gnb-header {
+	*zoom: 1;
+	line-height: 1.4;
+}
+#taogi-gnb-header:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+#taogi-gnb-header h1.title {
+	margin: 20px 20px 0 20px;
+	font-size: 15px;
+}
+#taogi-gnb-header p.description {
+	margin: 10px 20px 0 20px;
+}
+#taogi-gnb-header h2 {
+	display: none;
+}
+#taogi-gnb-header ul.social {
+	float: right;
+	*zoom: 1;
+	margin: 20px 20px 0 20px;
+}
+#taogi-gnb-header ul.social:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+#taogi-gnb-header ul.social li {
+	float: left;
+	*zoom: 1;
+	margin-left: 0.25em;
+}
+#taogi-gnb-header ul.social li.kakaotalk,
+#taogi-gnb-header ul.social li.embed {
+	display: none;
+}
+#taogi-gnb-header ul.social li a {
+	display: block;
+	overflow: hidden;
+	width: 24px;
+	height: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: #999999;
+}
+#taogi-gnb-header ul.social li a:hover {
+	color: #FFFFFF;
+}
+#taogi-gnb-header ul.social li a:before {
+	display: inline;
+	font-family: 'Jinbonet Icons';
+	font-size: inherit;
+	line-height: inherit;
+	content: 'j';
+}
+#taogi-gnb-header ul.social li.twitter a:before {
+	content: 'j';
+}
+#taogi-gnb-header ul.social li.facebook a:before {
+	content: 'f';
+}
+#taogi-gnb-header ul.social li.googleplus a:before {
+	content: 'g';
+}
+#taogi-gnb-header ul.social li.kakaotalk a:before {
+	content: 'h';
+}
+#taogi-gnb-header ul.social li.embed a:before {
+	content: 'i';
+}
+#taogi-gnb-header ul.social li a span {
+	display: none;
+}
+#taogi-gnb-body {
+}
+#taogi-gnb-body h2 {
+	display: none;
+}
+#taogi-gnb-body ul {
+	margin: 20px;
+}
+#taogi-gnb-body ul li {
+}
+#taogi-gnb-body ul li a {
+	height: 20px;
+	line-height: 20px;
+}
+#taogi-gnb-body ul li a span.ui:before {
+	display: inline;
+	margin-right: 0.5em;
+	font-family: 'Glyphicons Halflings';
+}
+#taogi-gnb-body ul li.checked a {
+	color: #F0F0F0;
+}
+#taogi-gnb-body ul li.checkbox a span.ui:before {
+	content: '\e157';
+}
+#taogi-gnb-body ul li.radio a span.ui:before {
+	content: '\e089';
+}
+#taogi-gnb-body ul li.checkbox.checked a span.ui:before {
+	content: '\e067';
+}
+#taogi-gnb-body ul li.radio.checked a span.ui:before {
+	content: '\e084';
+}
+#taogi-gnb-footer {
+}
+#taogi-gnb-footer h2 {
+	display: none;
+}
+#taogi-gnb-footer ul {
+	list-style: none;
+	margin: 20px;
+}
+#taogi-gnb-footer ul li {
+}
+#taogi-gnb-footer ul li a {
+	height: 20px;
+	line-height: 20px;
+}
+#taogi-gnb-footer ul li a:before {
+	position: relative;
+	top: 1px;
+	display: inline;
+	margin-right: 0.5em;
+	font-family: 'Glyphicons Halflings';
+	font-size: 0.9em;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+}
+#taogi-gnb-footer ul li.home a:before {
+	content: '\E021';
+}
+#taogi-gnb-footer ul li.profile a:before {
+	content: '\E019';
+}
+#taogi-gnb-footer ul li.write a:before {
+	content: '\E023';
+}
+#taogi-gnb-footer ul li.logout a:before {
+	content: '\E163';
+}
+#taogi-gnb-footer ul li.login a:before {
+	content: '\E161';
+}
+#taogi-gnb-footer ul li.join a:before {
+	content: '\E081';
+}
+
+
+/* INTERFACE */
+.taogi-frame.menu-active {
+	transform:translate3d(260px,0,0);
+	-webkit-transform:translate3d(260px,0,0);
+	-moz-transform:translate3d(260px,0,0);
+	-ms-transform:translate3d(260px,0,0);
+	-o-transform:translate3d(260px,0,0);
+}
+.taogi-frame.menu-active .taogi-gnb-switch span {
+	opacity: 0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+}
+/****************************************************************************************************
+	GNB end 
+****************************************************************************************************/
+
+
+
