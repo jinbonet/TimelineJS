@@ -23,7 +23,7 @@ jQuery.fn.enableSelection = function() {
 jQuery(document).disableSelection();
 
 // LOAD GOOGLE WEBFONTS
-if ( taogiVMM.Browser.browser == "Explorer" && parseInt(taogiVMM.Browser.version, 10) <= 8) {
+if ( taogiVMM.Browser.device != 'desktop' || (taogiVMM.Browser.browser == "Explorer" && parseInt(taogiVMM.Browser.version, 10) <= 8)) {
 } else {
 	jQuery.getScript('//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js',function(data,textStatus,jqxhr){
 		WebFont.load({
