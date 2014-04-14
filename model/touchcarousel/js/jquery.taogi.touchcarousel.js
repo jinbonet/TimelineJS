@@ -5863,13 +5863,6 @@ function onYouTubePlayerAPIReady() {
 		if(taogiVMM.Browser.browser == "Explorer") {
 			this.TLFrame.addClass('isie');
 		}
-		if(this._use_gnb == true) {
-			jQuery(this.settings.Smarkup).prependTo(this.TLFrame);
-			this._bindGnb(self.TLFrame.find('.taogi-gnb-switch a'));
-			jQuery('#taogi-gnb-body li a').click(function(e){
-				jQuery(this).parent().toggleClass('checked');
-			});
-		}
 		this._TLContainer = this.TLRoot.find('.touchcarousel-container');
 		this._TLContainerStyle = this._TLContainer[0].style;
 
@@ -5932,6 +5925,14 @@ function onYouTubePlayerAPIReady() {
 		if(this._useWebkitTransition == false) {
 			this.settings.switchGalleryMethod = 'fade';
 			this.settings.fingerSwitchGalleryMethod = 'fade';
+		}
+
+		if(this._use_gnb == true) {
+			jQuery(this.settings.Smarkup).prependTo(this.TLFrame);
+			this._bindGnb(self.TLFrame.find('.taogi-gnb-switch a'));
+			jQuery('#taogi-gnb-body li a').click(function(e){
+				jQuery(this).parent().toggleClass('checked');
+			});
 		}
 
 		/* init language pack */
@@ -6189,9 +6190,25 @@ function onYouTubePlayerAPIReady() {
 
 		_bindGnb:function(element) {
 			var self = this;
+			var transition = this.supports.transition;
+			var transform = this.supports.transform;
+			var transitionEnd = this.supports.transitionEnd+".taogi";
 			element.bind('touchstart click',function(e){
 				e.preventDefault();
-				self.TLFrame.toggleClass('menu-active');
+				if(self.TLFrame.hasClass('menu-active')) {
+					self.TLFrame.css({transition: (self.supports.transform)+' 0.3s ease-in', transform: 'translate3d(0,0,0)'});
+					self.TLFrame.bind(transitionEnd,function() {
+                        jQuery(this).removeClass('menu-active');
+                        jQuery(this).unbind(transitionEnd);
+                    });
+				} else {
+					var offset = jQuery('#taogi-gnb').width();
+					self.TLFrame.css({transition: (self.supports.transform)+' 0.3s ease-in', transform: 'translate3d('+offset+'px,0,0)'});
+					self.TLFrame.bind(transitionEnd,function() {
+						jQuery(this).addClass('menu-active');
+						jQuery(this).unbind(transitionEnd);
+                    });
+				}
 				return false;
 			});
 		},

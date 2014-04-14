@@ -12,11 +12,6 @@ body {
 	height: 100%;
 }
 .taogi-frame {
-	transition: transform 0.3s ease-in;
-	-webkit-transition: -webkit-transform 0.3s ease-in;
-	-moz-transition: -moz-transform 0.3s ease-in;
-	-ms-transition: -ms-transform 0.3s ease-in;
-	-o-transition: -o-transform 0.3s ease-in;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -29,7 +24,7 @@ body {
 	*zoom: 1;
 	top: 15px;
 	left: 15px;
-	width: 100%;
+	display: inline-block;
 	height: 30px;
 	line-height: 30px;
 	margin: 0;
@@ -294,13 +289,6 @@ body {
 
 
 /* INTERFACE */
-.taogi-frame.menu-active {
-	transform:translate3d(260px,0,0);
-	-webkit-transform:translate3d(260px,0,0);
-	-moz-transform:translate3d(260px,0,0);
-	-ms-transform:translate3d(260px,0,0);
-	-o-transform:translate3d(260px,0,0);
-}
 .taogi-frame.menu-active .taogi-gnb-switch span {
 	opacity: 0;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
