@@ -6190,24 +6190,34 @@ function onYouTubePlayerAPIReady() {
 
 		_bindGnb:function(element) {
 			var self = this;
-			var transition = this.supports.transition;
-			var transform = this.supports.transform;
-			var transitionEnd = this.supports.transitionEnd+".taogi";
+			if(this._useWebkitTransition) {
+				var transition = this.supports.transition;
+				var transform = this.supports.transform;
+				var transitionEnd = this.supports.transitionEnd+".taogi";
+			}
 			element.bind('touchstart click',function(e){
 				e.preventDefault();
 				if(self.TLFrame.hasClass('menu-active')) {
-					self.TLFrame.css({transition: (self.supports.transform)+' 0.3s ease-in', transform: 'translate3d(0,0,0)'});
-					self.TLFrame.bind(transitionEnd,function() {
-                        jQuery(this).removeClass('menu-active');
-                        jQuery(this).unbind(transitionEnd);
-                    });
+					if(self._useWebkitTransition) {
+						self.TLFrame.css({transition: (self.supports.transform)+' 0.3s ease-in', transform: 'translate3d(0,0,0)'});
+						self.TLFrame.bind(transitionEnd,function() {
+							jQuery(this).removeClass('menu-active');
+							jQuery(this).unbind(transitionEnd);
+		                 });
+					} else {
+						self.TLFrame.css({left: '0'}).removeClass('menu-active');
+					}
 				} else {
 					var offset = jQuery('#taogi-gnb').width();
-					self.TLFrame.css({transition: (self.supports.transform)+' 0.3s ease-in', transform: 'translate3d('+offset+'px,0,0)'});
-					self.TLFrame.bind(transitionEnd,function() {
-						jQuery(this).addClass('menu-active');
-						jQuery(this).unbind(transitionEnd);
-                    });
+					if(self._useWebkitTransition) {
+						self.TLFrame.css({transition: (self.supports.transform)+' 0.3s ease-in', transform: 'translate3d('+offset+'px,0,0)'});
+						self.TLFrame.bind(transitionEnd,function() {
+							jQuery(this).addClass('menu-active');
+							jQuery(this).unbind(transitionEnd);
+						});
+					} else {
+						self.TLFrame.css({left: offset+'px'}).addClass('menu-active');
+					}
 				}
 				return false;
 			});
