@@ -1,4 +1,71 @@
 /****************************************************************************************************
+	RESET start
+****************************************************************************************************/
+html, body, 
+div, header, hgroup, footer, article, section, nav, 
+h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, li, dl, dt, dd, 
+table, caption, thead, tbody, tfoot, col, colgroup, tr, th, td, 
+form, fieldset, legend, label, input, textarea, select, option, button, 
+span, a, strong, b, em, i, u, s, big, small, font, sup, sub, code, kbd, address, 
+img, audio, video, iframe, object, embed, 
+hr, br { 
+	-webkit-text-size-adjust: none; 
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	border-radius: 0; 
+	font-family: inherit; 
+	line-height: inherit; 
+} 
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* TYPOGRAPHY */
+body {
+	font-family: 'Apple SD Gothic Neo', '나눔고딕', 'NanumGothic', '맑은 고딕', 'Malgun Gothic', sans-serif;
+}
+blockquote {
+	font-family: '나눔명조', 'NanumMyeongjo', 'Georgia', serif;
+}
+pre,xmp,code,kbd {
+	font-family: '나눔고딕코딩', 'NanumGothicCoding', 'Monaco', 'Lucida Console', monospace;
+}
+/* GENERAL CLASSES */
+.clearfix {
+	*zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+	content: ".";
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+/* IE and Opera use "move", FF uses -moz-grab */
+.swipe-cursor {
+	cursor: url(../images/grab.png) 8 8, move;
+}
+.swipping-cursor {
+	cursor: url(../images/grabbing.png) 8 8, move;
+}
+
+/****************************************************************************************************
+	RESET end
+****************************************************************************************************/
+
+
+
+/****************************************************************************************************
 	GNB start
 ****************************************************************************************************/
 /* GNB FRAME */

@@ -43,6 +43,8 @@ switch($source_type) {
 
 if($datalist) {
 	$header .= "\t\t<meta name=\"viewport\" content=\"user-scalable=no,width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0\" />";
+	$header .= "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"".BASE_URI."/resources/css/media.css\" />\n";
+	$header .= "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"".BASE_URI."/model/touchcarousel/css/gnb.css\" />\n";
 	$header .= "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"".BASE_URI."/model/touchcarousel/css/layout.css\" />\n";
 	$header .= "\t\t<!--[if lt IE 9]>
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"".BASE_URI."/model/touchcarousel/css/layout.ie.css\" />
