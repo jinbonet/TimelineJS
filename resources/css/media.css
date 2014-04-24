@@ -1,0 +1,637 @@
+@charset "utf-8";
+@import url('foundation-icons.css');
+@import url('glyphicons-halflings.css');
+@import url('jinbonet-icons.css');
+
+/******************************************************************************************
+	FEATURE DEFAULTS start
+******************************************************************************************/
+.figure {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-color: #333333;
+	overflow: hidden;
+}
+.figure * {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.figure img {
+	width: auto;
+	height: auto;
+	background-color: #FFFFFF;
+}
+.figure blockquote,
+.figure .blockquote {
+	width: auto;
+	margin: 0;
+	padding: 1em;
+	background-color: transparent;
+}
+.figure blockquote a,
+.figure .blockquote a {
+	display: inline;
+}
+.figure h5.caption {
+	display: none;
+}
+/******************************************************************************************
+	FEATURE DEFAULTS end
+******************************************************************************************/
+
+
+
+
+
+/******************************************************************************************
+	ARTICLE FEATURE start
+******************************************************************************************/
+.article .figure {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0;
+	background-color: #333333;
+	background-image: none;
+	background-attachment: scroll;
+	background-repeat: repeat;
+	background-position: top left;
+}
+.article .figure article {
+	display: none;
+}
+.article .figure img {
+	width: 100%;
+}
+.article .figure i:before {
+	position: absolute;
+	z-index: 999999;
+	left: 50%;
+	top: 50%;
+	display: block;
+	width: 60px;
+	height: 60px !important;
+	margin: -33px 0 0 -33px;
+	line-height: 60px;
+	border: 3px solid #FFFFFF;
+	border-radius: 60px;
+	background-color: transparent;
+	box-shadow: 0 0 5px #000000, inset 0 0 5px #000000;
+	color: #FFFFFF;
+	text-shadow: 0 0 5px #000000;
+	font-family: 'Glyphicons Halflings';
+	font-size: 30px;
+	font-style: normal;
+	text-align: center;
+	content: '';
+	opacity: 0.7;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=70)";
+	cursor: pointer;
+}
+.article .figure:hover i:before {
+	opacity: 1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=100)";
+}
+/* WEBSITE, TEXT, WIKI, TWITTER */
+.article .figure.noimage.thumb-website,
+.article .figure.thumb-quote,
+.article .figure.thumb-textMedia,
+.article .figure.thumb-wikipedia,
+.article .figure.thumb-rigvedawiki,
+.article .figure.thumb-twitter {
+	background-color: #F5F5F5;
+}
+.article .figure.thumb-website i:before {
+	content: '\E144';
+}
+.article .figure.thumb-wikipedia i:before,
+.article .figure.thumb-rigvedawiki i:before {
+	content: '\e135';
+}
+/* IFRAME, PDF, ATTACHMENT, OBJECT */
+.article .figure.noimage.thumb-pdf,
+.article .figure.noimage.thumb-attachment,
+.article .figure.noimage.thumb-googledoc,
+.article .figure.noimage.thumb-iframe {
+	background-image: url(../images/background-pattern-default.png);
+}
+.article .figure.thumb-attachment i:before {
+	content: '\E166';
+}
+.article .figure.thumb-pdf i:before,
+.article .figure.thumb-googledoc i:before {
+	content: '\E022';
+}
+.article .figure.thumb-iframe i:before {
+	content: '\E009';
+}
+/* MAP */
+.article .figure.thumb-googlemap i:before {
+	content: '\E062';
+}
+/* VIDEO */
+.article .figure.noimage.thumb-youtube,
+.article .figure.noimage.thumb-vimeo,
+.article .figure.noimage.thumb-dailymotion,
+.article .figure.noimage.thumb-vine,
+.article .figure.noimage.thumb-mediaelements.wmv,
+.article .figure.noimage.thumb-mediaelements.avi,
+.article .figure.noimage.thumb-mediaelements.mp4,
+.article .figure.noimage.thumb-mediaelements.mpg,
+.article .figure.noimage.thumb-mediaelements.mpeg,
+.article .figure.noimage.thumb-mediaelements.flv,
+.article .figure.noimage.thumb-mediaelements.m4v,
+.article .figure.noimage.thumb-mediaelements.mov,
+.article .figure.noimage.thumb-mediaelements.mkv {
+	background-image: url(../images/background-pattern-video.png);
+}
+.article .figure.thumb-youtube i:before,
+.article .figure.thumb-vimeo i:before,
+.article .figure.thumb-dailymotion i:before,
+.article .figure.thumb-vine i:before,
+.article .figure.thumb-mediaelements i:before,
+.section.aritcle .figure.thumb-mediaelements.wmv i:before,
+.article .figure.thumb-mediaelements.avi i:before,
+.article .figure.thumb-mediaelements.mp4 i:before,
+.article .figure.thumb-mediaelements.mpg i:before,
+.article .figure.thumb-mediaelements.mpeg i:before,
+.article .figure.thumb-mediaelements.flv i:before,
+.article .figure.thumb-mediaelements.m4v i:before,
+.article .figure.thumb-mediaelements.mov i:before,
+.article .figure.thumb-mediaelements.mkv i:before {
+	content: '\E072';
+}
+/* AUDIO */
+.article .figure.noimage.thumb-soundcloud,
+.article .figure.noimage.thumb-mediaelements.wma,
+.article .figure.noimage.thumb-mediaelements.wav,
+.article .figure.noimage.thumb-mediaelements.mp3,
+.article .figure.noimage.thumb-mediaelements.m4a,
+.article .figure.noimage.thumb-mediaelements.ogg {
+	background-image: url(../images/background-pattern-audio.png);
+}
+.article .figure.thumb-soundcloud i:before,
+.article .figure.thumb-mediaelements.wma i:before,
+.article .figure.thumb-mediaelements.wav i:before,
+.article .figure.thumb-mediaelements.mp3 i:before,
+.article .figure.thumb-mediaelements.m4a i:before,
+.article .figure.thumb-mediaelements.ogg i:before {
+	content: '\E038';
+}
+/******************************************************************************************
+	ARTICLE FEATURE end
+******************************************************************************************/
+
+
+
+
+
+/******************************************************************************************
+	MEDIA FEATURE start
+******************************************************************************************/
+.media .figure {
+	float: left;
+	width: auto;
+	height: auto;
+	box-shadow: 2px 1px 2px #000000;
+}
+.media .figure i {
+	display: none;
+}
+/* BOX MODEL and BACKGROUND COLOR */
+.media .figure.iframe,
+.media .figure.image,
+.media .figure.picasa,
+.media .figure.flickr {
+	width: auto;
+	height: auto;
+}
+/* TWITTER */
+.media .figure.twitter {
+	margin: 0 auto !important;
+	padding: 0 !important;
+	border: 0 none !important;
+	background: transparent none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
+.media .figure.pdf,
+.media .figure.googledoc,
+.media .figure.googlemap,
+.media .media .figure.mediaelements,
+.media .figure.youtube,
+.media .figure.vimeo,
+.media .figure.dailymotion,
+.media .figure.vine {
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+}
+.media .figure.pdf div.pdf-wrapper {
+	width: 100%;
+	height: 100%;
+}
+.media .figure.quote,
+.media .figure.textMedia,
+.media .figure.website,
+.media .figure.attachment,
+.media .figure.wikipedia,
+.media .figure.rigvedawiki,
+.media .figure.twitter {
+	width: 100%;
+	max-width: 500px;
+	background-color: #F5F5F5;
+}
+.media .figure.soundcloud {
+	width: 100%;
+	max-width: 500px;
+}
+
+/******************************************************************************************
+	MEDIA FEATURE end
+******************************************************************************************/
+
+
+
+
+
+/******************************************************************************************
+	FEATURE SPEC start
+******************************************************************************************/
+/* QUOTE, TEXTMEDIA */
+.figure.quote,
+.figure.textMedia {
+}
+.article .figure.thumb-quote blockquote p,
+.article .figure.thumb-textMedia blockquote p {
+	height: 180px;
+	line-height: 30px;
+	font-size: 14px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.figure.quote blockquote,
+.figure.textMedia blockquote {
+	line-height: 35px;
+	font-size: 18px;
+}
+/* WEBSITE */
+.figure.website,
+.figure.attachment {
+	text-align: center;
+	color: #CCCCCC;
+}
+.figure.website a,
+.figure.attachment a {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	width: auto;
+	height: auto;
+	margin: auto;
+	text-decoration: none;
+	color: #333333;
+}
+.figure.website a:hover,
+.figure.attachment a:hover {
+	text-decoration: underline;
+}
+.figure.website img,
+.figure.attachment img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-height: 200px;
+}
+.figure.website .blockquote,
+.figure.attachment .blockquote {
+}
+.figure.website .blockquote a.snapshot,
+.figure.attachment .blockquote a.snapshot {
+	display: inline-block;
+	margin-bottom: 0.5em;
+}
+.figure.website .blockquote a.snapshot img,
+.figure.attachment .blockquote a.snapshot img {
+	max-height: 200px;
+	border: 1px solid #333333;
+	border-radius: 0;
+	box-shadow: none;
+}
+.figure.website .blockquote a.url,
+.figure.attachment .blockquote a.url {
+	display: block;
+	color: #000066;
+	font-size: 11px;
+}
+.figure.website .blockquote h4.headline,
+.figure.attachment .blockquote h4.headline {
+	color: #333333;
+	font-size: 16px;
+}
+.figure.website .blockquote h4.headline a,
+.figure.attachment .blockquote h4.headline a {
+	text-shadow: none;
+	color: #333333;
+}
+.figure.website .blockquote h4.headline a:hover,
+.figure.attachment .blockquote h4.headline a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+.figure.website .blockquote .source,
+.figure.attachment .blockquote .source {
+	display: none;
+}
+.figure.website .blockquote p.summary,
+.figure.attachment .blockquote p.summary {
+	margin-top: 0.5em;
+	line-height: 1.6;
+	font-size: 13px;
+	color: #666666;
+	text-align: left;
+
+}
+.figure.website .blockquote p.summary .more,
+.figure.attachment .blockquote p.summary .more {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+.figure.website .blockquote p.summary .more .ellipsis,
+.figure.attachment .blockquote p.summary .more .ellipsis {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+.figure.website .blockquote p.summary .more a.link,
+.figure.attachment .blockquote p.summary .more a.link {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	text-shadow: 0;
+}
+/* ATTACHMENT */
+.figure.attachment h4 a:before {
+	display: inline-block;
+	vertical-align: top;
+	content: '\E166';
+	padding-right: 0.3em;
+	font-family: 'Glyphicons Halflings';
+}
+.figure.attachment h4 span.suffix {
+	display: none;
+}
+.figure.attachment p.summary {
+	display: none;
+}
+/* NO-IMAGE WEBSITE, WIKI */
+.figure.thumb-wikipedia .blockquote,
+.figure.wikipedia .blockquote {
+	background: transparent url(../images/figure-wikipedia-logo.png) scroll no-repeat 15px 15px;
+}
+.figure.thumb-rigvedawiki .blockquote,
+.figure.rigvedawiki .blockquote {
+	background: transparent url(../images/figure-rigvedawiki-logo.png) scroll no-repeat 15px 15px;
+}
+.figure.thumb-website.og.noimage h4,
+.figure.thumb-wikipedia h4,
+.figure.wikipedia h4,
+.figure.thumb-rigvedawiki h4,
+.figure.rigvedawiki h4 {
+	width: auto;
+	height: 48px !important;
+	padding-left: 80px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 20px;
+	font-weight: normal;
+	color: #333333;
+}
+.figure.thumb-website.og.noimage h4 {
+	padding-left: 0;
+}
+.figure.thumb-website.og.noimage h4 a,
+.figure.thumb-wikipedia h4 a,
+.figure.wikipedia h4 a,
+.figure.thumb-rigvedawiki h4 a,
+.figure.rigvedawiki h4 a {
+	text-decoration: none;
+	color: inherit;
+}
+.figure.thumb-website.og.noimage h4 a:hover,
+.figure.thumb-wikipedia h4 a:hover,
+.figure.wikipedia h4 a:hover,
+.figure.thumb-rigvedawiki h4 a:hover,
+.figure.rigvedawiki h4 a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+.figure.thumb-website.og.noimage .web-source,
+.figure.thumb-wikipedia .wiki-source,
+.figure.wikipedia .wiki-source,
+.figure.thumb-rigvedawiki .wiki-source,
+.figure.rigvedawiki .wiki-source {
+	display: none;
+}
+.figure.thumb-website.og.noimage p,
+.figure.thumb-wikipedia p,
+.figure.wikipedia p,
+.figure.thumb-rigvedawiki p,
+.figure.rigvedawiki p {
+	line-height: 20px;
+	font-size: 13px;
+	color: #666666;
+}
+.figure.thumb-website.og.noimage p a,
+.figure.thumb-wikipedia p a,
+.figure.wikipedia p a,
+.figure.thumb-rigvedawiki p a,
+.figure.rigvedawiki p a {
+	color: inherit;
+	text-decoration: none;
+}
+.figure.thumb-website.og.noimage p a:hover,
+.figure.thumb-wikipedia p a:hover,
+.figure.wikipedia p a:hover,
+.figure.thumb-rigvedawiki p a:hover,
+.figure.rigvedawiki p a:hover {
+	color: #333333;
+	text-decoration: underline;
+}
+.figure.thumb-website.og.noimage p,
+.figure.thumb-wikipedia p,
+.figure.thumb-rigvedawiki p {
+	width: 100%;
+	height: 120px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+/* TWITTER */
+.article .figure.thumb-twitter,
+.figure.twitter {
+	background-color: #FFFFFF;
+}
+.article .figure.thumb-twitter .blockquote,
+.figure.thumb-twitter .blockquote {
+	line-height: 16px;
+}
+.article .figure.thumb-twitter .blockquote *,
+.figure.twitter .blockquote * {
+	width: auto;
+	line-height: inherit;
+}
+.article .figure.thumb-twitter .blockquote a,
+.figure.twitter .blockquote a {
+	text-decoration: none;
+}
+.article .figure.thumb-twitter .blockquote a:hover,
+.figure.twitter .blockquote a:hover {
+	text-decoration: underline;
+}
+.article .figure.thumb-twitter .blockquote .twitter-icon,
+.figure.twitter .blockquote .twitter-icon {
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin-right: 10px;
+}
+.article .figure.thumb-twitter .blockquote .twitter-icon img,
+.figure.twitter .blockquote .twitter-icon img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+.article .figure.thumb-twitter .blockquote h4,
+.figure.twitter .blockquote h4 {
+	width: auto;
+}
+.article .figure.thumb-twitter .blockquote h4 a,
+.figure.twitter .blockquote h4 a {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+.article .figure.thumb-twitter .blockquote h4 a:hover,
+.figure.twitter .blockquote h4 a:hover {
+	text-decoration: none;
+}
+.article .figure.thumb-twitter .blockquote h4 a span,
+.figure.twitter .blockquote h4 a span {
+	display: block;
+}
+.article .figure.thumb-twitter .blockquote h4 a span.realname,
+.figure.twitter .blockquote h4 a span.realname {
+	color: #292F33;
+	font-weight: bold;
+	font-size: 14px;
+}
+.article .figure.thumb-twitter .blockquote h4 a:hover span.realname,
+figure.twitter .blockquote h4 a:hover span.realname {
+	text-decoration: underline;
+}
+.article .figure.thumb-twitter .blockquote h4 a span.username,
+.figure.twitter .blockquote h4 a span.username {
+	color: #707070;
+	font-weight: normal;
+	font-size: 12px;
+}
+.article .figure.thumb-twitter .blockquote .twitter-date,
+.figure.twitter .blockquote .twitter-date {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+.article .figure.thumb-twitter .blockquote .twitter-date a,
+.figure.twitter .blockquote .twitter-date a {
+	color: #707070;
+	font-size: 12px;
+}
+.article .figure.thumb-twitter .blockquote .twitter-data a:hover,
+.figure.twitter .blockquote .twitter-data a:hover {
+}
+.article .figure.thumb-twitter .blockquote .twitter-text,
+.figure.twitter .blockquote .twitter-text {
+	margin-top: 0.5em;
+}
+.article .figure.thumb-twitter .blockquote .twitter-text p,
+.figure.twitter .blockquote .twitter-text p {
+	font-size: 12px;
+
+}
+.article .figure.thumb-twitter .blockquote .twitter-text p a,
+.figure.twitter .blockquote .twitter-text p a {
+	color: #0084B4;
+} 
+.article .figure.thumb-twitter .blockquote .twitter-text p a:hover,
+.figure.twitter .blockquote .twitter-text p a:hover {
+}
+/******************************************************************************************
+	FEATURE SPEC end
+******************************************************************************************/
+
+
+
+
+
+/******************************************************************************************
+	MEDIA NAV FEATURE start
+******************************************************************************************/
+.media-nav ul.thumbnails li.quote:after,
+.media-nav ul.thumbnails li.twitter:after {
+	content: '\E111';
+}
+.media-nav ul.thumbnails li.website:after {
+	content: '\E144';
+}
+.media-nav ul.thumbnails li.attachment:after {
+	content: '\E166';
+}
+.media-nav ul.thumbnails li.wikipedia:after,
+.media-nav ul.thumbnails li.rigvedawiki:after {
+	content: '\E135';
+}
+.media-nav ul.thumbnails li.textMedia:after,
+.media-nav ul.thumbnails li.pdf:after,
+.media-nav ul.thumbnails li.googledoc:after {
+	content: '\E022';
+}
+.media-nav ul.thumbnails li.googlemap:after {
+	content: '\E062';
+}
+.media-nav ul.thumbnails li.iframe:after {
+	content: '\E009';
+}
+.media-nav ul.thumbnails li.youtube:after,
+.media-nav ul.thumbnails li.vimeo:after,
+.media-nav ul.thumbnails li.dailymotion:after,
+.media-nav ul.thumbnails li.vine:after,
+.media-nav ul.thumbnails li.mediaelements.wmv:after,
+.media-nav ul.thumbnails li.mediaelements.avi:after,
+.media-nav ul.thumbnails li.mediaelements.mpg:after,
+.media-nav ul.thumbnails li.mediaelements.mpeg:after,
+.media-nav ul.thumbnails li.mediaelements.mp4:after,
+.media-nav ul.thumbnails li.mediaelements.flv:after,
+.media-nav ul.thumbnails li.mediaelements.m4a:after,
+.media-nav ul.thumbnails li.mediaelements.mkv:after {
+	content: '\E059';
+}
+.media-nav ul.thumbnails li.soundcloud:after,
+.media-nav ul.thumbnails li.mediaelements.wma:after,
+.media-nav ul.thumbnails li.mediaelements.wav:after,
+.media-nav ul.thumbnails li.mediaelements.mp3:after,
+.media-nav ul.thumbnails li.mediaelements.m4a:after,
+.media-nav ul.thumbnails li.mediaelements.ogg:after {
+	content: '\E038';
+}
+/******************************************************************************************
+	MEDIA NAV FEATURE end
+******************************************************************************************/
+
+
+
+
+
