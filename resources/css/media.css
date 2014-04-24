@@ -580,6 +580,35 @@ figure.twitter .blockquote h4 a:hover span.realname {
 /******************************************************************************************
 	MEDIA NAV FEATURE start
 ******************************************************************************************/
+
+.media-nav ul.thumbnails {
+}
+.media-nav ul.thumbnails li {
+}
+.media-nav ul.thumbnails li.current {
+}
+.media-nav ul.thumbnails li img {
+}
+.media-nav ul.thumbnails li:after {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	line-height: inherit;
+	background-color: #333333;
+	text-align: center;
+	font-family: 'Glyphicons Halflings';
+	font-size: inherit;
+	color: #FFFFFF;
+	text-shadow: 0 0 5px #000000;
+}
+.media-nav ul.thumbnails li span {
+	display: none;
+}
+
 .media-nav ul.thumbnails li.quote:after,
 .media-nav ul.thumbnails li.twitter:after {
 	content: '\E111';
