@@ -605,7 +605,7 @@ figure.twitter .blockquote h4 a:hover span.realname {
 	color: #FFFFFF;
 	text-shadow: 0 0 5px #000000;
 }
-.media-nav ul.thumbnails li span {
+.media-nav ul.thumbnails li > span {
 	display: none;
 }
 
