@@ -341,8 +341,13 @@ body {
 #taogi-gnb-footer ul li.profile a:before {
 	content: '\E019';
 }
+#taogi-gnb-footer ul li.profile a img {
+	display: none;
+}
 #taogi-gnb-footer ul li.write a:before {
-	content: '\E023';
+	content: '\E023'; /* CLOCK */ 
+	content: '\E065'; /* EDIT */
+	content: '\270F'; /* PENCIL */
 }
 #taogi-gnb-footer ul li.logout a:before {
 	content: '\E163';
