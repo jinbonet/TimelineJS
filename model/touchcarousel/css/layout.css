@@ -569,8 +569,6 @@ li.touchcarousel-item.flipper .item-flipper {
 	position: absolute; 
 	top: 0;
 	left: 0;
-}
-.taogi-frame.isie li.touchcarousel-item.flipper .item-flipper .section {
 	transition: 0.6s;
 	-webkit-transition: 0.6s;
 	-moz-transition: 0.6s;
