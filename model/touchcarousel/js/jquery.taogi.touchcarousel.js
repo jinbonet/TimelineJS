@@ -5853,7 +5853,7 @@ function onYouTubePlayerAPIReady() {
 		this.TLBox = this.TLRoot.wrap(jQuery('<div id="carousel-timeline-box" class="touchcarousel-timeline"></div>')).parent();
 		this.TLBox.Position = this.TLBox.css('position');
 		this._use_gnb = false;
-		if(jQuery('#taogi-gnb').length > 0) {
+		if(this.settings.use_gnb === true && jQuery('#taogi-gnb').length > 0) {
 			this.TLFrame = this.TLBox.next('#taogi-gnb').andSelf().wrapAll(jQuery('<div class="taogi-frame"></div>')).parent();
 			this._use_gnb = true;
 		} else {
@@ -7684,6 +7684,9 @@ function onYouTubePlayerAPIReady() {
 				self.loadGalleryItems(index,index2,auto);
 				self.items[index].gallery_loaded = 1;
 				container.data('isloaded',1)
+				item.find('.media-nav .caption').bind('click',function(e) {
+					self.toggleCaption(jQuery(this));
+				});
 			}
 			if(this._useWebkitTransition == false) {
 				cWidth = item.find('.gallery-wrap').width();
@@ -7832,9 +7835,28 @@ function onYouTubePlayerAPIReady() {
 			taogiVMM.Util.alignMiddle('#'+this.items[index].galleries[gindex].uid,0);
 			var caption = this.items[index].galleries[gindex].caption;
 			if(this.items[index].galleries[gindex].credit)
-				caption += '<span class="split"> - </span><cite>'+this.items[index].galleries[gindex].credit + '</cite>';
-			this.items[index].gallery.find('.media-nav .caption').html(caption);
+				caption += '<span class="split"> - </span><cite class="credit">'+this.items[index].galleries[gindex].credit + '</cite>';
+			this.items[index].gallery.find('.media-nav .caption').html(caption).data('index',index).data('gindex',gindex);
 			this.items[index].g_animating = false;
+		},
+
+		toggleCaption: function(obj) {
+			var i = obj.data('index');
+			var j = obj.data('gindex');
+			var w = this.items[i].galleries[j].item;
+			var o = w.find('.caption-overlay');
+			if(o.length > 0) {
+				if(o.hasClass('show')) {
+					this.items[i].item.find('.caption-overlay').removeClass('show');
+				} else {
+					o.find('.caption').html(obj.html());
+					o.addClass('show');
+				}
+			} else {
+				var o = jQuery('<div class="caption-overlay"><div class="caption">'+obj.html()+'</div></div>');
+				o.appendTo(w);
+				o.addClass('show');
+			}
 		},
 
 		toggleContainer:function() {
@@ -7891,6 +7913,7 @@ function onYouTubePlayerAPIReady() {
 		scrollbar_thmeme: 'theme1',
 		transitionSpeed: 600,
 		directionNav:true,
+		use_gnb:true,
 		keyboard:true,
 		threshold: 50,
 		clickElements: 'a, .taogi_buildGallery, li.thumbnail',

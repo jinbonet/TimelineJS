@@ -17,7 +17,8 @@ class JNTimeLine_Data {
 		$datalist = $json['timeline']['date'];
 		for($i=0; $i<@count($datalist); $i++) {
 			$datalist[$i]['date'] = JNTimeLine_TimeToString($datalist[$i]['startDate']);
-			$datalist[$i]['unique'] = trim(strtr(base64_encode(hash('crc32',$datalist[$i]['startDate']." ".$datalist[$i]['headline'], true)), '+/=', '-_ '));
+			if(!$datalist[$i]['unique'])
+				$datalist[$i]['unique'] = trim(strtr(base64_encode(hash('crc32',$datalist[$i]['startDate']." ".$datalist[$i]['headline'], true)), '+/=', '-_ '));
 		}
 
 		if($order == "asc") {
