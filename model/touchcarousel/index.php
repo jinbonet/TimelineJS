@@ -71,7 +71,8 @@ if($datalist) {
 	if(file_exists(dirname(__FILE__)."/skin/".$skinname."/script.js")) {
 		$header .= "\t\t<script type=\"text/javascript\" src=\"".BASE_URI."/model/touchcarousel/skin/".$skinname."/script.js\"></script>\n";
 	}
-	$permalink = $_SERVER['REQUEST_URI'];
+	if(!$permalink)
+		$permalink = $_SERVER['REQUEST_URI'];
 	ob_start();
 	require_once dirname(__FILE__)."/skin/".$skinname."/timeline.php";
 if($config['use_gnb'] != false) {

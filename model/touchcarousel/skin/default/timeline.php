@@ -1,6 +1,7 @@
 <div id="carousel-timeline" class="touchcarousel">
 	<ul class="touchcarousel-container">
-<?php if($timeline) {?>
+<?php
+	if($timeline) {?>
 		<li class="touchcarousel-item cover front">
 			<div class="item-container">
 				<section class="section article">
@@ -12,7 +13,7 @@
 							<?php print $taogi_theme->time($timeline); ?>
 						</div>
 						<ul class="social">
-							<li class="twitter"><a href="https://twitter.com/share?text=<?php print $permalink; ?>" target="_blank"><span><?php print $lang->_t('share_twitter'); ?></span></a></li>
+							<li class="twitter"><a href="https://twitter.com/share?u=<?php print $permalink; ?>&text=<?php print $timeline['headline']; ?>" target="_blank"><span><?php print $lang->_t('share_twitter'); ?></span></a></li>
 							<li class="facebook"><a href="https://facebook.com/sharer.php?u=<?php print $permalink; ?>" target="_blank"><span><?php print $lang->_t('share_facebook'); ?></span></a></li>
 							<li class="googleplus"><a href="https://plus.google.com/share?url=<?php print $permalink; ?>" target="_blank"><span><?php print $lang->_t('share_googleplus'); ?></span></a></li>
 							<li class="kakaotalk"><a href="https://plus.google.com/share?url=" target="_blank"><span><?php print $lang->_t('share_kakaotalk'); ?></span></a></li>
@@ -46,7 +47,7 @@
 <?php						}?>
 							<div class="title-description">
 								<h2 class="title"><?php print $datalist[$i]['headline']; ?></h2>
-								<div class="description"><p><?php print strip_tags($datalist[$i]['text'],'<a>'); ?><span class="more">... <a href="#"><?php print $lang->_t('read_more'); ?></a></span></p></div>
+								<div class="description"><p><?php print strip_tags($datalist[$i]['text'],'<a><br>'); ?><span class="more">... <a href="#"><?php print $lang->_t('read_more'); ?></a></span></p></div>
 							</div>
 						</article>
 					</section>
@@ -90,9 +91,9 @@
 							<?php print $taogi_theme->time($timeline,'endDate'); ?>
 						</div>
 						<ul class="social">
-							<li class="twitter"><a href="https://twitter.com/share?text=" target="_blank"><span><?php print $lang->_t('share_twitter');?></span></a></li>
-							<li class="facebook"><a href="https://facebook.com/sharer.php?u=" target="_blank"><span><?php print $lang->_t('share_facebook'); ?></span></a></li>
-							<li class="googleplus"><a href="https://plus.google.com/share?url=" target="_blank"><span><?php print $lang->_t('share_googleplus'); ?></span></a></li>
+							<li class="twitter"><a href="https://twitter.com/share?u=<?php print $permalink; ?>&text=<?php print $timeline['headline']; ?>" target="_blank"><span><?php print $lang->_t('share_twitter');?></span></a></li>
+							<li class="facebook"><a href="https://facebook.com/sharer.php?u=<?php print $permalink; ?>" target="_blank"><span><?php print $lang->_t('share_facebook'); ?></span></a></li>
+							<li class="googleplus"><a href="https://plus.google.com/share?url=<?php print $permalink; ?>" target="_blank"><span><?php print $lang->_t('share_googleplus'); ?></span></a></li>
 							<li class="kakaotalk"><a href="https://plus.google.com/share?url=" target="_blank"><span><?php print $lang->_t('share_kakaotalk'); ?></span></a></li>
 							<li class="embed"><a href="#"><span><?php print $lang->_t('share_embed'); ?></span></a></li>
 						</ul>

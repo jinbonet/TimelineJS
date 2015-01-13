@@ -1232,6 +1232,7 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.Util == 'undefined') {
 			if( typeof( jQuery ) != 'undefined' ){
 				var obj = jQuery(element);
 				var pa = obj.parent();
+				if(pa.length < 1) return;
 				if(pa[0].tagName.toLowerCase() == 'a')
 					pa = pa.parent();
 				var p_width = pa.innerWidth();
@@ -1437,7 +1438,7 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.Util == 'undefined') {
 				var hiddenImg = new Image();
 				hiddenImg.onerror = function() {
 					obj.remove();
-					if(typeof(pa[0].tagName) != 'undefined' && pa[0].tagName.toLowerCase() == 'a') {
+					if(typeof(pa) != 'undefined' && typeof(pa[0].tagName) != 'undefined' && pa[0].tagName.toLowerCase() == 'a') {
 						pa.remove();
 					}
 					if(alignelement) {

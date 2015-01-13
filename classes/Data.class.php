@@ -1,8 +1,20 @@
 <?php
+function _sortByDateAsc($a,$b) {
+	if($a['date'] > $b['date']) return 1;
+	else if($a['date'] < $b['date']) return -1;
+	else return 0;
+}
+
+function _sortByDateDesc($a,$b) {
+	if($a['date'] < $b['date']) return 1;
+	else if($a['date'] > $b['date']) return -1;
+	else return 0;
+}
+
 class JNTimeLine_Data {
 	private static $use_proxy;
 
-	function getJson($data,$order="asc") {
+	public static function getJson($data,$order="asc") {
 		$json = json_decode($data,true);
 		if(!$json) {
 			require_once dirname(__FILE__)."/JSON.php";
@@ -10,21 +22,23 @@ class JNTimeLine_Data {
 			$jsonParser = new Services_JSON(SERVICES_JSON_IN_ARR);
 			$json = json_decode(json_encode($jsonParser->decode($data)),true);
 			if(!$json) {
-			$json = json_decode(json_encode(jsinit_decode($data)),true);
 				$json = json_decode(json_encode(jsinit_decode($data)),true);
 			}
 		}
 		$datalist = $json['timeline']['date'];
 		for($i=0; $i<@count($datalist); $i++) {
 			$datalist[$i]['date'] = JNTimeLine_TimeToString($datalist[$i]['startDate']);
+			$datalist[$i]['date'] = ($i+1);
 			if(!$datalist[$i]['unique'])
 				$datalist[$i]['unique'] = trim(strtr(base64_encode(hash('crc32',$datalist[$i]['startDate']." ".$datalist[$i]['headline'], true)), '+/=', '-_ '));
 		}
 
 		if($order == "asc") {
-			usort($datalist,array(self,'_sortByDateAsc'));
+//			usort($datalist,array(self,'_sortByDateAsc'));
+			usort($datalist,'_sortByDateAsc');
 		} else {
-			usort($datalist,array(self,'_sortByDateDesc'));
+//j			usort($datalist,array(self,'_sortByDateDesc'));
+			usort($datalist,'_sortByDateDesc');
 		}
 		unset($json['timeline']['date']);
 		$json['timeline']['date'] = $datalist;
@@ -40,7 +54,7 @@ class JNTimeLine_Data {
 		return $json;
 	}
 
-	function getGoogleSpreed($data,$order="asc") {
+	public static function getGoogleSpreed($data,$order="asc") {
 		$_data = json_decode($data,true);
 
 		$entry = $_data['feed']['entry'];
@@ -100,7 +114,7 @@ class JNTimeLine_Data {
 		return $json;
 	}
 
-	function getGoogleCells($data) {
+	public static function getGoogleCells($data) {
 		$_data = json_decode($data,true);
 
 		$entry = $_data['feed']['entry'];
@@ -200,7 +214,7 @@ class JNTimeLine_Data {
 		return $json;
 	}
 
-	function csvToArray($fileContent,$delimiter=",",$escape = '\\', $enclosure = '"') {
+	public static function csvToArray($fileContent,$delimiter=",",$escape = '\\', $enclosure = '"') {
 		$lines = array();
 		$fields = array();
 	
@@ -256,7 +270,7 @@ class JNTimeLine_Data {
 		return $lines;
 	}
 
-	function csvArrayIndex($lines,$order="asc") {
+	public static function csvArrayIndex($lines,$order="asc") {
 		for($i=0; $i<@count($lines[0]); $i++) {
 			$fieldName[$i] = strtolower($lines[0][$i]);
 		}

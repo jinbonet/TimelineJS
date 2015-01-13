@@ -1,12 +1,13 @@
 <?php
 function JNTimeLine_TimeToString($dateString) {
 	$_date = explode(" ",$dateString);
-	$_day = preg_split("/[\-\/,]+/",$_date[0]);
-	$j=1;
-	for($i=0; $i<@count($_day); $i++) {
-		if((int)((int)$_day[$i] / 100) > 0) $day[0] = $_day[$i];
-		else $day[$j++] = $_day[$i];
-	}
+	$_day = preg_split("/[\-\/,\.]+/",$_date[0]);
+//	$j=1;
+//	for($i=0; $i<@count($_day); $i++) {
+//		if((int)((int)$_day[$i] / 100) > 0) $day[0] = $_day[$i];
+//		else $day[$j++] = $_day[$i];
+//	}
+	$day = $_day;
 	if($_date[1]) {
 		$time = explode(":",$_date[1]);
 	}
@@ -17,14 +18,15 @@ function JNTimeLine_TimeToString($dateString) {
 
 function JNTimeLine_prettyTime($dateString) {
 	$_date = explode(" ",$dateString);
-	$_day = preg_split("/[\-\/,]+/",$_date[0]);
-	$j=1;
-	for($i=0; $i<@count($_day); $i++) {
-		if((int)((int)$_day[$i] / 100) > 0) $day[0] = $_day[$i];
-		else $day[$j++] = $_day[$i];
-	}
+	$_day = preg_split("/[\-\/,\.]+/",$_date[0]);
+//	$j=1;
+//	for($i=0; $i<@count($_day); $i++) {
+//		if((int)((int)$_day[$i] / 100) > 0) $day[0] = $_day[$i];
+//		else $day[$j++] = $_day[$i];
+//	}
+	$day = $_day;
 	if(!is_numeric($day[0])) return $dateString;
-	$pubDate = sprintf("%04d",(int)$day[0]);
+	$pubDate = sprintf("%d",(int)$day[0]);
 	if(isset($day[1])) $pubDate .= ".".sprintf("%d",(int)$day[1]);
 	if(isset($day[2])) $pubDate .= ".".sprintf("%d",(int)$day[2]);
 	if($_date[1]) {
@@ -41,8 +43,10 @@ function JNTimeLine_formatTime($dateString,$format) {
 	$_date = explode(" ",$dateString);
 	$_day = preg_split("/[\-\/\.,]+/",$_date[0]);
 	$_time = explode(":",trim($_date[1]));
-	if(@count($_day) < 2) {
+	if(@count($_day) == 1) {
 		$dt = new DateTime($dateString."-01-01");
+	} else if(@count($_day) == 2) {
+		$dt = new DateTime(preg_replace("/[\/\.,]/i","-",$dateString)."-01");
 	} else {
 		$dt = new DateTime(preg_replace("/[\/\.,]/i","-",$dateString));
 	}

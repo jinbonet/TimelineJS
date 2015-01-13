@@ -608,7 +608,17 @@ figure.twitter .blockquote h4 a:hover span.realname {
 .media-nav ul.thumbnails li > span {
 	display: none;
 }
-
+.media-nav ul.thumbnails li.prev:after,
+.media-nav ul.thumbnails li.next:after {
+	background-color: transparent;
+	outline: default;
+}
+.media-nav ul.thumbnails li.prev:after {
+	content: '\E079';
+}
+.media-nav ul.thumbnails li.next:after {
+	content: '\E080';
+}
 .media-nav ul.thumbnails li.quote:after,
 .media-nav ul.thumbnails li.twitter:after {
 	content: '\E111';

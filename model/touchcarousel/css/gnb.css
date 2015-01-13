@@ -162,6 +162,7 @@ body {
 }
 #taogi-gnb {
 	position: absolute;
+	z-index:999;
 	top: 0;
 	left: -261px;
 	width: 260px;
@@ -199,6 +200,11 @@ body {
 	height: inherit;
 	border-left: 2px inset gray;
 }
+#taogi-gnb-body,
+#taogi-gnb-footer {
+	margin-top: 1em;
+}
+
 #taogi-gnb-header {
 	*zoom: 1;
 	line-height: 1.4;
@@ -212,7 +218,7 @@ body {
 	margin: 20px 20px 0 20px;
 	font-size: 15px;
 }
-#taogi-gnb-header p.description {
+#taogi-gnb-header div.description {
 	margin: 10px 20px 0 20px;
 }
 #taogi-gnb-header h2 {
@@ -311,54 +317,6 @@ body {
 }
 #taogi-gnb-footer {
 }
-#taogi-gnb-footer h2 {
-	display: none;
-}
-#taogi-gnb-footer ul {
-	list-style: none;
-	margin: 20px;
-}
-#taogi-gnb-footer ul li {
-}
-#taogi-gnb-footer ul li a {
-	height: 20px;
-	line-height: 20px;
-}
-#taogi-gnb-footer ul li a:before {
-	position: relative;
-	top: 1px;
-	display: inline;
-	margin-right: 0.5em;
-	font-family: 'Glyphicons Halflings';
-	font-size: 0.9em;
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1;
-}
-#taogi-gnb-footer ul li.home a:before {
-	content: '\E021';
-}
-#taogi-gnb-footer ul li.profile a:before {
-	content: '\E019';
-}
-#taogi-gnb-footer ul li.profile a img {
-	display: none;
-}
-#taogi-gnb-footer ul li.write a:before {
-	content: '\E023'; /* CLOCK */ 
-	content: '\E065'; /* EDIT */
-	content: '\270F'; /* PENCIL */
-}
-#taogi-gnb-footer ul li.logout a:before {
-	content: '\E163';
-}
-#taogi-gnb-footer ul li.login a:before {
-	content: '\E161';
-}
-#taogi-gnb-footer ul li.join a:before {
-	content: '\E081';
-}
-
 
 /* INTERFACE */
 .taogi-frame.menu-active .taogi-gnb-switch span {

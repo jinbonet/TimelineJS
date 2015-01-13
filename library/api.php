@@ -77,37 +77,28 @@ switch($_GET['type']) {
 		$html = preg_replace('/<title(.*?)>(.*?)<\/title>/is', '', $html);
 		$html = preg_replace('/<script(.*?)>(.*?)<\/script>/is', '', $html);
 		$html = str_replace('\\"', "&quot;", $html);
-//		$html = preg_replace('/<body(.*?)>(.*?)<\/body>/is', '', $html);
-		$doc = new DOMDocument();
-		@$doc->loadHTML($html);
-
-		$metas = $doc->getElementsByTagName('meta');
-		for ($i = 0; $i < $metas->length; $i++)
-		{
-			$meta = $metas->item($i);
-			if($meta->getAttribute('property') == 'og:title') {
-				$og['title'] = $meta->getAttribute('content');
-			}
-			if($meta->getAttribute('name') == 'twitter:title') {
-				$og['title'] = $meta->getAttribute('content');
-			}
-			if($meta->getAttribute('property') == 'og:description') {
-				$og['description'] = $meta->getAttribute('content');
-			}
-			if($meta->getAttribute('name') == 'twitter:description') {
-				$og['description'] = $meta->getAttribute('content');
-			}
-			if($meta->getAttribute('property') == 'og:site_name') {
-				$og['name'] = $meta->getAttribute('content');
-			}
-			if($meta->getAttribute('name') == 'twitter:creator') {
-				$og['name'] = $meta->getAttribute('content');
-			}
-			if($meta->getAttribute('property') == 'og:image') {
-				$og['image'] = $meta->getAttribute('content');
-			}
-			if($meta->getAttribute('name') == 'twitter:image:src') {
-				$og['image'] = $meta->getAttribute('content');
+		if(preg_match_all('~<\s*meta\s+property="((og|twitter):[^"]+)"\s+content="([^"]*)~i', $html, $matches)) {
+			for($c=0; $c<@count($matches[1]); $c++) {
+				switch ($matches[1][$c]) {
+					case 'og:title':
+					case 'twitter:title':
+						$og['title'] = $matches[3][$c];
+						break;
+					case 'og:description':
+					case 'twitter:description':
+						$og['description'] = $matches[3][$c];
+						break;
+					case 'og:site_name':
+					case 'twitter:creator':
+						$og['name'] = $matches[3][$c];
+						break;
+					case 'og:image':
+					case 'twitter:image:src':
+						$og['image'] = $matches[3][$c];
+						break;
+					default:
+						break;
+				}
 			}
 		}
 		header("Content-type: text/json; charset=utf-8");
