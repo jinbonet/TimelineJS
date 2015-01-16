@@ -6057,7 +6057,7 @@ function onYouTubePlayerAPIReady() {
 			thumbnails.each(function(index3) {
 				obj.hasMedia = true;
 				var thumbnail = jQuery(this);
-				if(index3 == 0) t_width = thumbnail.outerWidth();
+				if(index3 == 0) t_width = thumbnail.outerWidth(true);
 				var obj2 = {}
 				obj2.url = thumbnail.attr('href');
 				if(obj2.url) {
@@ -7706,7 +7706,7 @@ function onYouTubePlayerAPIReady() {
 			var thumbnail_navi = item.find('.thumbnails-navi');
 			if(this.items[index].thumbnail_width > thumbnail_navi.innerWidth()) {
 				thumbnail_navi.addClass('use-navi');
-				this.bindThumbnailNavi(thumbnail_navi);
+				this.bindThumbnailNavi(index,thumbnail_navi);
 			} else {
 				thumbnail_navi.removeClass('use-navi');
 			}
@@ -7895,13 +7895,38 @@ function onYouTubePlayerAPIReady() {
 			}
 		},
 
-		bindThumbnailNavi: function(navi) {
+		bindThumbnailNavi: function(index,navi) {
+			var self = this;
 			if(navi.data('init-event') !== 1) {
+				var totalWidth = navi.find('.thumbnails-navi-items').width();
+				var transform = this.supports.transform;
 				navi.find('.prev').bind('click.taogi',function(e) {
-					alert('작업중이다. 이것들아');
+					e.preventDefault();
+					var curPos = parseInt(navi.data('curPos'));
+					if(isNaN(curPos)) curPos = 0;
+					if(curPos == 0) return;
+					curPos = curPos - totalWidth;
+					var nav = navi.find('.thumbnails')
+					if(self._useWebkitTransition === true) {
+						nav.css( { transform : 'translate3d(-'+curPos+'px,0,0)' } );
+					} else {
+						nav.css( { 'left' : '-'+curPos+'px' } );
+					}
+					navi.data('curPos',curPos);
 				});
 				navi.find('.next').bind('click.taogi',function(e) {
-					alert('작업중이다. 이것들아2');
+					e.preventDefault();
+					var curPos = parseInt(navi.data('curPos'));
+					if(isNaN(curPos)) curPos = 0;
+					if((curPos + totalWidth) >= self.items[index].thumbnail_width) return;
+					curPos = curPos + totalWidth;
+					var nav = navi.find('.thumbnails')
+					if(self._useWebkitTransition === true) {
+						nav.css( { transform : 'translate3d(-'+curPos+'px,0,0)' } );
+					} else {
+						nav.css( { 'left' : '-'+curPos+'px' } );
+					}
+					navi.data('curPos',curPos);
 				});
 				navi.data('init-event',1);
 			}
