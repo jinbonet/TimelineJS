@@ -6051,10 +6051,13 @@ function onYouTubePlayerAPIReady() {
 
 			var g_container = jQuery(this).find('.gallery-container');
 			var thumbnails = jQuery(this).find('ul.thumbnails li');
+			var t_width = 0;
+			obj.thumbnail_width = 0;
 			obj.galleries = [];
 			thumbnails.each(function(index3) {
 				obj.hasMedia = true;
 				var thumbnail = jQuery(this);
+				if(index3 == 0) t_width = thumbnail.outerWidth();
 				var obj2 = {}
 				obj2.url = thumbnail.attr('href');
 				if(obj2.url) {
@@ -6074,6 +6077,7 @@ function onYouTubePlayerAPIReady() {
 					thumbnail.attr('id','t_'+obj2.uid);
 					thumbnail.attr('item-index',index);
 					thumbnail.attr('g-index',index3);
+					obj.thumbnail_width += t_width;
 				}
 			});
 
@@ -7699,6 +7703,13 @@ function onYouTubePlayerAPIReady() {
 					gallery.css({'width':cWidth+'px','left':pos+'px'});
 				}
 			}
+			var thumbnail_navi = item.find('.thumbnails-navi');
+			if(this.items[index].thumbnail_width > thumbnail_navi.innerWidth()) {
+				thumbnail_navi.addClass('use-navi');
+				this.bindThumbnailNavi(thumbnail_navi);
+			} else {
+				thumbnail_navi.removeClass('use-navi');
+			}
 		},
 
 		loadGalleryItems:function(index,index2,auto) {
@@ -7881,6 +7892,18 @@ function onYouTubePlayerAPIReady() {
 						});
 					}
 				});
+			}
+		},
+
+		bindThumbnailNavi: function(navi) {
+			if(navi.data('init-event') !== 1) {
+				navi.find('.prev').bind('click.taogi',function(e) {
+					alert('작업중이다. 이것들아');
+				});
+				navi.find('.next').bind('click.taogi',function(e) {
+					alert('작업중이다. 이것들아2');
+				});
+				navi.data('init-event',1);
 			}
 		},
 

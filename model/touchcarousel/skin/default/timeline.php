@@ -62,15 +62,23 @@
 								<a class="switch_nav" href="javascript://">Open / Close</a>
 								<a class="switch_mode" href="javascript://"><?php print $lang->_t('view_article'); ?></a>
 								<p class="caption">Media description...</p>
-								<ul class="thumbnails">
-<?php						if(@count($datalist[$i]['media'])) {
-								for($j=0; $j<@count($datalist[$i]['media']); $j++) {
-									print $taogi_theme->thumbnail($datalist[$i]['media'][$j]);
-								}
-							} else if($datalist[$i]['asset']['media']) {
-									print $taogi_theme->thumbnail($datalist[$i]['asset']);
-							}?>
-								</ul>
+								<div class="thumbnails-navi">
+									<div class="thumbnails-navi-items">
+										<ul class="thumbnails">
+<?php							if(@count($datalist[$i]['media'])) {
+									for($j=0; $j<@count($datalist[$i]['media']); $j++) {
+										print $taogi_theme->thumbnail($datalist[$i]['media'][$j]);
+									}
+								} else if($datalist[$i]['asset']['media']) {
+										print $taogi_theme->thumbnail($datalist[$i]['asset']);
+								}?>
+										</ul><!--/.thumbnails-->
+									</div><!--/.thumbnails-navi-items-->
+									<div class="thumbnails-navi-buttons">
+										<button class="prev"><span>prev</span2></button>
+										<button class="next"><span>next</span></button>
+									</div><!--/.thumbnails-navi-buttons-->
+								</div>
 							</div>
 						</article>
 					</section>
