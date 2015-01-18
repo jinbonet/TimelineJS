@@ -14,8 +14,8 @@
 		"date": 
         [
 			{
-				"startDate":"1870,1,10",
-				"headline":"",
+				"startDate":"1870,7,13",
+				"headline":"엠스 전보 사건",
 				"text":"",
 				"asset":
 				{
@@ -105,8 +105,8 @@
 			},
 			{
 				"startDate":"1870,9,4",
-				"headline":"파리 혁명 - 제3 공화국 선언",
-				"text":"\"제정은 카드로 만든 집처럼 힘없이 넘어지고 다시 공화국이 선포되었다.\"(by 엥겔스) 그러나 '국민 방위 정부'는 시청을 장악하고 공화국을 팔아 포로가 된 루이 보나파르트와 바꿀 궁리나 한다.",
+				"headline":"제3 공화국 선포",
+				"text":"\"제정은 카드로 만든 집처럼 힘없이 넘어지고 다시 공화국이 선포되었다.\"(by 엥겔스) 입법원의 파리 출신 의원들은 '국민 방위 정부'를 세우고 공화정을 선포했다. 근데 얘네들은 시청을 장악하고 공화국을 팔아 포로가 된 루이 보나파르트와 바꿀 궁리나 한다.",
 				"asset":
 				{
 					"media":"http://www.larousse.fr/encyclopedie/data/images/1008952-Proclamation_de_la_IIIe_R%c3%a9publique.jpg",
@@ -144,7 +144,7 @@
 			},
 			{
 				"startDate":"1870,9,19",
-				"headline":"파리 봉쇄",
+				"headline":"프로이센군, 파리 봉쇄",
 				"text":"1871.1.28까지 지속된다.",
 				"asset":
 				{
@@ -155,6 +155,12 @@
 				},
 				"media":
 				[
+					{
+						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Bundesarchiv_Bild_183-H26707%2C_Deutsch-franz%C3%B6sischer_Krieg_1870-71%2C_Paris%2C_Belagerung.jpg/592px-Bundesarchiv_Bild_183-H26707%2C_Deutsch-franz%C3%B6sischer_Krieg_1870-71%2C_Paris%2C_Belagerung.jpg",
+						"credit":"<a href='https://en.wikipedia.org/wiki/File:Bundesarchiv_Bild_183-H26707,_Deutsch-französischer_Krieg_1870-71,_Paris,_Belagerung.jpg'>Wikipedia</a>",
+						"caption":"봉쇄 당시 프로이센 포병대",
+						"thumbnail":""
+					},
 					{
 						"media":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Les_ballons_sortis_pendant_le_Siege_de_Paris%2C_1870-1871.jpg/766px-Les_ballons_sortis_pendant_le_Siege_de_Paris%2C_1870-1871.jpg",
 						"credit":"<a href='https://en.wikipedia.org/wiki/File:Les_ballons_sortis_pendant_le_Siege_de_Paris,_1870-1871.jpg'>Wikipedia</a>",
@@ -172,7 +178,7 @@
 			{
 				"startDate":"1870,10,31",
 				"headline":"",
-				"text":"",
+				"text":"포위 속에서 굶주림에 지친 파리는 결국 자신들이 휴전의 희생양이 되었다고 여겼고, 상처받은 애국심은 배신에 대한 분노로 증폭되었다.(by 최갑수)",
 				"asset":
 				{
 					"media":"",
@@ -210,12 +216,6 @@
 						"media":"http://digital.library.northwestern.edu/siege/images/par00305.jpg",
 						"credit":"<a href='http://digital.library.northwestern.edu/'>The Siege and Commune of Paris</a>",
 						"caption":"이것이 바로 당시 쓰던 캐논포",
-						"thumbnail":""
-					},
-					{
-						"media":"https://upload.wikimedia.org/wikipedia/commons/c/c3/Communecannon.jpg",
-						"credit":"<a href='https://en.wikipedia.org/wiki/File:Communecannon.jpg'>Wikipedia</a>",
-						"caption":"여자들과 아이들이 캐논포 두 대를 몽마르뜨로 옮기고 있댜",
 						"thumbnail":""
 					}
 				]
@@ -260,9 +260,33 @@
 				}
 			},
 			{
-				"startDate":"1871,3,18",
-				"headline":"프랑스 내전 발발",
+				"startDate":"1871,2,26",
+				"headline":"가조약이 체결되고 프로이센군 수도 진입한다는 소식에 대포들을 이동시킴.",
+				"text":"띠에르 개노무시키",
+				"asset":
+				{
+					"media":"https://upload.wikimedia.org/wikipedia/commons/c/c3/Communecannon.jpg",
+					"credit":"<a href='https://en.wikipedia.org/wiki/File:Communecannon.jpg'>Wikipedia</a>",
+					"caption":"여자들과 아이들이 캐논포 두 대를 몽마르뜨로 옮기고 있댜",
+					"thumbnail":""
+				}
+			},
+			{
+				"startDate":"1871,3,1",
+				"headline":"rr",
 				"text":"",
+				"asset":
+				{
+					"media":"http://www.laguerrede1870enimages.fr/_wp_generated/wp46c301ba.gif",
+					"credit":"<a href='http://www.laguerrede1870enimages.fr/page118.html'>La  guerre  de  1870-71  en  images</a>",
+					"caption":"콩코드 광장을 점령한 프로이센군",
+					"thumbnail":""
+				}
+			},
+			{
+				"startDate":"1871,3,18",
+				"headline":"프랑스 내전 - 파리 꼬뮌",
+				"text":"띠에르(놈)은 대포를 탈취할 것을 지시. 망하자 모든 정부기관이 파리에서 철수할 것을 명하고, 그날 밤 '국민방위대'의 '중앙위원회'가 시청을 접수 - 파리 꼬뮌이 시작된다. 와아~~",
 				"asset":
 				{
 					"media":"<blockquote>지배 계급의 패배와 반역의 한가운데에 있는 파리의 프롤레타리아들은 공무의 지휘를 자기의 수중에 장악하여 상황을 수습하여야 할 시간이 다가왔음을 파악하였다. ... 그들은, 스스로 자기 자신들의 운명의 주인이 되고 정부 권력을 장악하는 것이 자신들의 긴급한 의무이며 절대적 권리라는 것을 파악하였다.</blockquote>",
@@ -286,7 +310,7 @@
 			{
 				"startDate":"1871,5,10",
 				"headline":"프랑크푸르트 조약 체결",
-				"text":"이때 프랑스는 알자스-로렌 지방을 프로이센에 드 드리기로.",
+				"text":"이때 프랑스는 알자스-로렌 지방을 프로이센에 드, 드리rh 50억 프랑도 배상하겠습니다!",
 				"asset":
 				{
 					"media":"",
@@ -306,8 +330,8 @@
 			},
 			{
 				"startDate":"1871,5,21",
-				"headline":"베르사유 군대, 파리 입성 ㅠㅠ",
-				"text":"북쪽과 동쪽 요새를 장악하고 있던 프로이센 군이 베르사유 군 지나게 해줌 ㅠㅠ",
+				"headline":"피의 일주일 시작",
+				"text":"북쪽&동쪽 요새를 장악하고 있던 프로이센 군이 통과시켜준 덕에 베르사이유군 파리 입성, 일주일간의 꼬뮌군 학살을 시작한다.",
 				"asset":
 				{
 					"media":"",
@@ -319,7 +343,7 @@
 			{
 				"startDate":"1871,5,28",
 				"headline":"",
-				"text":"",
+				"text":" 그 후로도 한동안 사람들이 단체로 살해당했다.",
 				"asset":
 				{
 					"media":"",
