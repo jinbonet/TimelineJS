@@ -7098,10 +7098,11 @@ function onYouTubePlayerAPIReady() {
 					var max_l = cl+Math.round((parseInt(sl.next().css('left')) - cl) / 2);
 				} else {
 					var max_l = parseInt(sl.next().css('left'));
+					if(isNaN(max_l)) max_l = this.slidebar_width;
 				}
 				var w = tooltip.outerWidth()+parseInt(tooltip.css('left'))+max_l;
-				var transition = this.settings.transition;
-				var transform = this.settings.transform;
+				var transition = this.supports.transition;
+				var transform = this.supports.transform;
 				if(this._useWebkitTransition) {
 					if(w > this.slidebar_width) {
 						tooltip.css({transition: transform+' 500ms ease', transform: 'translate3d('+(this.slidebar_width - w)+'px,0,0)'});
