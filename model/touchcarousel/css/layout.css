@@ -243,6 +243,9 @@ li.touchcarousel-item .item-container .section .wrap:after {
 .section.media .gallery-wrap .gallery-container .gallery-item .caption-overlay cite.credit {
 	font-size: 12px;
 }
+.section.media .gallery-wrap .gallery-container .gallery-item .caption-overlay span.close {
+	display: none;
+}
 /* MEDIA MODE -- navigation */
 .section.media .media-nav {
 	width: 100%;
@@ -309,6 +312,17 @@ li.touchcarousel-item .item-container .section .wrap:after {
 	color: #999999;
 	font-size: 11px;
 	font-style: normal;
+}
+.section.media .media-nav p.caption .close {
+	display: none;
+}
+.section.media .media-nav p.caption.overlay span.caption-content,
+.section.media .media-nav p.caption.overlay span.split,
+.section.media .media-nav p.caption.overlay cite.credit {
+	display: none;
+}
+.section.media .media-nav p.caption.overlay span.close {
+	display: inline-block;
 }
 .section.media .media-nav .thumbnails-navi {
 	box-sizing: content-box;
@@ -919,7 +933,7 @@ li.touchcarousel-item.flipper.vertical .item-flipper .section.media {
 		box-shadow: 0 0 5px #666666;
 	}
 	#carousel-timeline .taogi-scrollbar-container .taogi-scrollbar-container-switch {
-		display: block;
+		/* display: block; */
 	}
 	li.touchcarousel-item .section.article .wrap {
 		height: 90%;

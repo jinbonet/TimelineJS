@@ -18,5 +18,6 @@
 	"download":"<span class="suffix">Download </span>%s",
 
 	"read_source":"Read source",
-	"view_article":"Back to slide"
+	"view_article":"Back to slide",
+	"close_caption":"close"
 }

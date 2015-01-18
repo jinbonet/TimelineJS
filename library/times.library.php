@@ -43,6 +43,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 	$_date = explode(" ",$dateString);
 	$_day = preg_split("/[\-\/\.,]+/",$_date[0]);
 	$_time = explode(":",trim($_date[1]));
+	$year = (int)$_day[0];;
 	if(@count($_day) == 1) {
 		$dt = new DateTime($dateString."-01-01");
 	} else if(@count($_day) == 2) {
@@ -90,6 +91,7 @@ function JNTimeLine_formatTime($dateString,$format) {
 				if($_day[0]) {
 					$out .= $c;
 					$skip = false;
+					if($c == 'Y') $year_pretty = true;
 				} else {
 					$skip = true;
 				}
@@ -143,6 +145,9 @@ function JNTimeLine_formatTime($dateString,$format) {
 				if($skip == false) $out .= $c;
 				break;
 		}
+	}
+	if( $year_pretty == true ) {
+		$out = str_replace("Y",$year,$out);
 	}
 	return $dt->format(trim($out));
 }

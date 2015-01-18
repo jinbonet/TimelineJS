@@ -5957,6 +5957,8 @@ function onYouTubePlayerAPIReady() {
 		this.snapToItem = false;
 		this.totalItemCnt=0;
 		this._pageScroll = 0;
+		if(jQuery(window).height <= 570) this._pageScroll = 1;
+
 		var figure_index_cnt = 0;
 		Items.each(function(index) {
 			var item = jQuery(this);
@@ -6244,6 +6246,7 @@ function onYouTubePlayerAPIReady() {
 				this.min_slide = Math.round(win_width/4)*(-1)
 				this.max_slide = Math.round(win_width*1.25);
 				this._pageScroll = 0;
+				if(win_height <= 570) this._pageScroll = 1;
 				for(i=0; i<this.items.length; i++) {
 					var iwidth = parseInt(this.items[i].item.css('width'));
 					if(iwidth > Math.abs(this.min_slide)) this.min_slide = iwidth * (-1.25);
@@ -6402,7 +6405,7 @@ function onYouTubePlayerAPIReady() {
 				var cE = jQuery(event.target).closest('.touchcarousel-item');
 				if(cE.length>0) {
 					this._scrollItem = this.items[cE.data('index')];
-					if(this._scrollItem.pageScroll == true) {
+					if(this._scrollItem.pageScroll == true || this.scrollContainerPos) {
 						this._startYPos = this._scrollItem.curScrollY;
 						this._isPageScrollSwipping = true;
 					}
@@ -6422,13 +6425,18 @@ function onYouTubePlayerAPIReady() {
 			} else if(direction == "right") {
 				dist = this._startPos + distance;
 			} else if(direction == 'up' && this._isPageScrollSwipping == true) {
-				if( (this._startYPos + this._scrollItem.wheight) > (this._scrollItem.height + (this.scrollContainerPos && this.scrollContainer.data('show')==1 ? this.scrollContainerPos : 0)) && 
-					(this._scrollItem.curScrollY + this._scrollItem.wheight) > ((this._scrollItem.height + (this.scrollContainerPos && this.scrollContainer.data('show')==1 ? this.scrollContainerPos : 0)) * 0.75) ) {
+				if( this._scrollItem.pageScroll === true &&
+					(this._startYPos + this._scrollItem.wheight) > this._scrollItem.height && 
+					(this._scrollItem.curScrollY + this._scrollItem.wheight) > (this._scrollItem.height * 0.75) ) {
 					scroll = true;
 					dist = this._startYPos - distance;
+				} else if(this.scrollContainerPos && this.scrollContainer.data('show') !== 1) {
+					this._showIndicate(1); 
 				}
 			} else if(direction == 'down' && this._isPageScrollSwipping == true) {
-				if( this._startYPos < 0 && this._scrollItem.curScrollY < ((this._scrollItem.height + (this.scrollContainerPos && this.scrollContainer.data('show')==1 ? this.scrollContainerPos : 0)) / 4) ) {
+				if(this.scrollContainerPos && this.scrollContainer.data('show') == 1) {
+					this._showIndicate(0);
+				} else if( this._scrollItem.pageScroll === true && this._startYPos < 0 && this._scrollItem.curScrollY < (this._scrollItem.height / 4) ) {
 					scroll = true;
 					dist = this._startYPos + distance;
 				}
@@ -6449,14 +6457,26 @@ function onYouTubePlayerAPIReady() {
 						this._initGallery(obj.data('index'));
 					}
 				} else if(this._isPageScrollSwipping == true) {
-					if((this._scrollItem.curScrollY + this._scrollItem.wheight) < this._scrollItem.height + (this.scrollContainerPos && this.scrollContainer.data('show')==1 ? this.scrollContainerPos : 0)) {
-						var lastendYPos = (this._scrollItem.height - this._scrollItem.wheight + (this.scrollContainerPos && this.scrollContainer.data('show')==1 ? this.scrollContainerPos : 0));
-						duration = duration / (lastendYPos - this._scrollItem.curScrollY) * (this._scrollItem.height / 4) / 2;
-						this.setYScrollPosition(this._scrollItem,lastendYPos,duration,'ease-out');
-					} else if(this._scrollItem.curScrollY > 0) {
-						var lastendYPos = 0;
-						duration = duration / (this._scrollItem.curScrollY - lastendYPos) * (this._scrollItem.height / 4) / 2;
-						this.setYScrollPosition(this._scrollItem,lastendYPos,duration,'ease-out');
+					if(direction == 'up') {
+						if( this._scrollItem.pageScroll === true && (this._scrollItem.curScrollY + this._scrollItem.wheight) < this._scrollItem.height ) {
+							var lastendYPos = (this._scrollItem.height - this._scrollItem.wheight);
+							duration = duration / (lastendYPos - this._scrollItem.curScrollY) * (this._scrollItem.height / 4) / 2;
+							this.setYScrollPosition(this._scrollItem,lastendYPos,duration,'ease-out');
+						} else if(this.scrollContainerPos && this.scrollContainer.data('show') !== 1) {
+							this._showIndicate(1);
+						}
+					} else if(direction == 'down') {
+						if(this.scrollContainerPos && this.scrollContainer.data('show') == 1) {
+							this._showIndicate(0);
+						} else if( this._scrollItem.pageScroll === true && (this._scrollItem.curScrollY + this._scrollItem.wheight) < this._scrollItem.height ) {
+							var lastendYPos = (this._scrollItem.height - this._scrollItem.wheight);
+							duration = duration / (lastendYPos - this._scrollItem.curScrollY) * (this._scrollItem.height / 4) / 2;
+							this.setYScrollPosition(this._scrollItem,lastendYPos,duration,'ease-out');
+						} else if(this._scrollItem.curScrollY > 0) {
+							var lastendYPos = 0;
+							duration = duration / (this._scrollItem.curScrollY - lastendYPos) * (this._scrollItem.height / 4) / 2;
+							this.setYScrollPosition(this._scrollItem,lastendYPos,duration,'ease-out');
+						}
 					}
 				}
 			} else if(distance) {
@@ -6552,6 +6572,8 @@ function onYouTubePlayerAPIReady() {
 					this.buildGallery(this.figures[i].item_index,this.figures[i].figure_index);
 				} else if(cE.tagName == 'a') {
 					window.open(cE.attr('href'),'_blank');
+				} else if(cE.hasClass('caption')) {
+					this.toggleCaption(cE);
 				}
 			}
 		},
@@ -7018,30 +7040,38 @@ function onYouTubePlayerAPIReady() {
 				if(show_opt == 1) {
 					if(this._useWebkitTransition === true) {
 						this._isIndicateSwipping = true;
-						this.scrollContainer.css({transition: transform+' '+(this.settings.transitionSpeed/3).toFixed(1)+'ms '+$.cssEase['easeOutCubic']+(delay ? ' '+delay.toFixed(1)+'ms' : ''), transform: 'translate3d(0,'+self.scrollContainerPos+'px,0)'});
-						this.scrollContainer.bind(transitionEnd, function() {
+//						this.scrollContainer.css({transition: transform+' '+(this.settings.transitionSpeed/3).toFixed(1)+'ms '+$.cssEase['easeOutCubic']+(delay ? ' '+delay.toFixed(1)+'ms' : ''), transform: 'translate3d(0,'+self.scrollContainerPos+'px,0)'});
+						this.TLBox.css({transition: transform+' '+(this.settings.transitionSpeed/3).toFixed(1)+'ms '+$.cssEase['easeOutCubic']+(delay ? ' '+delay.toFixed(1)+'ms' : ''), transform: 'translate3d(0,'+self.scrollContainerPos+'px,0)'});
+//						this.scrollContainer.bind(transitionEnd, function() {
+						this.TLBox.bind(transitionEnd, function() {
 							self.scrollContainer.data('show',1);
 							self.scrollContainer.addClass('active');
 							self._isIndicateSwipping = false;
-							self.scrollContainer.unbind(transitionEnd);
+//							self.scrollContainer.unbind(transitionEnd);
+							self.TLBox.unbind(transitionEnd);
 						});
 					} else {
-						this.scrollContainer.css('bottom',0);
+//						this.scrollContainer.css('bottom',0);
+						this.TLRoot.css('top','-'+this.scrollContainerPos+'px');
 						this.scrollContainer.addClass('active');
 						this.scrollContainer.data('show',1);
 					}
 				} else {
 					if(this._useWebkitTransition === true) {
 						this._isIndicateSwipping = true;
-						this.scrollContainer.css({transition: transform+' '+$.cssEase['easeOutCubic']+' '+(this.settings.transitionSpeed/3).toFixed(1)+'ms', transform: 'translate3d(0,0,0)'});
-						this.scrollContainer.bind(transitionEnd, function() {
+//						this.scrollContainer.css({transition: transform+' '+$.cssEase['easeOutCubic']+' '+(this.settings.transitionSpeed/3).toFixed(1)+'ms', transform: 'translate3d(0,0,0)'});
+						this.TLBox.css({transition: transform+' '+$.cssEase['easeOutCubic']+' '+(this.settings.transitionSpeed/3).toFixed(1)+'ms', transform: 'translate3d(0,0,0)'});
+//						this.scrollContainer.bind(transitionEnd, function() {
+						this.TLBox.bind(transitionEnd, function() {
 							self.scrollContainer.data('show',0);
 							self.scrollContainer.removeClass('active');
 							self._isIndicateSwipping = false;
-							self.scrollContainer.unbind(transitionEnd);
+//							self.scrollContainer.unbind(transitionEnd);
+							self.TLBox.unbind(transitionEnd);
 						});
 					} else {
-						this.scrollContainer.css('bottom',this.scrollContainerPos+'px');
+//						this.scrollContainer.css('bottom',this.scrollContainerPos+'px');
+						this.TLBox.css('top',0);
 						this.scrollContainer.removeClass('active');
 						this.scrollContainer.data('show',0);
 					}
@@ -7689,9 +7719,6 @@ function onYouTubePlayerAPIReady() {
 				self.loadGalleryItems(index,index2,auto);
 				self.items[index].gallery_loaded = 1;
 				container.data('isloaded',1)
-				item.find('.media-nav .caption').bind('click',function(e) {
-					self.toggleCaption(jQuery(this));
-				});
 			}
 			if(this._useWebkitTransition == false) {
 				cWidth = item.find('.gallery-wrap').width();
@@ -7845,9 +7872,10 @@ function onYouTubePlayerAPIReady() {
 			this.items[index].item.find('.gallery-container').data('curIndex',gindex);
 			jQuery('#t_'+this.items[index].galleries[gindex].uid).addClass('current').siblings().removeClass('current');
 			taogiVMM.Util.alignMiddle('#'+this.items[index].galleries[gindex].uid,0);
-			var caption = this.items[index].galleries[gindex].caption;
+			var caption = '<span class="caption-content">'+this.items[index].galleries[gindex].caption+'</span>';
 			if(this.items[index].galleries[gindex].credit)
 				caption += '<span class="split"> - </span><cite class="credit">'+this.items[index].galleries[gindex].credit + '</cite>';
+			caption += '<span class="close">'+taogiVMM.languagePack.close_caption+'</span>';
 			this.items[index].gallery.find('.media-nav .caption').html(caption).data('index',index).data('gindex',gindex);
 			this.items[index].g_animating = false;
 		},
@@ -7860,14 +7888,17 @@ function onYouTubePlayerAPIReady() {
 			if(o.length > 0) {
 				if(o.hasClass('show')) {
 					this.items[i].item.find('.caption-overlay').removeClass('show');
+					obj.removeClass('overlay');
 				} else {
 					o.find('.caption').html(obj.html());
 					o.addClass('show');
+					obj.addClass('overlay');
 				}
 			} else {
 				var o = jQuery('<div class="caption-overlay"><div class="caption">'+obj.html()+'</div></div>');
 				o.appendTo(w);
 				o.addClass('show');
+				obj.addClass('overlay');
 			}
 		},
 
@@ -7965,7 +7996,7 @@ function onYouTubePlayerAPIReady() {
 		use_gnb:true,
 		keyboard:true,
 		threshold: 50,
-		clickElements: 'a, .taogi_buildGallery, li.thumbnail',
+		clickElements: 'a, .taogi_buildGallery, li.thumbnail, .media-nav .caption',
 		triggerOnTouchEnd: true,
 		allowPageScroll: 'auto',
 		swipeUsingMouse: true,

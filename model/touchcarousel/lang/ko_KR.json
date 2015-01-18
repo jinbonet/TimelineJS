@@ -3,7 +3,7 @@
 	"timeline_text":"설명",
 	"timeline_author":"작성자",
 
-	"time_format":"o년 n월 j일 A h시 i분",
+	"time_format":"Y년 n월 j일 A h시 i분",
 
 	"share_twitter":"트위터에 공유하기",
 	"share_facebook":"페이스북에 공유하기",
@@ -18,5 +18,6 @@
 	"download":"%s<span class='suffix'> 내려받기</span>",
 
 	"read_source":"원문 보기",
-	"view_article":"슬라이드로 돌아가기"
+	"view_article":"슬라이드로 돌아가기",
+	"close_caption":"접기"
 }
