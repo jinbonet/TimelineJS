@@ -245,6 +245,7 @@ li.touchcarousel-item .item-container .section .wrap:after {
 }
 .section.media .gallery-wrap .gallery-container .gallery-item .caption-overlay span.close {
 	display: none;
+	font-weight: bold;
 }
 /* MEDIA MODE -- navigation */
 .section.media .media-nav {
@@ -793,7 +794,7 @@ li.touchcarousel-item.flipper.vertical .item-flipper .section.media {
 	}
 	li.touchcarousel-item .section.article .wrap {
 		width: 665px; /* 765-50-50 */
-		height: 370px; /* 470-50-50 */
+		height: 440px; /* 470-50-50 */
 		margin: 50px auto 0 auto;
 	}
 	li.touchcarousel-item .section.media .gallery-wrap {

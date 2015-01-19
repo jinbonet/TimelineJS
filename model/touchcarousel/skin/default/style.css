@@ -146,7 +146,7 @@ body {
 }
 .cover .section.article ul.social {
 	position: absolute;
-	bottom: 30px;
+	bottom: 0px;
 	left: 0;
 	list-style: none;
 	width: 100%;

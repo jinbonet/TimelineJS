@@ -7877,7 +7877,8 @@ function onYouTubePlayerAPIReady() {
 			if(this.items[index].galleries[gindex].credit)
 				caption += '<span class="split"> - </span><cite class="credit">'+this.items[index].galleries[gindex].credit + '</cite>';
 			caption += '<span class="close">'+taogiVMM.languagePack.close_caption+'</span>';
-			this.items[index].gallery.find('.media-nav .caption').html(caption).data('index',index).data('gindex',gindex);
+			jQuery('.caption-overlay').removeClass('show');
+			this.items[index].gallery.find('.media-nav .caption').removeClass('overlay').html(caption).data('index',index).data('gindex',gindex);
 			this.items[index].g_animating = false;
 		},
 
