@@ -7901,6 +7901,10 @@ function onYouTubePlayerAPIReady() {
 				o.appendTo(w);
 				o.addClass('show');
 				obj.addClass('overlay');
+				o.bind('click.taogi',function(e) {
+					jQuery(this).removeClass('show');
+					obj.removeClass('overlay');
+				});
 			}
 		},
 

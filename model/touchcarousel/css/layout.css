@@ -325,6 +325,12 @@ li.touchcarousel-item .item-container .section .wrap:after {
 .section.media .media-nav p.caption.overlay span.close {
 	display: inline-block;
 }
+.section.media .media-nav p.caption.overlay span.close:before {
+	font-family: 'Glyphicons Halflings';
+	content: '\E134';
+	padding: 3px 5px 0 2px;
+	font-size: 10px;
+}
 .section.media .media-nav .thumbnails-navi {
 	box-sizing: content-box;
 	position: relative;
