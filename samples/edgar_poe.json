@@ -1,0 +1,153 @@
+{ 
+	"timeline":
+	{
+		"headline":"포의 일족 - 에드거 포 중심 연대기 + 작중에 인용된 작품 소개",
+		"type":"source type: Json",
+		"startDate":"1740",
+		"text":"에드거 포는 하기오 모토 선생의 만화 [포의 일족]의 주인공 뱀파네라임다. 그의 행적을 연표로 정리해 보았긔 ㅇㅅㅇ 개스포일러 주의. 일본 위키피디아의 포의 일족 항목의 연표 부분을 많이 참고함",
+		"asset":
+		{
+			"media":"",
+			"credit":"뎡야핑(님)",
+			"caption":""
+		},
+		"date": 
+        [
+			{
+				"startDate":"1740,5,12",
+				"headline":"에드거 태어나다",
+				"text":"태어났을 때엔 인간이었고-ㅅ- 성은 '에번스'였음 에드거 에번스 ㅇㅇ 엄마 '메리웨더'는 에번스 백작의 세컨이었다",
+				"location":"",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			},
+			{
+				"startDate":"1744",
+				"headline":"포의 일족에 입성",
+				"text":"4년 뒤 메리벨을 낳고 병약해진 메리웨더 사망. 에번스 백작의 부인에게 에드거와 메리벨을 죽일 것을 지시받은 아이들의 유모는 둘을 숲에 버리고 도망, 이 둘을 전설의(?) 뱀파네라 한나 포가 거둬들임",
+				"location":"스코티 마을. 영문 검색해도 모르겠넹 미쿡에 하나 있긔..",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			},
+			{
+				"startDate":"",
+				"headline":"",
+				"text":"",
+				"location":"",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			},
+			{
+				"startDate":"1879",
+				"headline":"\"앨런, 우리랑 같이 시간을 넘어서 멀리 갈테야?\"",
+				"text":"앨런 트와일라잇, 포의 일족에 합류. 만화 편제상으로는 [포의 일족] 시리즈의 첫번째 이야기임. 같은 시기 메리벨과ㅜㅜ 포츠넬 부부 사망.",
+				"location":"영국 어디 항구도시",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			},
+			{
+				"startDate":"1888,9,30",
+				"headline":"에드거의 초상화들",
+				"text":"정물화 따위를 그리던 아서 퀭튼 경은 다음해 4월 15일까지 에드거의 초상화 열 점을 남김.",
+				"location":"",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				},
+				"media":
+				[
+					{
+						"media":"http://upload.wikimedia.org/wikipedia/commons/1/1b/Master_Lambton_-_Sir_Thomas_Lawrence.png",
+						"credit":"위키피디아",
+						"caption":"아서 퀭튼 경이 첨으로 그린 에드거는 18세기 초상화가 토머스 로렌스의 'Master Lambtom'을 모사한 거였다.",
+						"thumbnail":""
+					}
+				]
+			},
+			{
+				"startDate":"1959,5",
+				"headline":"독일의 기숙학교로",
+				"text":"'로빈 카'를 일족으롬 맞이하러 독일로 온 에드거와 앨런. 이때쯤이면 앨런은 안팎으로 행패와 땡깡을 일삼게 된다. 청아하던 앨런이여 아아 나이들며 느는 것은 땡깡이란 말가",
+				"location":"독일 어디 모래 많은 강 근처 기숙학교",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				},
+				"media":
+				[
+					{
+						"media":"http://en.wikipedia.org/wiki/Cock_Robin",
+						"credit":"위키피디아",
+						"caption":"누가 로빈콕(울새)을 죽였나? 일족으로 맞이하려 기다려왔던 '로빈 카'의 죽음을 알게 된 에드거가 학교 애들 앞에서 부르는 영국 동요.",
+						"thumbnail":""
+					},
+					{
+						"media":"http://blog.jinbo.net/test/60",
+						"credit":"펌을 펌",
+						"caption":"에드거와 앨런도 출연한 셰익스피어의 [뜻대로 하세요]를 읽어봐봠.",
+						"thumbnail":""
+					},
+					{
+						"media":"http://www.opensourceshakespeare.org/views/plays/play_view.php?WorkID=asyoulikeit&Scope=entire&pleasewait=1&msg=pl",
+						"credit":"OpenSourceShakespeare",
+						"caption":"영문으로도 읽긔 As You Like It",
+						"thumbnail":""
+					}
+				]
+			},
+			{
+				"startDate":"",
+				"headline":"",
+				"text":"",
+				"location":"",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			},
+			{
+				"startDate":"1976",
+				"headline":"앨런 소멸 ㅜㅜ",
+				"text":"",
+				"location":"London",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"",
+					"thumbnail":""
+				}
+			}
+		]
+	}
+}
+		
