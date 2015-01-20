@@ -12,6 +12,8 @@
 
 }
 
+@import	src:url("/taogi-timeline/resources/Font-Awesome/css/font-awesome.min.css);
+
 [data-icon]:before {
   font-family: "Jinbonet Icons" !important;
   content: attr(data-icon);
