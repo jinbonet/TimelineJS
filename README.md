@@ -52,7 +52,7 @@
 | [PDFObject][repository-pdfobject]                 | [MIT][license-mit]    | resources/pdfobject/                              |
 | [PHP Proxy][repository-php-proxy]                 | [MIT][license-mit]    | library/php-proxy/                                |
 | [Twitteroauth][repository-twitteroauth]           | [?]                   | library/twitteroauth/                             |
-| [FontAwesome][font-awesome]						| [OFL][license-ofl]	| resources/font-awesome/							|
+| [FontAwesome][repository-font-awesome]			| [OFL][license-ofl]	| resources/font-awesome/							|
 
 2. 업로드
 ---------
@@ -156,7 +156,7 @@ http://yourdomain.com/taogi-timeline/?src=yourfile.json
 [repository-pdfobject]:         https://github.com/pipwerks/PDFObject
 [repository-php-proxy]:         https://github.com/jenssegers/php-proxy
 [repository-twitteroauth]:      https://github.com/abraham/twitteroauth
-[repository-bootstrap]:         https://github.com/twbs/bootstrap
+[repository-font-awesome]:      https://github.com/FortAwesome/Font-Awesome
 
 [license-mpl]: http://mozilla.org/MPL/2.0/
 [license-mit]: http://opensource.org/licenses/MIT
