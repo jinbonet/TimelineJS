@@ -1,7 +1,6 @@
 @charset "utf-8";
-@import url('foundation-icons.css');
-@import url('glyphicons-halflings.css');
-@import url('jinbonet-icons.css');
+@import url('../font-awesome/css/font-awesome.min.css');
+@import url('../jinbonet-icons/css/jinbonet-icons.css');
 
 /******************************************************************************************
 	FEATURE DEFAULTS start
@@ -81,7 +80,7 @@
 	box-shadow: 0 0 5px #000000, inset 0 0 5px #000000;
 	color: #FFFFFF;
 	text-shadow: 0 0 5px #000000;
-	font-family: 'Glyphicons Halflings';
+	font-family: 'FontAwesome';
 	font-size: 30px;
 	font-style: normal;
 	text-align: center;
@@ -104,11 +103,11 @@
 	background-color: #F5F5F5;
 }
 .article .figure.thumb-website i:before {
-	content: '\E144';
+	content: '\F0C1';
 }
 .article .figure.thumb-wikipedia i:before,
 .article .figure.thumb-rigvedawiki i:before {
-	content: '\e135';
+	content: '\F0AC';
 }
 /* IFRAME, PDF, ATTACHMENT, OBJECT */
 .article .figure.noimage.thumb-pdf,
@@ -118,18 +117,18 @@
 	background-image: url(../images/background-pattern-default.png);
 }
 .article .figure.thumb-attachment i:before {
-	content: '\E166';
+	content: '\F0C6';
 }
 .article .figure.thumb-pdf i:before,
 .article .figure.thumb-googledoc i:before {
-	content: '\E022';
+	content: '\F1C1';
 }
 .article .figure.thumb-iframe i:before {
-	content: '\E009';
+	content: '\F152';
 }
 /* MAP */
 .article .figure.thumb-googlemap i:before {
-	content: '\E062';
+	content: '\F041';
 }
 /* VIDEO */
 .article .figure.noimage.thumb-youtube,
@@ -161,7 +160,7 @@
 .article .figure.thumb-mediaelements.m4v i:before,
 .article .figure.thumb-mediaelements.mov i:before,
 .article .figure.thumb-mediaelements.mkv i:before {
-	content: '\E072';
+	content: '\F03D';
 }
 /* AUDIO */
 .article .figure.noimage.thumb-soundcloud,
@@ -178,7 +177,7 @@
 .article .figure.thumb-mediaelements.mp3 i:before,
 .article .figure.thumb-mediaelements.m4a i:before,
 .article .figure.thumb-mediaelements.ogg i:before {
-	content: '\E038';
+	content: '\F028';
 }
 /******************************************************************************************
 	ARTICLE FEATURE end
@@ -377,9 +376,9 @@
 .figure.attachment h4 a:before {
 	display: inline-block;
 	vertical-align: top;
-	content: '\E166';
+	content: '\F0C6';
 	padding-right: 0.3em;
-	font-family: 'Glyphicons Halflings';
+	font-family: 'FontAwesome';
 }
 .figure.attachment h4 span.suffix {
 	display: none;
@@ -600,7 +599,7 @@ figure.twitter .blockquote h4 a:hover span.realname {
 	line-height: inherit;
 	background-color: #333333;
 	text-align: center;
-	font-family: 'Glyphicons Halflings';
+	font-family: 'FontAwesome';
 	font-size: inherit;
 	color: #FFFFFF;
 	text-shadow: 0 0 5px #000000;
@@ -614,35 +613,37 @@ figure.twitter .blockquote h4 a:hover span.realname {
 	outline: default;
 }
 .media-nav ul.thumbnails li.prev:after {
-	content: '\E079';
+	content: '\F137';
 }
 .media-nav ul.thumbnails li.next:after {
-	content: '\E080';
+	content: '\F138';
 }
-.media-nav ul.thumbnails li.quote:after,
+.media-nav ul.thumbnails li.quote:after {
+	content: '\F10D';
+}
 .media-nav ul.thumbnails li.twitter:after {
-	content: '\E111';
+	content: '\F099';
 }
 .media-nav ul.thumbnails li.website:after {
-	content: '\E144';
+	content: '\F0C1';
 }
 .media-nav ul.thumbnails li.attachment:after {
-	content: '\E166';
+	content: '\F0C6';
 }
 .media-nav ul.thumbnails li.wikipedia:after,
 .media-nav ul.thumbnails li.rigvedawiki:after {
-	content: '\E135';
+	content: '\F0AC';
 }
 .media-nav ul.thumbnails li.textMedia:after,
 .media-nav ul.thumbnails li.pdf:after,
 .media-nav ul.thumbnails li.googledoc:after {
-	content: '\E022';
+	content: '\F1C1';
 }
 .media-nav ul.thumbnails li.googlemap:after {
-	content: '\E062';
+	content: '\F041';
 }
 .media-nav ul.thumbnails li.iframe:after {
-	content: '\E009';
+	content: '\F152';
 }
 .media-nav ul.thumbnails li.youtube:after,
 .media-nav ul.thumbnails li.vimeo:after,
@@ -656,7 +657,7 @@ figure.twitter .blockquote h4 a:hover span.realname {
 .media-nav ul.thumbnails li.mediaelements.flv:after,
 .media-nav ul.thumbnails li.mediaelements.m4a:after,
 .media-nav ul.thumbnails li.mediaelements.mkv:after {
-	content: '\E059';
+	content: '\F03D';
 }
 .media-nav ul.thumbnails li.soundcloud:after,
 .media-nav ul.thumbnails li.mediaelements.wma:after,
@@ -664,7 +665,7 @@ figure.twitter .blockquote h4 a:hover span.realname {
 .media-nav ul.thumbnails li.mediaelements.mp3:after,
 .media-nav ul.thumbnails li.mediaelements.m4a:after,
 .media-nav ul.thumbnails li.mediaelements.ogg:after {
-	content: '\E038';
+	content: '\F028';
 }
 /******************************************************************************************
 	MEDIA NAV FEATURE end

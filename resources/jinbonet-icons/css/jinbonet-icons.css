@@ -2,17 +2,15 @@
 
 @font-face {
   font-family: "Jinbonet Icons";
-  src:url("jinbonet-icons.eot");
-  src:url("jinbonet-icons.eot?#iefix") format("embedded-opentype"),
-    url("jinbonet-icons.woff") format("woff"),
-    url("jinbonet-icons.ttf") format("truetype"),
-    url("jinbonet-icons.svg#jinbonet-icons") format("svg");
+  src:url("../fonts/jinbonet-icons.eot");
+  src:url("../fonts/jinbonet-icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/jinbonet-icons.woff") format("woff"),
+    url("../fonts/jinbonet-icons.ttf") format("truetype"),
+    url("../fonts/jinbonet-icons.svg#jinbonet-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 
 }
-
-@import	src:url("/taogi-timeline/resources/Font-Awesome/css/font-awesome.min.css);
 
 [data-icon]:before {
   font-family: "Jinbonet Icons" !important;

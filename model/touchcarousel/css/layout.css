@@ -283,8 +283,8 @@ li.touchcarousel-item .item-container .section .wrap:after {
 	*display: inline;
 	line-height: inherit;
 	vertical-align: middle;
-	font-family: 'Glyphicons Halflings';
-	content: '\E017';
+	font-family: 'FontAwesome';
+	content: '\F0EC';
 	margin-right: 0.3em;
 }
 .section.media .media-nav p.caption {
@@ -326,8 +326,8 @@ li.touchcarousel-item .item-container .section .wrap:after {
 	display: inline-block;
 }
 .section.media .media-nav p.caption.overlay span.close:before {
-	font-family: 'Glyphicons Halflings';
-	content: '\E134';
+	font-family: 'FontAwesome';
+	content: '\F057';
 	padding: 3px 5px 0 2px;
 	font-size: 10px;
 }
@@ -445,7 +445,7 @@ li.touchcarousel-item .item-container .section .wrap:after {
 	background-color: transparent;
 
 	content: '';
-	font-family: 'Glyphicons Halflings';
+	font-family: 'FontAwesome';
 	font-size: 20px;
 	color: rgba(255,255,255,0.5);
 }
@@ -457,13 +457,13 @@ li.touchcarousel-item .item-container .section .wrap:after {
 	left: 0px;
 }
 .section.media .media-nav button.prev:after {
-	content: '\e079';
+	content: '\F0A8';
 }
 .section.media .media-nav button.next {
 	left: 30px;
 }
 .section.media .media-nav button.next:after {
-	content: '\e080';
+	content: '\F0A9';
 }
 /****************************************************************************************************
 	BOX MODEL end 
@@ -526,9 +526,9 @@ li.touchcarousel-item .item-container .section .wrap:after {
 	height: 20px;
 	line-height: 20px;
 	text-align: center;
-	font-family: 'Glyphicons Halflings';
+	font-family: 'FontAwesome';
 	font-size: 13px;
-	content: '\E133';
+	content: '\F0AA';
 	color: #666666;
 }
 .taogi-scrollbar-container.active .taogi-scrollbar-container-switch:after {
@@ -539,7 +539,7 @@ li.touchcarousel-item .item-container .section .wrap:after {
 	-ms-transform: rotate(180deg);
 	-o-transform: rotate(180deg);
 	*/
-	content: '\E134';
+	content: '\F0AB';
 }
 .taogi-scrollbar-wrap {
 	position: relative;

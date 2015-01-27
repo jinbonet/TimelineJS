@@ -298,22 +298,22 @@ body {
 #taogi-gnb-body ul li a span.ui:before {
 	display: inline;
 	margin-right: 0.5em;
-	font-family: 'Glyphicons Halflings';
+	font-family: 'FontAwesome';
 }
 #taogi-gnb-body ul li.checked a {
 	color: #F0F0F0;
 }
 #taogi-gnb-body ul li.checkbox a span.ui:before {
-	content: '\e157';
+	content: '\F096';
 }
 #taogi-gnb-body ul li.radio a span.ui:before {
-	content: '\e089';
+	content: '\F10C';
 }
 #taogi-gnb-body ul li.checkbox.checked a span.ui:before {
-	content: '\e067';
+	content: '\F046';
 }
 #taogi-gnb-body ul li.radio.checked a span.ui:before {
-	content: '\e084';
+	content: '\F192';
 }
 #taogi-gnb-footer {
 }
