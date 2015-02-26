@@ -47,7 +47,7 @@
 <?php						}?>
 							<div class="title-description">
 								<h2 class="title"><?php print $datalist[$i]['headline']; ?></h2>
-								<div class="description"><p><?php print strip_tags($datalist[$i]['text'],'<a><br>'); ?><span class="more">... <a href="#"><?php print $lang->_t('read_more'); ?></a></span></p></div>
+								<div class="description"><p><?php print strip_tags($datalist[$i]['text'],'<b><strong><i><em><u><s><strike><a><br><p>'); ?><span class="more">... <a href="#"><?php print $lang->_t('read_more'); ?></a></span></p></div>
 							</div>
 						</article>
 					</section>

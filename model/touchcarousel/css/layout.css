@@ -983,3 +983,29 @@ li.touchcarousel-item.flipper.vertical .item-flipper .section.media {
 /******************************************************************************************
 	RESPONSIVE end
 ******************************************************************************************/
+
+/******************************************************************************************
+	Richeditor
+******************************************************************************************/
+.title-description .description p {
+	margin: 0;
+	padding: 0;
+}
+.title-description .description p+p {
+	margin-top: 1em;
+}
+.title-description .description b,
+.title-description .description strong {
+	font-weight: bold;
+}
+.title-description .description i,
+.title-description .description em {
+	font-style: italic;
+}
+.title-description .description u {
+	text-decoration: underline;
+}
+.title-description .description s,
+.title-description .description strike {
+	text-decoration: line-through;
+}
