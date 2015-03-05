@@ -175,10 +175,11 @@ body {
 	line-height: 24px;
 	text-align: center;
 	text-decoration: none;
-	color: #666666;
+	color: #000000;
+	opacity: 0.5;
 }
 .cover .section.article ul.social li a:hover {
-	color: #000000;
+	opacity: 1;
 }
 .cover .section.article ul.social li a span {
 	display: none;
