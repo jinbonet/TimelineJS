@@ -6127,8 +6127,15 @@ function onYouTubePlayerAPIReady() {
 					else if (e.keyCode === 39) {
 						if(!self._blockRightArrow) self.nextPage();
 					}
-   			 });
+				});
 			}
+			jQuery(document).on('mousewheel',function(event) {
+				if(event.deltaY > 0) {
+					self.prevPage();
+				} else if(event.deltaY < 0) {
+					self.nextPage();
+				}
+			});
 			self._enableArrow();
 		}
 
