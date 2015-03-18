@@ -980,6 +980,9 @@ li.touchcarousel-item.flipper.vertical .item-flipper .section.media {
 .figure.overflow img {
 	max-height: 190px !important;
 }
+.figure.instagram.overflow {
+	overflow-y:auto;
+}
 /******************************************************************************************
 	RESPONSIVE end
 ******************************************************************************************/

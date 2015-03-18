@@ -676,6 +676,13 @@ if (typeof taogiVMM == 'undefined') {
 			tries:			0
 		},
 
+		instagram: {
+			active:			false,
+			array:			[],
+			api_loaded:		false,
+			que:			[]
+		},
+		
 		soundcloud: {
 			active:			false,
 			array:			[],
@@ -2522,6 +2529,9 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 			if (taogiVMM.master_config.youtube.active) {
 				taogiVMM.ExternalAPI.youtube.pushQue();
 			}
+			if (taogiVMM.master_config.instagram.active) {
+				taogiVMM.ExternalAPI.instagram.pushQue();
+			}
 			if (taogiVMM.master_config.soundcloud.active) {
 				taogiVMM.ExternalAPI.soundcloud.pushQue();
 			}
@@ -2683,7 +2693,7 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 				media.id = d.split("photos\/")[1].split("/")[1];
 				media.link = d;
 				success = true;
-			} else if (d.match("instagr.am/p/")) {
+			} else if (d.match("instagr.am/p/") || d.match("instagram.com/p/")) {
 				media.type = "instagram";
 				media.link = d;
 				media.id = d.split("\/p\/")[1].split("/")[0];
@@ -3906,27 +3916,48 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 
 		instagram: {
 			get: function(m) {
-				if (m.thumb) {
-					return "http://instagr.am/p/" + m.id + "/media/?size=t";
-				} else {
-					return "http://instagr.am/p/" + m.id + "/media/?size=" + taogiVMM.ExternalAPI.instagram.sizes(taogiVMM.master_config.sizes.api.height);
-				}
+				taogiVMM.master_config.instagram.que.push(m);
+				taogiVMM.master_config.instagram.active = true;
 			},
 
-			resize: function(m) {
+			create: function(instagram, callback) {
+				var the_url = "http://api.instagram.com/oembed?url=https://instagram.com/p/"+instagram.id+"&callback=?";
+				taogiVMM.getJSON(the_url, function(d) {
+					taogiVMM.alignattachElement("#"+instagram.uid, d.html,'#'+instagram.uid,0);
+					callback();
+				});
 			},
 
-			sizes: function(s) {
-				var _size = "";
-				if (s <= 150) {
-					_size = "t";
-				} else if (s <= 306) {
-					_size = "m";
-				} else {
-					_size = "l";
+			createThumb: function(instagram,callback) {
+				var the_url = "http://api.instagram.com/oembed?url=https://instagram.com/p/"+instagram.id+"&callback=?";
+				taogiVMM.getJSON(the_url, function(d) {
+					taogiVMM.alignattachElement("#"+instagram.uid, "<img src='" + d.thumbnail_url + "' class='feature_image' /><h5 class='instagram caption'>"+d.title+"</h5><i></i>",'#'+instagram.uid+' .feature_image',1);
+					callback();
+				});
+			},
+
+			getThumb: function(instagram) {
+				var the_url = "http://api.instagram.com/oembed?url=https://instagram.com/p/"+instagram.id+"&callback=?";
+				taogiVMM.getJSON(the_url, function(d) {
+					var im = jQuery('#t_'+instagram.uid+' img');
+					if(im.length > 0 && !jQuery.trim(im.attr('alt')))
+						im.attr('alt',(d.title + ' ' + d.author_name));
+				});
+				return "http://instagram.com/p/"+instagram.id+"/media/?size=t";
+			},
+
+			resize: function(instagram) {
+				taogiVMM.Util.reAlignMiddle('#'+instagram.uid+(instagram.thumb ? ' .feature_image' : ''),(instagram.thumb ? 1 : 0));
+			},
+
+			pushQue: function() {
+				if (taogiVMM.master_config.instagram.que.length > 0) {
+					if(taogiVMM.master_config.instagram.que[0].thumb)
+						taogiVMM.ExternalAPI.instagram.createThumb(taogiVMM.master_config.instagram.que[0], taogiVMM.ExternalAPI.instagram.pushQue);
+					else
+						taogiVMM.ExternalAPI.instagram.create(taogiVMM.master_config.instagram.que[0], taogiVMM.ExternalAPI.instagram.pushQue);
+					taogiVMM.master_config.instagram.que.remove(0);
 				}
-				
-				return _size;
 			}
 		},
 
@@ -7270,7 +7301,7 @@ function onYouTubePlayerAPIReady() {
 
 				mediaElem = this.createFigureElement(m,item);
 				if(mediaElem) {
-					if(m.type == 'image' || m.type == 'instagram') {
+					if(m.type == 'image') {
 						taogiVMM.alignattachElement('#'+m.uid, mediaElem, '#'+m.uid+(m.thumb ? ' .feature_image' : ''), (m.thumb ? 1 : 0));
 					} else {
 						taogiVMM.attachElement('#'+m.uid,mediaElem);
@@ -7297,9 +7328,8 @@ function onYouTubePlayerAPIReady() {
 				jQuery('#'+m.uid).addClass((m.thumb ? 'thumb-flickr taogi_buildGallery' : 'flickr')).html(loading_message);
 				taogiVMM.ExternalAPI.flickr.get(m);
 			} else if(m.type == "instagram") {
-				jQuery('#'+m.uid).addClass('taogi_buildGallery');
-				mediaElem = "<img src='"+taogiVMM.ExternalAPI.instagram.get(m)+"' class='feature_image' />";
-				if(item.credit) mediaElem += "<h5 class='caption'>"+item.caption+"</h5>";
+				jQuery('#'+m.uid).addClass((m.thumb ? 'thumb-instagram taogi_buildGallery taogi-icon-player' : 'instagram')).html(loading_message);
+				taogiVMM.ExternalAPI.instagram.get(m);
 			} else if(m.type == "youtube") {
 				jQuery('#'+m.uid).addClass((m.thumb ? 'thumb-youtube taogi_buildGallery taogi-icon-player' : 'youtube'));
 				vw = this.resolutionOfVideo(m);
@@ -7383,7 +7413,7 @@ function onYouTubePlayerAPIReady() {
 
 		resizeFigureElement:function(m) {
 			var self = this;
-			if(m.type == "image" || m.type == 'instagram') {
+			if(m.type == "image") {
 				taogiVMM.Util.reAlignMiddle('#'+m.uid+(m.thumb ? ' .feature_image' : ''),(m.thumb ? 1 : 0));
 			} else if(m.type == "flickr") {
 				taogiVMM.ExternalAPI.flickr.resize(m);
@@ -7401,6 +7431,8 @@ function onYouTubePlayerAPIReady() {
 				taogiVMM.ExternalAPI.twitter.resize(m);
 			} else if(m.type == "twitter-ready") {
 				taogiVMM.Util.reAlignMiddle('#'+m.uid,(m.thumb ? 1 : 0));
+			} else if(m.type == "instagram") {
+				taogiVMM.ExternalAPI.instagram.resize(m);
 			} else if(m.type == "soundcloud") {
 				taogiVMM.ExternalAPI.soundcloud.resize(m);
 			} else if(m.type == "google-map") {
@@ -7771,7 +7803,7 @@ function onYouTubePlayerAPIReady() {
 
 				mediaElem = this.createFigureElement(m,this.items[index].galleries[i]);
 				if(mediaElem) {
-					if(m.type == 'image' || m.type == 'instagram' || m.type == 'quote') {
+					if(m.type == 'image' || m.type == 'quote') {
 						taogiVMM.alignattachElement('#'+m.uid,mediaElem,'#'+m.uid+(m.thumb ? ' .feature_image' : ''),(m.thumb ? 1 : 0));
 					} else {
 						taogiVMM.attachElement('#'+m.uid,mediaElem);
@@ -7798,6 +7830,9 @@ function onYouTubePlayerAPIReady() {
 							m.id = './library/api.php?type=proxy&taogiauth=ACA20D8B4F7B63D8639C7824AC458D3A53F7E275&skip_referer=1&url='+encodeURIComponent(m.id);
 						}
 						mediaElem = '<img src="'+m.id+'" alt="'+m.caption+' '+m.credit+'" />';
+						break;
+					case 'instagram':
+						mediaElem = '<img src="'+taogiVMM.ExternalAPI.instagram.getThumb(m)+'" alt="'+m.caption+' '+m.credit+'" />';
 						break;
 					default:
 						mediaElem = '<span>'+(m.caption ? m.caption : m.credit)+'</span>';

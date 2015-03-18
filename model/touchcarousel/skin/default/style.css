@@ -127,7 +127,7 @@ body {
 	COVER start
 *************************************************************************************************************/
 .cover .section.article h1.title,
-.cover .section.article p.description,
+.cover .section.article div.description,
 .cover .section.article .meta {
 	width: 80%;
 	margin: 0 auto;
@@ -137,7 +137,7 @@ body {
 .cover .section.article h1.title {
 	color: #2F2F2F;
 }
-.cover .section.article p.description {
+.cover .section.article div.description {
 	text-align: justify;
 	line-height: 1.6;
 }
@@ -213,7 +213,7 @@ body {
 	letter-spacing: -0.04em;
 	word-break: keep-all;
 }
-.cover.front .section.article p.description {
+.cover.front .section.article div.description {
 	padding-top: 30px;
 	border-top: 2px solid #9DA0A9;
 }
@@ -225,7 +225,7 @@ body {
 	padding-bottom: 30px;
 	font-size: 40px;
 }
-.cover.back .section.article p.description {
+.cover.back .section.article div.description {
 	padding-bottom: 30px;
 	border-bottom: 1px solid #9DA0A9;
 }
