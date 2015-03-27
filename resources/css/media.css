@@ -109,6 +109,15 @@
 .article .figure.thumb-rigvedawiki i:before {
 	content: '\F0AC';
 }
+/* IMAGE, INSTAGRAM */
+.article .figure.thumb-image,
+.article .figure.thumb-instagram {
+	background-color: #333333;
+}
+.article .figure.thumb-image i:before,
+.article .figure.thumb-instagram i:before {
+	display: none;
+}
 /* IFRAME, PDF, ATTACHMENT, OBJECT */
 .article .figure.noimage.thumb-pdf,
 .article .figure.noimage.thumb-attachment,
