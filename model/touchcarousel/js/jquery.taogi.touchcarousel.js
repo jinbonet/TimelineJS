@@ -3923,7 +3923,10 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 			create: function(instagram, callback) {
 				var the_url = "http://api.instagram.com/oembed?url=https://instagram.com/p/"+instagram.id+"&callback=?";
 				taogiVMM.getJSON(the_url, function(d) {
-					taogiVMM.alignattachElement("#"+instagram.uid, d.html,'#'+instagram.uid,0);
+					var temp_markup = '<div class="instagram"><img src="'+d.thumbnail_url+'">';
+					temp_markup += '<h5 class="instagram-caption"><a href="http://instagram.com/p/'+instagram.id+'">'+d.title+'</a><a href="http://instagram.com/p/'+instagram.id+'"><span class="instagram-logo">INSTAGRAM</span></a></h5>';
+					temp_markup += '</div>';
+					taogiVMM.alignattachElement("#"+instagram.uid, temp_markup,'#'+instagram.uid+' .instagram',0);
 					callback();
 				});
 			},
@@ -3951,7 +3954,7 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 			},
 
 			pushQue: function() {
-				if (taogiVMM.master_config.instagram.que.length > 0) {
+				while (taogiVMM.master_config.instagram.que.length > 0) {
 					if(taogiVMM.master_config.instagram.que[0].thumb)
 						taogiVMM.ExternalAPI.instagram.createThumb(taogiVMM.master_config.instagram.que[0], taogiVMM.ExternalAPI.instagram.pushQue);
 					else

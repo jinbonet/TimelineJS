@@ -93,7 +93,7 @@
 				<section class="section article">
 					<article class="wrap">
 						<h1 class="title"><?php print $timeline['headline']; ?></h1>
-						<p class="description"><?php print $timeline['text']; ?></p>
+						<div class="description"><?php print $timeline['text']; ?></div>
 						<div class="meta">
 							<cite class="author"><?php print $timeline['extra']['author']; ?></cite>
 							<?php print $taogi_theme->time($timeline,'endDate'); ?>
