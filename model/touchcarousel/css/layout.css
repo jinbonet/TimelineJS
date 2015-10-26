@@ -108,7 +108,7 @@ li.touchcarousel-item .item-container {
 	height: 100%;
 	padding: 0;
 	overflow: hidden;
-	background-color: white;
+/*	background-color: white; */
 	*zoom: 1;
 }
 li.touchcarousel-item .item-container:after {
@@ -160,6 +160,7 @@ li.touchcarousel-item .item-container .section .wrap:after {
 	background: #333333 url(../images/background-dots.svg) scroll repeat center center;
 	box-shadow: inset 0 0 15px #000000;
 }
+.section.article .loading,
 .section.media .loading {
 	width: 100%;
 	height: 100%;

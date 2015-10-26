@@ -562,6 +562,7 @@ if (typeof taogiVMM == 'undefined') {
 		api_keys_master: {
 			flickr:		"RAIvxHY4hE/Elm5cieh4X5ptMyDpj7MYIxziGxi0WGCcy1s+yr7rKQ==",
 			google:		"uQKadH1VMlCsp560gN2aOiMz4evWkl1s34yryl3F/9FJOsn+/948CbBUvKLN46U=",
+			youtube:	"AIzaSyAkxyLpegOcmLxPAbdeUyfsvl9Cckn7PfA",
 			twitter:	""
 		},
 
@@ -4255,10 +4256,11 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 
 			createThumb: function(vid) {
 				trace("CREATE YouTube THUMB: "+vid.id);
-				var the_url = "http://gdata.youtube.com/feeds/api/videos/" + vid.id + "?v=2&alt=jsonc&callback=?";
+				var the_url = "https://www.googleapis.com/youtube/v3/videos?id=" + vid.id + "&key="+taogiVMM.master_config.api_keys_master.youtube+"&part=snippet";
+				console.log(the_url);
 				taogiVMM.getJSON(the_url, function(d) {
-					if (typeof d.data != 'undefined') {
-						taogiVMM.alignattachElement('#'+vid.uid, "<img src='" + d.data.thumbnail.sqDefault + "' class='feature_image'><h5 class='youtube caption'>"+d.data.title+"</h5><i></i>", '#'+vid.uid+" .feature_image", 1);
+					if (typeof d != 'undefined') {
+						taogiVMM.alignattachElement('#'+vid.uid, "<img src='" + d.items[0].snippet.thumbnails.medium.url + "' class='feature_image'><h5 class='youtube caption'>"+d.items[0].snippet.title+"</h5><i></i>", '#'+vid.uid+" .feature_image", 1);
 					}
 				});
 			},
@@ -4778,7 +4780,8 @@ if(typeof taogiVMM != 'undefined' && typeof taogiVMM.ExternalAPI == 'undefined')
 								var _text = "";
 								_text		=	'<h4><a href="' + m.id + '" target="_blank">' + d.title + "</a></h4>";
 								_text		+=	"<span class='web-source'>BY "+d.name+"</span>";
-								_text		+=	"<p>"+d.description.substring(0,300)+"</p>";
+								if( typeof( d.description ) !== 'undefined' )
+									_text	+=	"<p>"+d.description.substring(0,300)+"</p>";
 								taogiVMM.attachElement("#"+m.uid, '<div class="blockquote">'+_text+'</div><i></i>');
 								taogiVMM.Lib.addClass('#'+m.uid,'noimage');
 							}
