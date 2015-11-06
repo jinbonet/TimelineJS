@@ -127,6 +127,7 @@ li.touchcarousel-item .item-container .section {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	background-color: #fff;
 }
 li.touchcarousel-item .item-container .section:after {
 	content: " ";

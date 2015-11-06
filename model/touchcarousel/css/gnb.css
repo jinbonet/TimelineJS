@@ -169,7 +169,7 @@ body {
 	height: 100%;
 	overflow: hidden;
 	background-color: black;
-	border-right: 1px solid gray;
+	border-right: 1px solid #2D2D2D;
 	box-shadow: inset 0 0 5px black;
 }
 #taogi-gnb * {
