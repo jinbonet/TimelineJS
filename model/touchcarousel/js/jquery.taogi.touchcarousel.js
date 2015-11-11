@@ -6158,11 +6158,13 @@ function onYouTubePlayerAPIReady() {
 
 			if(this.settings.keyboard) {
 				$(document).bind("keydown.taogi", function(e) {
-					if (e.keyCode === 37) {
-						if(!self._blockLeftArrow) self.prevPage();
-					}
-					else if (e.keyCode === 39) {
-						if(!self._blockRightArrow) self.nextPage();
+					if( !jQuery(e.target).is('input, textarea') ) {
+						if (e.keyCode === 37) {
+							if(!self._blockLeftArrow) self.prevPage();
+						}
+						else if (e.keyCode === 39) {
+							if(!self._blockRightArrow) self.nextPage();
+						}
 					}
 				});
 			}
