@@ -6278,7 +6278,6 @@ function onYouTubePlayerAPIReady() {
 					var offset = jQuery('#taogi-gnb').width();
 					if(self._useWebkitTransition) {
 						self.TLFrame.css({transition: (self.supports.transform)+' 0.3s ease-in', transform: 'translate3d('+offset+'px,0,0)'});
-						console.log(transitionEnd);
 						self.TLFrame.bind(transitionEnd,function() {
 							jQuery(this).addClass('menu-active');
 							jQuery(this).unbind(transitionEnd);
