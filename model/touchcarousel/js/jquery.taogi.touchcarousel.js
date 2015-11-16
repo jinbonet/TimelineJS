@@ -5943,21 +5943,34 @@ function onYouTubePlayerAPIReady() {
 		}
 
 		var TransitionEndeventNames = {
-			'transition':	   'transitionEnd',
+			'transition':	   'transitionend',
 			'-Moz-Transition':	'transitionend',
-			'-O-Transition':	  'oTransitionEnd',
-			'-Webkit-Transition': 'webkitTransitionEnd',
-			'-ms-Transition':	 'msTransitionEnd'
+			'-Webkit-Transition': 'webkitTransitionEnd'
+		};
+		var transEndEventNames = {
+			'WebkitTransition' : 'webkitTransitionEnd',
+			'MozTransition'    : 'transitionend',
+			'transition'       : 'transitionend'
 		};
 
 		/* check that the browser support transition */
 		this._useWebkitTransition = false;
-		this.supports.transition		= _getVendorPropertyName('transition');
-		if(this.hasTouch || (this.settings.useWebkitTransition && this.supports.transition)) {
-			this._useWebkitTransition = true;
-			this.supports.transform	= _getVendorPropertyName('transform');
-			this.supports.transitionEnd = TransitionEndeventNames[this.supports.transition] || null;
-			this.supports.opacity = _getVendorPropertyName('opacity');
+		if( typeof(Modernizr) !== 'undefined' ) {
+			if(Modernizr.csstransitions) {
+				this.supports.transition		= Modernizr.prefixedCSS('transition');
+				this._useWebkitTransition		= true;
+				this.supports.transform			= Modernizr.prefixedCSS('transform');
+				this.supports.transitionEnd		= transEndEventNames[Modernizr.prefixed('transition')];
+				this.supports.opacity			= Modernizr.prefixedCSS('opacity');
+			}
+		} else {
+			this.supports.transition		= _getVendorPropertyName('transition');
+			if(this.hasTouch || (this.settings.useWebkitTransition && this.supports.transition)) {
+				this._useWebkitTransition = true;
+				this.supports.transform	= _getVendorPropertyName('transform');
+				this.supports.transitionEnd = TransitionEndeventNames[this.supports.transition] || null;
+				this.supports.opacity = _getVendorPropertyName('opacity');
+			}
 		}
 
 		if(this._useWebkitTransition == false) {
@@ -6248,6 +6261,7 @@ function onYouTubePlayerAPIReady() {
 				var transform = this.supports.transform;
 				var transitionEnd = this.supports.transitionEnd+".taogi";
 			}
+			if(element.data('click-handler') === true) return;
 			element.bind('touchstart click',function(e){
 				e.preventDefault();
 				if(self.TLFrame.hasClass('menu-active')) {
@@ -6264,6 +6278,7 @@ function onYouTubePlayerAPIReady() {
 					var offset = jQuery('#taogi-gnb').width();
 					if(self._useWebkitTransition) {
 						self.TLFrame.css({transition: (self.supports.transform)+' 0.3s ease-in', transform: 'translate3d('+offset+'px,0,0)'});
+						console.log(transitionEnd);
 						self.TLFrame.bind(transitionEnd,function() {
 							jQuery(this).addClass('menu-active');
 							jQuery(this).unbind(transitionEnd);
@@ -6274,6 +6289,7 @@ function onYouTubePlayerAPIReady() {
 				}
 				return false;
 			});
+			element.data('click-handler',true);
 		},
 
 		/* touchcarousel container resizing function where window resize event call */
