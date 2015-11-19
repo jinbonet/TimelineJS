@@ -20,7 +20,7 @@ jQuery.fn.enableSelection = function() {
 		}).attr('unselectable','off').unbind('selectstart');
 	});
 };
-jQuery(document).disableSelection();
+jQuery('#carousel-timeline-box').disableSelection();
 
 // LOAD GOOGLE WEBFONTS
 if ( taogiVMM.Browser.device != 'desktop' || (taogiVMM.Browser.browser == "Explorer" && parseInt(taogiVMM.Browser.version, 10) <= 8)) {
