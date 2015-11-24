@@ -6,8 +6,8 @@
 			<div class="item-container">
 				<section class="section article">
 					<article class="wrap">
-						<h1 class="title"><?php print $timeline['headline']; ?></h1>
-						<div class="description"><?php print $timeline['text']; ?></div>
+						<h1 class="title"><?php print rtrim($timeline['headline'],"<br>"); ?></h1>
+						<div class="description"><?php print rtrim($timeline['text'],"<br>"); ?></div>
 						<div class="meta">
 							<cite class="author"><?php print $timeline['extra']['author']; ?></cite>
 							<?php print $taogi_theme->time($timeline); ?>
@@ -25,7 +25,7 @@
 		</li>
 <?php }
 	for($i=0; $i<@count($datalist); $i++) {
-		if($datalist[$i]['permalink']) $datalist[$i]['headline'] = '<a href="'.$datalist[$i]['permalink'].'" title="'.htmlspecialchars($datalist[$i]['headline']).'" target="_blank">'.$datalist[$i]['headline'].'</a>'; ?>
+		if($datalist[$i]['permalink']) $datalist[$i]['headline'] = '<a href="'.$datalist[$i]['permalink'].'" title="'.htmlspecialchars($datalist[$i]['headline']).'" target="_blank">'.rtrim($datalist[$i]['headline'],"<br>").'</a>'; ?>
 		<li id="<?php print $datalist[$i]['unique']; ?>" class="touchcarousel-item">
 			<div class="item-container">
 				<div class="item-flipper">
@@ -46,8 +46,8 @@
 								</div>
 <?php						}?>
 							<div class="title-description">
-								<h2 class="title"><?php print $datalist[$i]['headline']; ?></h2>
-								<div class="description"><p><?php print preg_replace("/(&quot;){1,}/i",'"',strip_tags($datalist[$i]['text'],'<b><strong><i><em><u><s><strike><a><br><p>')); ?><span class="more">... <a href="#"><?php print $lang->_t('read_more'); ?></a></span></p></div>
+								<h2 class="title"><?php print rtrim($datalist[$i]['headline'],"<br>"); ?></h2>
+								<div class="description"><p><?php print preg_replace("/(&quot;){1,}/i",'"',strip_tags(rtrim($datalist[$i]['text'],"<br>"),'<b><strong><i><em><u><s><strike><a><br><p>')); ?><span class="more">... <a href="#"><?php print $lang->_t('read_more'); ?></a></span></p></div>
 							</div>
 						</article>
 					</section>

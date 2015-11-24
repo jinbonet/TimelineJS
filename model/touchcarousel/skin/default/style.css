@@ -100,13 +100,13 @@ body {
 }
 .section.article .title-description .title {
 	margin: 0;
-	line-height: 1.4;
+	line-height: 1.2;
 	color: #333333;
 	font-size: 30px;
 }
 .section.article .wrap .title-description .description {
 	margin: 2em 0 0 0;
-	line-height: 1.6;
+	line-height: 1.5;
 	color: #666666;
 }
 .section.article .wrap .title-description .description .more a {
