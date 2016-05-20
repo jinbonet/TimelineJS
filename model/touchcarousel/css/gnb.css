@@ -89,11 +89,11 @@ body {
 	position: absolute;
 	z-index: 999;
 	*zoom: 1;
-	top: 15px;
-	left: 15px;
+	top: 16px;
+	left: 16px;
 	display: inline-block;
-	height: 30px;
-	line-height: 30px;
+	height: 40px;
+	line-height: 40px;
 	margin: 0;
 	padding: 0;
 	font-size: 13px;
@@ -112,7 +112,7 @@ body {
 	z-index: 1;
 	float: left;
 	display: block;
-	width: 30px;
+	width: 40px;
 	height: 100%;
 	text-indent: -10000px;
 }
@@ -129,9 +129,9 @@ body {
 	text-align: center;
 	background-color: #000000;
 	color: #FFFFFF;
-	font-family: 'Jinbonet Icons';
-	font-size: 20px;
-	content: 'd'; /* c:pictogram, d:symbol */
+	font-family: 'FontAwesome';
+	font-size: 18px;
+	content: '\f0c9'; /* c:pictogram, d:symbol */
 }
 .taogi-gnb-switch span {
 	transition-duration: 0.3s;
@@ -177,7 +177,7 @@ body {
 	margin: 0;
 	padding: 0;
 	color: #B3B3B1;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: inherit;
 	word-wrap: break-word;
 	word-break: break-all;
